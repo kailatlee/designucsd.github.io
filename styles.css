@@ -128,7 +128,6 @@ p.strong {
   padding-top: 500px;
   padding-bottom: 200px;
   margin-bottom: -100px;
-  color: white;
 }
 
 .hero-content {
@@ -145,6 +144,7 @@ p.strong {
 }
 
 .hero-button{
+  color: white;
   display: block;
   width: 215px;
   font-size: 24px;
