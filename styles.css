@@ -1,10 +1,203 @@
-body{
+/** 
+  * Colors:
+  *   Dark blue: #2E4A57;
+  *   Black: #1A1A1A;
+  *   Salmon: #FF5E5B;
+  *
+  * Breakpoints:
+  *   Tablet/mobile: 768px;
+  *   Desktop: 1024px; 
+  *
+  */
+
+/**
+  * Some CSS and Bootstrap resets
+  */
+body {
+  margin: 0;
+  padding: 0;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+html * {
+  font-family: ;
+}
+.navbar-inverse {
+  background-color: transparent;
+}
+/** Utility classes for colors and slanted-ness
+  * 
+  * Use class="slant-border bg-blue" or your desired color
+  * Easiest way to have image backgrounds slanted is to just put slanted 
+  * divs above and below them.
+  *
+  * Source: http://stackoverflow.com/questions/27706921/responsive-slanted-border
+  */
+.slant-border {
+  position: relative;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+.slant-border:before,
+.slant-border:after {
+  content: "";
+  position: absolute;
+  background: #a1a8ad;
+  -webkit-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  z-index: -1;
+  width: 150%;
+  height: 100px;
+}
+.slant-border:before {
+  top: -50px;
+  left: 0;
+}
+.slant-border:after {
+  bottom: -50px;
+  right: 0;
+}
+/* Make angles more obvious on mobile */
+@media screen and (max-width: 768px) {
+  .slant-border:before,
+  .slant-border:after {
+    -webkit-transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+}
+/* Feel free to add more color classes here */
+.bg-blue,
+.bg-blue:after,
+.bg-blue:before {
+  color: white;
+  background-color: #2E4A57;
+}
+.bg-white,
+.bg-white:after,
+.bg-white:before {
+  background-color: #FFFFFF;
+}
+.no-after:after {
+  content: none !important;
+}
+.no-before:before {
+  content: none !important;
 }
 
-h1{
-  color: red;
+/* Other general utility/text classes */
+.inline {
+  display: inline;
+}
+.pad-left {
+  padding-left: 2em;
+}
+p.small {
+  font-size: 14px;
+}
+p.strong {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+/* Navigation bar */
+.navbar {
+  border-bottom: none;
+  position: absolute;
+}
+.navbar a {
+  color: #2E4A57 !important;
+}
+.navbar .navbar-right a {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.navbar .slant-border {
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+/* Hero: TODO; */
+.hero {
+  background-color: #ddd; /* Temporary */
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-bottom: -100px;
+}
+
+/* Quote */
+.quote-section {
+  color: #FFFFFF;
+  background-color: #2E4A57;
+  z-index: 1;
+}
+.quote-section .quote {
+  font-size: 30px;
+  text-align: center;
+}
+.quote-section .quoted {
+}
+
+/* Tiles */
+.tile-hoz {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  display: table;
+}
+.tile-hoz h3 {
+  margin-top: 5px;
+  font-size: 28px;
+}
+.tile-hoz .tile-content {
+}
+.tile-content .strong.inline {
+}
+.tile-hoz .fb-link {
+  margin-top: 20px;
+}
+.tile-hoz p {
+  font-size: 18px;
+}
+.tile-hoz .tile-text {
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer-wrap {
+  bottom: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+.footer-wrap .slant-border {
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+.footer .footer-signup {
+  text-align: right;
+}
+.footer input[type="text"],
+.footer input[type="submit"] {
+  outline: none;
+  border: none;
+  height: 40px;
+  padding: 5px;
+  font-size: 20px;
+  line-height: 30px;
+}
+.footer input[type="submit"] {
+  background-color: #ff535b;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.footer label,
+.footer p {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+.footer p {
+  margin-top: 16px;
 }
