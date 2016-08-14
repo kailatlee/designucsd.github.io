@@ -20,6 +20,8 @@ body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
 }
 @font-face {
   font-family: Calibre;
@@ -36,6 +38,11 @@ a:hover,
 button:hover,
 input[type="submit"]:hover {
   cursor: pointer;
+}
+input[type='submit'] {
+ -webkit-appearance: none;
+ -moz-appearance: none;
+ appearance: none;  
 }
 /** Utility classes for colors and slanted-ness
   *
@@ -60,6 +67,7 @@ input[type="submit"]:hover {
   transform: rotate(-2deg);
   z-index: -1;
   width: 150%;
+  width: 150vw;
   height: 100px;
 }
 .slant-border:before {
