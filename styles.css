@@ -1,4 +1,4 @@
-/** 
+/**
   * Colors:
   *   Dark blue: #2E4A57;
   *   Black: #1A1A1A;
@@ -6,7 +6,7 @@
   *
   * Breakpoints:
   *   Tablet/mobile: 768px;
-  *   Desktop: 1024px; 
+  *   Desktop: 1024px;
   *
   */
 
@@ -27,9 +27,9 @@ html * {
   background-color: transparent;
 }
 /** Utility classes for colors and slanted-ness
-  * 
+  *
   * Use class="slant-border bg-blue" or your desired color
-  * Easiest way to have image backgrounds slanted is to just put slanted 
+  * Easiest way to have image backgrounds slanted is to just put slanted
   * divs above and below them.
   *
   * Source: http://stackoverflow.com/questions/27706921/responsive-slanted-border
@@ -120,12 +120,38 @@ p.strong {
   padding-top: 20px;
 }
 
-/* Hero: TODO; */
+/* Hero:*/
 .hero {
-  background-color: #ddd; /* Temporary */
-  padding-top: 200px;
+  height: 90vh;
+  background: url(images/team-above.jpg) center center;
+  background-size: cover;
+  padding-top: 500px;
   padding-bottom: 200px;
   margin-bottom: -100px;
+  color: white;
+}
+
+.hero-content {
+  width: 900px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  color: white;
+  background-color: rgba(46,74,87,0.8);
+  padding: 20px 30px 20px 30px;
+  display: inline;
+  line-height: 1.87;
+}
+
+.hero-button{
+  display: block;
+  width: 215px;
+  font-size: 24px;
+  background: #FF5E5B;
+  text-transform: uppercase;
+  padding: 20px 30px;
+  margin-top: 20px;
 }
 
 /* Quote */
