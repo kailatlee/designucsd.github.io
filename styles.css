@@ -25,7 +25,7 @@ body {
 }
 @font-face {
   font-family: Calibre;
-  src: url(fonts/Calibre-Regular.otf);
+  src: url('fonts/Calibre-Regular.otf');
 }
 html * {
   font-family: Calibre;
