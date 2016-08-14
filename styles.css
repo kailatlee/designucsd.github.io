@@ -19,8 +19,9 @@ body {
   height: 100%;
   width: 100%;
   overflow-x: hidden;
-  padding-top: 100px;
-  background-color: #ddd; /* Temporary */
+}
+html * {
+  font-family: ;
 }
 .navbar-inverse {
   background-color: transparent;
@@ -30,8 +31,9 @@ body {
   * Use class="slant-border bg-blue" or your desired color
   * Easiest way to have image backgrounds slanted is to just put slanted 
   * divs above and below them.
+  *
+  * Source: http://stackoverflow.com/questions/27706921/responsive-slanted-border
   */
-
 .slant-border {
   position: relative;
   margin-bottom: 100px;
@@ -85,10 +87,33 @@ body {
   content: none !important;
 }
 
+/* Other general utility/text classes */
+.inline {
+  display: inline;
+}
+.pad-left {
+  padding-left: 2em;
+}
+p.small {
+  font-size: 14px;
+}
+p.strong {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
 /* Navigation bar */
 .navbar {
   border-bottom: none;
   position: absolute;
+}
+.navbar a {
+  color: #2E4A57 !important;
+}
+.navbar .navbar-right a {
+  text-transform: uppercase;
+  font-size: 14px;
 }
 .navbar .slant-border {
   margin-top: 0;
@@ -97,12 +122,17 @@ body {
 
 /* Hero: TODO; */
 .hero {
+  background-color: #ddd; /* Temporary */
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-bottom: -100px;
 }
 
 /* Quote */
 .quote-section {
   color: #FFFFFF;
   background-color: #2E4A57;
+  z-index: 1;
 }
 .quote-section .quote {
   font-size: 30px;
@@ -112,17 +142,62 @@ body {
 }
 
 /* Tiles */
-
+.tile-hoz {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  display: table;
+}
+.tile-hoz h3 {
+  margin-top: 5px;
+  font-size: 28px;
+}
+.tile-hoz .tile-content {
+}
+.tile-content .strong.inline {
+}
+.tile-hoz .fb-link {
+  margin-top: 20px;
+}
+.tile-hoz p {
+  font-size: 18px;
+}
+.tile-hoz .tile-text {
+  margin-top: 20px;
+}
 
 /* Footer */
 .footer-wrap {
   bottom: 0;
   margin-bottom: 0;
   overflow: hidden;
-  /*padding-bottom: 20px;*/
-  /*transform: translateY(30px);*/
 }
 .footer-wrap .slant-border {
   margin-bottom: 0;
   padding-bottom: 20px;
+}
+.footer .footer-signup {
+  text-align: right;
+}
+.footer input[type="text"],
+.footer input[type="submit"] {
+  outline: none;
+  border: none;
+  height: 40px;
+  padding: 5px;
+  font-size: 20px;
+  line-height: 30px;
+}
+.footer input[type="submit"] {
+  background-color: #ff535b;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.footer label,
+.footer p {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+.footer p {
+  margin-top: 16px;
 }
