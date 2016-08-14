@@ -1,10 +1,128 @@
-body{
+/** 
+  * Colors:
+  *   Dark blue: #2E4A57;
+  *   Black: #1A1A1A;
+  *   Salmon: #FF5E5B;
+  *
+  * Breakpoints:
+  *   Tablet/mobile: 768px;
+  *   Desktop: 1024px; 
+  *
+  */
+
+/**
+  * Some CSS and Bootstrap resets
+  */
+body {
+  margin: 0;
+  padding: 0;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+  padding-top: 100px;
+  background-color: #ddd; /* Temporary */
+}
+.navbar-inverse {
+  background-color: transparent;
+}
+/** Utility classes for colors and slanted-ness
+  * 
+  * Use class="slant-border bg-blue" or your desired color
+  * Easiest way to have image backgrounds slanted is to just put slanted 
+  * divs above and below them.
+  */
+
+.slant-border {
+  position: relative;
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+.slant-border:before,
+.slant-border:after {
+  content: "";
+  position: absolute;
+  background: #a1a8ad;
+  -webkit-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  z-index: -1;
+  width: 150%;
+  height: 100px;
+}
+.slant-border:before {
+  top: -50px;
+  left: 0;
+}
+.slant-border:after {
+  bottom: -50px;
+  right: 0;
+}
+/* Make angles more obvious on mobile */
+@media screen and (max-width: 768px) {
+  .slant-border:before,
+  .slant-border:after {
+    -webkit-transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+}
+/* Feel free to add more color classes here */
+.bg-blue,
+.bg-blue:after,
+.bg-blue:before {
+  color: white;
+  background-color: #2E4A57;
+}
+.bg-white,
+.bg-white:after,
+.bg-white:before {
+  background-color: #FFFFFF;
+}
+.no-after:after {
+  content: none !important;
+}
+.no-before:before {
+  content: none !important;
 }
 
-h1{
-  color: red;
+/* Navigation bar */
+.navbar {
+  border-bottom: none;
+  position: absolute;
+}
+.navbar .slant-border {
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+/* Hero: TODO; */
+.hero {
+}
+
+/* Quote */
+.quote-section {
+  color: #FFFFFF;
+  background-color: #2E4A57;
+}
+.quote-section .quote {
+  font-size: 30px;
+  text-align: center;
+}
+.quote-section .quoted {
+}
+
+/* Tiles */
+
+
+/* Footer */
+.footer-wrap {
+  bottom: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  /*padding-bottom: 20px;*/
+  /*transform: translateY(30px);*/
+}
+.footer-wrap .slant-border {
+  margin-bottom: 0;
+  padding-bottom: 20px;
 }
