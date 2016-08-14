@@ -159,11 +159,15 @@ p.strong {
     padding-bottom: 0;
   }
   .navbar .slant-border:after {
-    /*content: none;*/
-    top: -20px;
+    top: -10px;
   }
   .navbar .navbar-brand ul {
     display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar .slant-border:after {
+    top: -20px;
   }
 }
 
