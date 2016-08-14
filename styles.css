@@ -11,8 +11,9 @@
   */
 
 /**
-  * Some CSS and Bootstrap resets
+  * Some CSS and Bootstrap resets and font
   */
+html,
 body {
   margin: 0;
   padding: 0;
@@ -20,11 +21,21 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
+@font-face {
+  font-family: Calibre;
+  src: url(fonts/Calibre-Regular.otf);
+}
 html * {
-  font-family: ;
+  font-family: Calibre;
+  font-size: 20px;
 }
 .navbar-inverse {
   background-color: transparent;
+}
+a:hover,
+button:hover,
+input[type="submit"]:hover {
+  cursor: pointer;
 }
 /** Utility classes for colors and slanted-ness
   *
@@ -63,9 +74,9 @@ html * {
 @media screen and (max-width: 768px) {
   .slant-border:before,
   .slant-border:after {
-    -webkit-transform: rotate(-4deg);
-    -ms-transform: rotate(-4deg);
-    transform: rotate(-4deg);
+    -webkit-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
   }
 }
 /* Feel free to add more color classes here */
@@ -95,13 +106,12 @@ html * {
   padding-left: 2em;
 }
 p.small {
-  font-size: 14px;
+  font-size: 16px;
 }
 p.strong {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 22px;
+  font-weight: 400;
 }
-
 
 /* Navigation bar */
 .navbar {
@@ -113,37 +123,79 @@ p.strong {
 }
 .navbar .navbar-right a {
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: 500;
 }
 .navbar .slant-border {
   margin-top: 0;
-  padding-top: 20px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+.navbar .navbar-brand {
+  padding-left: 90px;
+  padding-top: 16px;
+  background: url(images/logo.png) no-repeat;
+  background-size: auto 100%;
+  font-size: 32px;
+  font-weight: 600;
+  height: 40px;
+}
+.navbar .navbar-brand ul {
+  padding-left: 0;
+  padding-top: 15px;
+  list-style-type: none;
+}
+@media screen and (max-width: 768px) {
+  .navbar .navbar-brand {
+    font-size: 20px;
+    height: 30px;
+    padding-left: 70px;
+    margin-top: 8px;
+    padding-top: 10px;
+  }
+  .navbar .slant-border {
+    margin-bottom: 0;
+    padding-top: 10px;
+    padding-bottom: 0;
+  }
+  .navbar .slant-border:after {
+    top: -10px;
+  }
+  .navbar .navbar-brand ul {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar .slant-border:after {
+    top: -20px;
+  }
 }
 
 /* Hero:*/
 .hero {
-  height: 90vh;
+  min-height: 90vh;
   background: url(images/team-above.jpg) center center;
   background-size: cover;
-  padding-top: 500px;
-  padding-bottom: 200px;
+  padding-top: 40vh;
+  padding-bottom: 10vh;
   margin-bottom: -100px;
 }
-
 .hero-content {
-  width: 900px;
+  max-width: 768px;
 }
-
 .hero h1 {
   font-size: 60px;
   color: white;
   background-color: rgba(46,74,87,0.8);
-  padding: 20px 30px 20px 30px;
+  padding-top: 30px;
+  padding-bottom: 20px;
   display: inline;
   line-height: 1.87;
+  position: relative;
+  left: 10px;
+  box-shadow: 10px 0 0 rgba(46,74,87,0.8), -10px 0 0 rgba(46,74,87,0.8);
 }
-
-.hero-button{
+.hero-button {
   color: white;
   display: block;
   width: 215px;
@@ -153,18 +205,31 @@ p.strong {
   padding: 20px 30px;
   margin-top: 20px;
 }
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 32px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+}
 
 /* Quote */
 .quote-section {
   color: #FFFFFF;
   background-color: #2E4A57;
   z-index: 1;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .quote-section .quote {
-  font-size: 30px;
+  font-size: 36px;
+  font-weight: 300;
   text-align: center;
 }
 .quote-section .quoted {
+  font-style: italic;
+  font-size: 36px;
+  font-weight: 200;
 }
 
 /* Tiles */
@@ -176,17 +241,15 @@ p.strong {
 }
 .tile-hoz h3 {
   margin-top: 5px;
-  font-size: 28px;
+  font-size: 30px;
 }
 .tile-hoz .tile-content {
 }
 .tile-content .strong.inline {
+  font-weight: 500;
 }
 .tile-hoz .fb-link {
-  margin-top: 20px;
-}
-.tile-hoz p {
-  font-size: 18px;
+  margin-top: 22px;
 }
 .tile-hoz .tile-text {
   margin-top: 20px;
@@ -204,6 +267,7 @@ p.strong {
 }
 .footer .footer-signup {
   text-align: right;
+  padding-top: 20px;
 }
 .footer input[type="text"],
 .footer input[type="submit"] {
@@ -221,9 +285,12 @@ p.strong {
 }
 .footer label,
 .footer p {
-  font-size: 18px;
+  font-size: 22px;
   margin-bottom: 4px;
+  font-weight: 400;
 }
-.footer p {
-  margin-top: 16px;
+.footer .crafted {
+  margin-top: 40px;
+  font-size: 26px;
 }
+
