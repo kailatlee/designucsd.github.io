@@ -26,10 +26,10 @@ body {
 }
 @font-face {
   font-family: "Calibre";
-  src: url('fonts/Calibre-Regular.otf');
+  src: url('fonts/calibre-regular.ttf');
 }
 html * {
-  font-family: "Calibre", "Roboto", Arial;
+  font-family: "Calibre", "Roboto", Arial, sans-serif;
   font-size: 20px;
 }
 h1 {
