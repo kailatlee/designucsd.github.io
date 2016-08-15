@@ -46,6 +46,9 @@ h3 {
 .navbar-inverse {
   background-color: transparent;
 }
+.active {
+  font-weight: bold !important;
+}
 a:hover,
 button:hover,
 input[type="submit"]:hover {
@@ -330,18 +333,23 @@ h1.highlighted {
   font-size: 3em;
   line-height: 1.5;
 }
-
 .about-goals {
   padding-bottom: 50px;
 }
-
 .hero-image {
   min-height: 90vh;
-  eidthl 100%;
   background: url(images/team-above.jpg) no-repeat center center;
   background-size: cover;
 }
-
+.hero-resources {
+  background: linear-gradient(rgba(46, 74, 87, 0.2), rgba(46, 74, 87, 0.2)), url(images/resources.jpg) no-repeat center center;
+  margin-bottom: -100px;
+  min-height: initial;
+  background-size: cover;
+}
+.hero-resources h1 {
+  background: none;
+}
 @media screen and (max-width: 768px) {
   .hero h1 {
     font-size: 42px;
@@ -549,4 +557,71 @@ input[type="text"] {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* Resources */
+.resources-content {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.resources-content img {
+  max-width: 100%;
+  height: auto;
+}
+.resources-content h3 {
+  font-size: 36px;
+  font-weight: 500;
+}
+.resources-content p {
+  font-size: 26px;
+}
+.resources-content .what-is-design {
+  margin-bottom: 40px;
+}
+.courses .courses-list {
+  margin-top: 60px;
+}
+.courses {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.courses ul {
+  list-style-type: none;
+}
+.courses li {
+  line-height: 2;
+}
+.courses .courses-majors ul {
+  padding-left: 0;
+}
+.course-list li {
+  position: relative;
+}
+.course-list li .course-name {
+  position: absolute;
+  left: 110px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.courses .course-list h4 {
+  margin-top: 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .courses .course-list h4 {
+    margin-top: 20px;
+  }
+  .courses .course-list li {
+    padding-left: 0;
+  }
+  .courses .course-list ul {
+    padding-left: 0;
+  }
+  .courses .course-list li .course-name {
+    padding-left: 40px;
+    position: static;
+    left: auto;
+    display: block;
+  }
 }
