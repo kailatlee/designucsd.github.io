@@ -35,7 +35,10 @@ h1 {
   font-size: 64px;
 }
 h2 {
-  font-size: 36px;
+  font-size: 40px;
+}
+h3 {
+  font-size: 30px;
 }
 .navbar-inverse {
   background-color: transparent;
@@ -124,7 +127,7 @@ p.small {
 }
 p.strong {
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 /* Navigation bar */
@@ -205,14 +208,19 @@ p.strong {
 
 /* Hero:*/
 .hero {
+  background-size: cover;
+  padding-top: 15vh;
+  padding-bottom: 10vh;
+  background: #2E4A57;
+}
+.hero-front {
+  padding-top: 40vh;
   min-height: 90vh;
   background: url(images/team-above.jpg) center center;
   background-size: cover;
-  padding-top: 40vh;
-  padding-bottom: 10vh;
   margin-bottom: -100px;
 }
-.hero-content {
+.hero-front .hero-content {
   max-width: 768px;
   padding-bottom: 100px;
 }
@@ -224,6 +232,11 @@ p.strong {
   padding-bottom: 20px;
   display: inline;
   line-height: 1.87;
+}
+.hero p {
+  font-size: 28px;
+}
+h1.highlighted {
   position: relative;
   left: 10px;
   box-shadow: 10px 0 0 rgba(46,74,87,0.8), -10px 0 0 rgba(46,74,87,0.8);
@@ -246,6 +259,9 @@ p.strong {
     padding-top: 20px;
     padding-bottom: 15px;
   }
+  .hero p {
+    font-size: 24px;
+  }
 }
 @media screen and (max-width: 540px) {
   .hero h1 {
@@ -255,6 +271,9 @@ p.strong {
   }
   .hero-button {
     padding: 10px 20px 5px 20px;
+    font-size: 20px;
+  }
+  .hero p {
     font-size: 20px;
   }
 }
@@ -297,7 +316,6 @@ p.strong {
 }
 .tile-hoz h3 {
   margin-top: 5px;
-  font-size: 30px;
 }
 .tile-hoz .tile-content {
 }
@@ -330,8 +348,8 @@ p.strong {
   text-align: right;
   padding-top: 20px;
 }
-.footer input[type="text"],
-.footer input[type="submit"] {
+input[type="text"],
+input[type="submit"] {
   outline: none;
   border: none;
   height: 40px;
@@ -339,12 +357,12 @@ p.strong {
   font-size: 20px;
   line-height: 30px;
 }
-.footer input[type="submit"] {
+input[type="submit"] {
   background-color: #ff535b;
   padding-left: 14px;
   padding-right: 14px;
 }
-.footer input[type="text"] {
+input[type="text"] {
   color: #2E4A57;
 }
 .footer label,
@@ -369,9 +387,9 @@ p.strong {
     text-align: center;
     padding-top: 10px;
   }
-  .footer label,
-  .footer input[type="text"],
-  .footer input[type="submit"] {
+  label,
+  input[type="text"],
+  input[type="submit"] {
     font-size: 18px;
   }
 }
