@@ -3,6 +3,8 @@
   *   Dark blue: #2E4A57;
   *   Black: #1A1A1A;
   *   Salmon: #FF5E5B;
+  *   Card Background: #F2F3F4;
+  *   Card Class: #7B7B7B;
   *
   * Breakpoints:
   *   Tablet/mobile: 768px;
@@ -51,7 +53,7 @@ input[type="submit"]:hover {
 input[type='submit'] {
  -webkit-appearance: none;
  -moz-appearance: none;
- appearance: none;  
+ appearance: none;
 }
 /** Utility classes for colors and slanted-ness
   *
@@ -65,6 +67,7 @@ input[type='submit'] {
   position: relative;
   margin-bottom: 100px;
   margin-top: 100px;
+  z-index: 1;
 }
 .slant-border:before,
 .slant-border:after {
@@ -87,6 +90,34 @@ input[type='submit'] {
   bottom: -50px;
   right: 0;
 }
+
+.slant-border-reverse {
+  position: relative;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  z-index: 1;
+}
+.slant-border-reverse:before,
+.slant-border-reverse:after {
+  content: "";
+  position: absolute;
+  background: #a1a8ad;
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+  z-index: -1;
+  width: 150%;
+  width: 150vw;
+  height: 100px;
+}
+.slant-border-reverse:before {
+  top: -50px;
+  left: -50px;
+}
+.slant-border-reverse:after {
+  bottom: -50px;
+  right: -50px;
+}
 /* Make angles more obvious on mobile */
 @media screen and (max-width: 768px) {
   .slant-border:before,
@@ -94,6 +125,13 @@ input[type='submit'] {
     -webkit-transform: rotate(-3deg);
     -ms-transform: rotate(-3deg);
     transform: rotate(-3deg);
+  }
+
+  .slant-border-reverse:before,
+  .slant-border-reverse:after {
+    -webkit-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
   }
 }
 /* Feel free to add more color classes here */
@@ -211,7 +249,7 @@ p.strong {
   background-size: cover;
   padding-top: 15vh;
   padding-bottom: 10vh;
-  background: #2E4A57;
+  /*background: #2E4A57;*/
 }
 .hero-front {
   padding-top: 40vh;
@@ -245,14 +283,46 @@ h1.highlighted {
   color: white;
   font-size: 24px;
   background: #FF5E5B;
+  margin-bottom: 50px;
   padding: 15px 30px 10px 30px;
   position: relative;
+  text-align: center;
   top: 60px;
 }
 .hero-button:hover {
   text-decoration: none;
   color: white;
 }
+
+.hero-about {
+  padding-top: 40vh;
+  min-height: 90vh;
+  margin-bottom: -100px;
+  text-align: center;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.hero-about .hero-content {
+  color: white;
+  padding-bottom: 100px;
+  text-align: center;
+}
+.hero-about h2{
+  font-size: 3em;
+  line-height: 1.5;
+}
+
+.about-goals {
+  padding-bottom: 50px;
+}
+
+.hero-image {
+  min-height: 90vh;
+  eidthl 100%;
+  background: url(images/team-above.jpg) no-repeat center center;
+  background-size: cover;
+}
+
 @media screen and (max-width: 768px) {
   .hero h1 {
     font-size: 42px;
@@ -306,6 +376,36 @@ h1.highlighted {
     padding-bottom: 20px;
   }
 }
+
+/* Meet the team */
+.team-member {
+  width: 100%;
+  background-color: #F2F3F4;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.team-member img {
+  width: 100%;
+}
+
+.team-member-text {
+  padding: 10px;
+}
+
+.team-member .light {
+  font-size: 14px;
+  font-weight: 100;
+  margin-bottom: 0;
+}
+
+.team-member .light-gray {
+  font-size: 14px;
+  font-weight: 100;
+  margin-bottom: 0;
+  color: #7B7B7B;
+}
+
 
 /* Tiles */
 .tile-hoz {
@@ -393,4 +493,3 @@ input[type="text"] {
     font-size: 18px;
   }
 }
-
