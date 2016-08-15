@@ -185,7 +185,10 @@ p.strong {
   background-color: #2E4A57 !important;
 }
 .navbar-fixed-top {
-  position: absolute !important;
+  position: relative;
+  top: auto;
+  margin-bottom: -50px;
+  height: 0;
 }
 @media screen and (max-width: 768px) {
   .navbar .navbar-brand {
