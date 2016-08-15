@@ -24,11 +24,11 @@ body {
   overflow-scrolling: touch;
 }
 @font-face {
-  font-family: Calibre;
+  font-family: "Calibre";
   src: url('fonts/Calibre-Regular.otf');
 }
 html * {
-  font-family: Calibre;
+  font-family: "Calibre", "Roboto", Arial;
   font-size: 20px;
 }
 h1 {
@@ -335,7 +335,7 @@ p.strong {
   outline: none;
   border: none;
   height: 40px;
-  padding: 5px;
+  padding: 8px 5px 2px 5px;
   font-size: 20px;
   line-height: 30px;
 }
@@ -343,6 +343,9 @@ p.strong {
   background-color: #ff535b;
   padding-left: 14px;
   padding-right: 14px;
+}
+.footer input[type="text"] {
+  color: #2E4A57;
 }
 .footer label,
 .footer p {
