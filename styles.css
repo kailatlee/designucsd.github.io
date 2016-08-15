@@ -321,7 +321,6 @@ h1.highlighted {
   min-height: 90vh;
   margin-bottom: -100px;
   text-align: center;
-  background-color: rgba(0,0,0,0.5);
 }
 
 .hero-about .hero-content {
@@ -336,17 +335,20 @@ h1.highlighted {
 .about-goals {
   padding-bottom: 50px;
 }
-.hero-image {
-  min-height: 90vh;
-  background: url(images/team-above.jpg) no-repeat center center;
+.hero-about {
+  background: linear-gradient(rgba(46, 74, 87, 0.2), rgba(46, 74, 87, 0.2)), url(images/team-above.jpg) no-repeat center center;
+  margin-bottom: -100px;
+  min-height: initial;
   background-size: cover;
 }
+
 .hero-resources {
   background: linear-gradient(rgba(46, 74, 87, 0.2), rgba(46, 74, 87, 0.2)), url(images/resources.jpg) no-repeat center center;
   margin-bottom: -100px;
   min-height: initial;
   background-size: cover;
 }
+
 .hero-resources h1, .hero-about h1 {
   background: none;
 }
