@@ -347,7 +347,7 @@ h1.highlighted {
   min-height: initial;
   background-size: cover;
 }
-.hero-resources h1 {
+.hero-resources h1, .hero-about h1 {
   background: none;
 }
 @media screen and (max-width: 768px) {
