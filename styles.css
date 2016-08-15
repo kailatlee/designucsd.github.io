@@ -441,6 +441,71 @@ h1.highlighted {
   color: #7B7B7B;
 }
 
+/* Team Hover States */
+#michael:hover {
+  content: url(team-members/michael-hover.jpg);
+}
+
+#elmer:hover {
+  content: url(team-members/elmer-hover.jpg);
+}
+
+#alex:hover {
+  content: url(team-members/alex-hover.jpg);
+}
+
+#alyssa:hover {
+  content: url(team-members/alyssa-hover.jpg);
+}
+
+#charu:hover {
+  content: url(team-members/charu-hover.jpg);
+}
+
+#chris:hover {
+  content: url(team-members/chris-hover.jpg);
+}
+
+#danielle:hover {
+  content: url(team-members/danielle-hover.jpg);
+}
+
+#ed:hover {
+  content: url(team-members/ed-hover.jpg);
+}
+
+#ellen:hover {
+  content: url(team-members/ellen-hover.jpg);
+}
+
+#jingchun:hover {
+  content: url(team-members/jingchun-hover.jpg);
+}
+
+#joel:hover {
+  content: url(team-members/joel-hover.jpg);
+}
+
+#joseph:hover {
+  content: url(team-members/joseph-hover.jpg);
+}
+
+#kaichin:hover {
+  content: url(team-members/kaichin-hover.jpg);
+}
+
+#lizzy:hover {
+  content: url(team-members/lizzy-hover.jpg);
+}
+
+#thomas:hover {
+  content: url(team-members/thomas-hover.jpg);
+}
+
+#vince:hover {
+  content: url(team-members/vince-hover.jpg);
+}
+
 
 /* Tiles */
 .tile-hoz {
