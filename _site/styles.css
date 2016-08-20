@@ -194,6 +194,8 @@ p.strong {
   padding-right: 0;
   margin-left: 20px;
   margin-right: 20px;
+  padding-bottom: 6px;
+  margin-bottom: 8px
 }
 .navbar .navbar-right a {
   text-transform: uppercase;
@@ -723,4 +725,9 @@ input[type="text"] {
     left: auto;
     display: block;
   }
+}
+
+/* Posts */
+.post-container {
+  padding-top: 200px;
 }
