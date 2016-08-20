@@ -1,8 +1,9 @@
 ---
+# Note that you CANNOT use colons here
 layout: post
-title: Well Well!
+title: Design @ Large by Bill Buxton
 hosted: Hosted by the Design Lab
-time: Wednesday 4pm
+time: 4pm Sept 18, 2016
 location: CSE 1202
 facebook: https://facebook.com
 image: placeholder.jpg

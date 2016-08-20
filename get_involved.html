@@ -26,22 +26,23 @@ layout: default
         {% assign img_url = site.baseurl | append: "images/events/" | append: post.image %}
 
         <div class="row tile tile-hoz">
-          <div class="col-xs-12 col-sm-4 col-lg-3">
+          <div class="col-xs-12 col-sm-5">
             <a href="{{ post.url }}">
-              <img src="{{ img_url }}" style="width: 100%" />
+              <div class="tile-image" style="background: url({{ img_url }}) no-repeat center center"></div>
             </a>
           </div>
-          <div class="col-xs-12 col-sm-8 col-lg-9 tile-content">
-          <h3>{{ post.title }}</h3>
-          <p class="small">{{ post.hosted }}</p>
-          <p class="strong inline">{{ post.time }}</p>
-          <p class="strong inline pad-left">{{ post.location }}</p>
-          <p class="tile-text">{{ post.excerpt }} (<a href="{{ post.url }}">More</a>)</p>
-          {% if post.facebook %}
-            <p class="fb-link small" href="{{ post.facebook }}"><a>Facebook Event</a></p>
-          {% endif %}
+          <div class="col-xs-12 col-sm-7 tile-content">
+            <h3>{{ post.title }}</h3>
+            <p class="strong inline italic uppercase">{{ post.time }}</p>
+            <p class="strong inline italic pad-left">{{ post.location }}</p>
+            <p class="tile-text">{{ post.excerpt }} (<a href="{{ post.url }}">More</a>)</p>
+            <p class="tile-text">{{ post.hosted }}</p>
+            {% if post.facebook %}
+            <p class="fb-link" href="{{ post.facebook }}"><a>Facebook Event</a></p>
+            {% endif %}
           </div>
         </div>
+
       {% endfor %}
 
     </div>
@@ -56,19 +57,19 @@ layout: default
   </div>
   <div class="row">
 
-    {% for post in site.posts limit:3 %}
+    {% for post in site.posts limit:4 %}
 
       {% assign img_url = site.baseurl | append: "images/events/" | append: post.image %}
 
-      <div class="col-sm-4 tile tile-vert">
+      <div class="col-sm-4 col-md-3 tile tile-vert">
         <a href="{{ post.url }}">
-          <img src="{{ img_url }}" style="width: 100%" />
+          <div class="tile-image" style="background: url({{ img_url }}) no-repeat center center"></div>
         </a>
         <h3>{{ post.title }}</h3>
-        <p class="small">{{ post.hosted }}</p>
-        <p class="strong inline">{{ post.time }}</p>
-        <p class="strong inline pad-left">{{ post.location }}</p>
+        <p class="strong">{{ post.time }}</p>
+        <p class="strong">{{ post.location }}</p>
         <p class="tile-text">{{ post.excerpt }} (<a href="{{ post.url }}">More</a>)</p>
+        <p class="tile-text">{{ post.hosted }}</p>
         {% if post.facebook %}
           <p class="fb-link small" href="{{ post.facebook }}"><a>Facebook Event</a></p>
         {% endif %}
