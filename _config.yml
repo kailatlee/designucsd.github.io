@@ -1,2 +1,7 @@
+# Site settings
+title: Design.UCSD
+baseurl: "/engai.github.io"
+url: "http://engai.github.io"
+
 kramdown:
   input: GFM
