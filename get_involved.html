@@ -24,15 +24,19 @@ layout: default
       {% for post in site.posts limit:3 %}
         <div class="row tile tile-hoz">
           <div class="col-xs-12 col-sm-4 col-lg-3">
-            <img src="http://lorempixel.com/400/400" style="width: 100%" />
+            <a href="{{ post.url }}">
+              <img src="http://lorempixel.com/400/400" style="width: 100%" />
+            </a>
           </div>
           <div class="col-xs-12 col-sm-8 col-lg-9 tile-content">
-            <h3>Design At Large: Bill Buxton</h3>
-            <p class="small">Hosted by the Design Lab</p>
-            <p class="strong inline">Wednesday 4pm</p>
-            <p class="strong inline pad-left">CSE 1202</p>
-            <p class="tile-text">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui... (<a href="#">More</a>)</p>
-            <p class="fb-link small" href="#"><a>Facebook Event</a></p>
+          <h3>{{ post.title }}</h3>
+          <p class="small">{{ post.hosted }}</p>
+          <p class="strong inline">{{ post.time }}</p>
+          <p class="strong inline pad-left">{{ post.location }}</p>
+          <p class="tile-text">{{ post.excerpt }} (<a href="{{ post.url }}">More</a>)</p>
+          {% if post.facebook %}
+            <p class="fb-link small" href="{{ post.facebook }}"><a>Facebook Event</a></p>
+          {% endif %}
           </div>
         </div>
       {% endfor %}
@@ -51,13 +55,17 @@ layout: default
 
     {% for post in site.posts limit:3 %}
       <div class="col-sm-4 tile tile-vert">
-        <img src="http://lorempixel.com/400/400" style="width: 100%" />
-        <h3>Design At Large: Bill Buxton</h3>
-        <p class="small">Hosted by the Design Lab</p>
-        <p class="strong inline">Wednesday 4pm</p>
-        <p class="strong inline pad-left">CSE 1202</p>
-        <p class="tile-text">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui... (<a href="#">More</a>)</p>
-        <p class="fb-link small" href="#"><a>Facebook Event</a></p>
+        <a href="{{ post.url }}">
+          <img src="http://lorempixel.com/400/400" style="width: 100%" />
+        </a>
+        <h3>{{ post.title }}</h3>
+        <p class="small">{{ post.hosted }}</p>
+        <p class="strong inline">{{ post.time }}</p>
+        <p class="strong inline pad-left">{{ post.location }}</p>
+        <p class="tile-text">{{ post.excerpt }} (<a href="{{ post.url }}">More</a>)</p>
+        {% if post.facebook %}
+          <p class="fb-link small" href="{{ post.facebook }}"><a>Facebook Event</a></p>
+        {% endif %}
       </div>
     {% endfor %}
 
