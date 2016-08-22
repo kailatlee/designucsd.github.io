@@ -30,7 +30,7 @@ layout: default
 
       {% for post in site.posts limit:3 %}
 
-        {% assign img_url = site.baseurl | append: "images/events/" | append: post.image %}
+        {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
 
         <div class="row tile tile-hoz">
           <div class="col-xs-12 col-sm-5">

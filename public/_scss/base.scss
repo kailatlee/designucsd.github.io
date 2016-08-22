@@ -28,7 +28,7 @@ body {
 }
 @font-face {
   font-family: "Calibre";
-  src: url('fonts/calibre-regular.ttf');
+  src: url('../fonts/calibre-regular.ttf');
 }
 html * {
   font-family: "Calibre", "Roboto", Arial, sans-serif;
@@ -215,7 +215,7 @@ p.strong {
   padding-left: 90px;
   padding-top: 16px;
   margin-left: 5px;
-  background: url(images/logo.png) no-repeat;
+  background: url(../images/logo.png) no-repeat;
   background-size: auto 100%;
   font-size: 32px;
   font-weight: 600;
@@ -282,7 +282,7 @@ p.strong {
 .hero-front {
   padding-top: 40vh;
   min-height: 90vh;
-  background: url(images/team-above.jpg) center center;
+  background: url(../images/team-above.jpg) center center;
   background-size: cover;
   margin-bottom: -100px;
 }
@@ -352,14 +352,14 @@ h1.highlighted {
   padding-bottom: 50px;
 }
 .hero-about {
-  background: linear-gradient(rgba(46, 74, 87, 0.2), rgba(46, 74, 87, 0.2)), url(images/team-above.jpg) no-repeat center center;
+  background: linear-gradient(rgba(46, 74, 87, 0.2), rgba(46, 74, 87, 0.2)), url(../images/team-above.jpg) no-repeat center center;
   margin-bottom: -100px;
   min-height: initial;
   background-size: cover;
 }
 
 .hero-resources {
-  background: linear-gradient(rgba(46, 74, 87, 0.2), rgba(46, 74, 87, 0.2)), url(images/resources.jpg) no-repeat center center;
+  background: linear-gradient(rgba(46, 74, 87, 0.2), rgba(46, 74, 87, 0.2)), url(../images/resources.jpg) no-repeat center center;
   margin-bottom: -100px;
   min-height: initial;
   background-size: cover;
@@ -461,67 +461,67 @@ h1.highlighted {
 
 /* Team Hover States */
 #michael:hover {
-  content: url(team-members/michael-hover.jpg);
+  content: url(../images/team/michael-hover.jpg);
 }
 
 #elmer:hover {
-  content: url(team-members/elmer-hover.jpg);
+  content: url(../images/team/elmer-hover.jpg);
 }
 
 #alex:hover {
-  content: url(team-members/alex-hover.jpg);
+  content: url(../images/team/alex-hover.jpg);
 }
 
 #alyssa:hover {
-  content: url(team-members/alyssa-hover.jpg);
+  content: url(../images/team/alyssa-hover.jpg);
 }
 
 #charu:hover {
-  content: url(team-members/charu-hover.jpg);
+  content: url(../images/team/charu-hover.jpg);
 }
 
 #chris:hover {
-  content: url(team-members/chris-hover.jpg);
+  content: url(../images/team/chris-hover.jpg);
 }
 
 #danielle:hover {
-  content: url(team-members/danielle-hover.jpg);
+  content: url(../images/team/danielle-hover.jpg);
 }
 
 #ed:hover {
-  content: url(team-members/ed-hover.jpg);
+  content: url(../images/team/ed-hover.jpg);
 }
 
 #ellen:hover {
-  content: url(team-members/ellen-hover.jpg);
+  content: url(../images/team/ellen-hover.jpg);
 }
 
 #jingchun:hover {
-  content: url(team-members/jingchun-hover.jpg);
+  content: url(../images/team/jingchun-hover.jpg);
 }
 
 #joel:hover {
-  content: url(team-members/joel-hover.jpg);
+  content: url(../images/team/joel-hover.jpg);
 }
 
 #joseph:hover {
-  content: url(team-members/joseph-hover.jpg);
+  content: url(../images/team/joseph-hover.jpg);
 }
 
 #kaichin:hover {
-  content: url(team-members/kaichin-hover.jpg);
+  content: url(../images/team/kaichin-hover.jpg);
 }
 
 #lizzy:hover {
-  content: url(team-members/lizzy-hover.jpg);
+  content: url(../images/team/lizzy-hover.jpg);
 }
 
 #thomas:hover {
-  content: url(team-members/thomas-hover.jpg);
+  content: url(../images/team/thomas-hover.jpg);
 }
 
 #vince:hover {
-  content: url(team-members/vince-hover.jpg);
+  content: url(../images/team/vince-hover.jpg);
 }
 
 

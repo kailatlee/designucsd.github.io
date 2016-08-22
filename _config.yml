@@ -4,3 +4,11 @@ url: "http://engai.github.io"
 
 kramdown:
   input: GFM
+
+sass:
+  style: compressed
+  sass_dir: public/_scss
+
+include:
+- public/css
+- public/js
