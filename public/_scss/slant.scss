@@ -1,0 +1,79 @@
+
+/** Utility classes for colors and slanted-ness
+  *
+  * Use class="slant-border bg-blue" or your desired color
+  * Easiest way to have image backgrounds slanted is to just put slanted
+  * divs above and below them.
+  *
+  * Source: http://stackoverflow.com/questions/27706921/responsive-slanted-border
+  */
+.slant-border {
+  position: relative;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  z-index: 1;
+}
+.slant-border:before,
+.slant-border:after {
+  content: "";
+  position: absolute;
+  background: #a1a8ad;
+  -webkit-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+  z-index: -1;
+  width: 150%;
+  width: 150vw;
+  height: 100px;
+}
+.slant-border:before {
+  top: -50px;
+  left: 0;
+}
+.slant-border:after {
+  bottom: -50px;
+  right: 0;
+}
+.slant-border-reverse {
+  position: relative;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  z-index: 1;
+}
+.slant-border-reverse:before,
+.slant-border-reverse:after {
+  content: "";
+  position: absolute;
+  background: #a1a8ad;
+  -webkit-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+  z-index: -1;
+  width: 150%;
+  width: 150vw;
+  height: 100px;
+}
+.slant-border-reverse:before {
+  top: -50px;
+  left: -50px;
+}
+.slant-border-reverse:after {
+  bottom: -50px;
+  right: -50px;
+}
+/* Make angles more obvious on mobile */
+@media screen and (max-width: $bp_tablet) {
+  .slant-border:before,
+  .slant-border:after {
+    -webkit-transform: rotate(-3deg);
+    -ms-transform: rotate(-3deg);
+    transform: rotate(-3deg);
+  }
+
+  .slant-border-reverse:before,
+  .slant-border-reverse:after {
+    -webkit-transform: rotate(3deg);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+}
