@@ -1,0 +1,88 @@
+/** Global variables, CSS resets */
+
+$dark_blue: #2E4A57;
+$black: #1A1A1A;
+$salmon: #FF5E5B;
+$card_bg: #F2F3F4;
+$card_cl: #7B7B7B;
+
+$bp_tablet: 768px;
+$bp_desktop: 1024px;
+
+/**
+  * Some CSS and Bootstrap resets and font
+  */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  color: $dark_blue;
+}
+@font-face {
+  font-family: "Calibre";
+  src: url('../fonts/calibre-regular.ttf');
+}
+html * {
+  font-family: "Calibre", "Roboto", Arial, sans-serif;
+  font-size: 20px;
+}
+h1 {
+  font-size: 64px;
+}
+h2 {
+  font-size: 40px;
+}
+h3 {
+  font-size: 30px;
+}
+.navbar-inverse {
+  background-color: transparent;
+}
+.active {
+  font-weight: bold !important;
+}
+.italic {
+  font-style: italic;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+a:hover,
+button:hover,
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+input[type='submit'] {
+ -webkit-appearance: none;
+ -moz-appearance: none;
+ appearance: none;
+}
+.no-after:after {
+  content: none !important;
+}
+.no-before:before {
+  content: none !important;
+}
+.text-center {
+  text-align: center;
+}
+
+/* Other general utility/text classes */
+.inline {
+  display: inline;
+}
+.pad-left {
+  padding-left: 2em;
+}
+p.small {
+  font-size: 16px;
+}
+p.strong {
+  font-size: 22px;
+  font-weight: 500;
+}
