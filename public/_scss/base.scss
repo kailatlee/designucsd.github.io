@@ -39,7 +39,7 @@
   line-height: 1.2;
 }
 .hero p {
-  font-size: 28px;
+  font-size: 26px;
 }
 h1.highlighted {
   position: relative;
@@ -262,6 +262,8 @@ h1.highlighted {
 .tile .tile-text a {
   margin-top: 20px;
   font-size: 24px;
+}
+.tile .tile-text {
   color: #555;
 }
 .tile .tile-image {

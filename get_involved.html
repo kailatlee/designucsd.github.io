@@ -4,9 +4,9 @@ layout: default
 
 <div class="container-fluid hero slant-border bg-blue hero-get_involved">
   <div class="container">
-    <div class="hero-content">
+    <div class="hero-content col-sm-12 col-md-10 col-xl-8">
       <h1>Let's Hangout</h1><br>
-      <p>Meetings are 8Pm TUesday in HSS 1346 unless otherwise noted . Keep in touch through email. This is very similar to the dynamic that powers an LCD screen, except that the sun is a small light bulb, the leaves are molecules of</p>
+      <p>If you’re developing your professional design skills, just learning what design is all about, or looking to hang around with hard-working peers, you’re in the right place.  Our events include skill-building workshops, social hangouts, talks presented by design industry guests, alumni panels, and community events. Stay in the loop about design events and opportunities both on and off campus by subscribing to our newsletter. </p>
       <form>
         <input type="text" name="email" id="email" placeholder="example@email.com" />
         <input type="submit" value="Subscribe" />
@@ -56,11 +56,11 @@ layout: default
   </div>
   <div class="row">
 
-    {% for post in site.posts limit:4 %}
+    {% for post in site.posts limit:3 %}
 
       {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
 
-      <div class="col-sm-4 col-md-3 tile tile-vert">
+      <div class="col-sm-6 col-md-4 tile tile-vert">
         <a href="{{ post.url }}">
           <div class="tile-image" style="background: url({{ img_url }}) no-repeat center center"></div>
         </a>
