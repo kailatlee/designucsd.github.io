@@ -90,6 +90,9 @@ h1.highlighted {
   padding-bottom: 100px;
   text-align: center;
 }
+.hero-content input {
+  max-width: 450px;
+}
 .hero-about h2{
   font-size: 3em;
   line-height: 1.5;
@@ -360,6 +363,11 @@ h1.highlighted {
 }
 .courses .courses-majors ul {
   padding-left: 0;
+
+  li a {
+    color: inherit;
+    text-decoration: underline;
+  }
 }
 .course-list li {
   position: relative;
