@@ -8,7 +8,9 @@ $ gem install jekyll
 $ bundle install
 $ bundle exec jekyll serve
 ```
-Now view the site at http://localhost:4000
+Now view the site at `http://localhost:4000`.
+
+*Note*: If you're running OSX El Capitan (like me), you may have to install the latest version of XCode by running `$ xcode-select --install` or from the Mac App Store.
 
 ## How to create new posts:
 First, make sure you're in the latest master branch (you can run `git checkout master` to switch to that branch and `git pull origin master` to pull the latest version from Github). Look in _posts. The best approach is probaby to copy paste one of the existing ones. Use the format `YEAR-MONTH-DAY-title.md` for the post title. Here are some examples: 
@@ -30,7 +32,7 @@ $ git push origin master
 ```
 
 ## License
-All directories other than `_posts`, `images` and `team-members` are MIT Licensed and are free for you to use, with or without mentioning us (though please do :).
+All directories other than `_posts` and `images` are MIT Licensed and are free for you to use, with or without mentioning us (though please do :).
 
 ## Issues
-There is one known issue with absolute pathing where the site might not work when deployed to GitHub Pages. This is due to the use of absolute paths and links in the site. You may need to play around with paths and links in order to get it to work with GitHub Pages
+If you happen to find any issues, feel free to list them or contact us at designucsd@gmail.com.
