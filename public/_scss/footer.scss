@@ -3,22 +3,58 @@
   margin-bottom: 0;
   overflow: hidden;
 }
-.footer-wrap .slant-border {
+.footer-wrap .slant-border-reverse {
   margin-bottom: 0;
   padding-bottom: 20px;
 }
 .footer .footer-signup {
-  text-align: right;
+  text-align: left;
   padding-top: 20px;
+  font-size: 14px;
+
+  h4, label {
+    // text-align: left;
+  }
+  h4 {
+    font-size: 36px;
+  }
+}
+.footer .navbar-brand {
+  background: url(../images/logo_white.png) no-repeat;
+  font-weight: 400;
+  font-size: 36px;
+  width: 100%;
+  margin-bottom: 20px;
+  padding-left: 110px;
+  display: block;
+  text-align: left;
+
+  @media screen and (max-width: $bp_tablet) {
+    width: auto;
+    margin: auto;
+  }
+}
+.footer .navbar-brand-wrap {
+}
+.footer .social-links {
+  font-size: 14px;
+  font-weight: 400;
+}
+.footer .contact-links {
+  margin-top: 30px;
+}
+.footer .underline a {
+  text-decoration: underline;
 }
 input[type="text"],
 input[type="submit"] {
   outline: none;
   border: none;
   height: 40px;
-  padding: 8px 5px 2px 5px;
+  padding: 8px 10px 2px 10px;
   font-size: 20px;
   line-height: 30px;
+  margin-top: 15px;
 }
 input[type="submit"] {
   background-color: #ff535b;
@@ -27,8 +63,12 @@ input[type="submit"] {
 }
 input[type="text"] {
   color: $dark_blue;
+  width: 75%;
+
+  @media screen and (max-width: $bp_desktop) {
+    width: 60%;
+  }
 }
-.footer label,
 .footer p {
   font-size: 22px;
   margin-bottom: 4px;
