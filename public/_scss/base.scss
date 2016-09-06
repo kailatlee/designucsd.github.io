@@ -30,22 +30,22 @@
 .hero-front {
   padding-top: 40vh;
   min-height: 90vh;
-  background: url(../images/team-above.jpg) center center;
+  background: url(../images/home.jpg) center center;
   background-size: cover;
   margin-bottom: -100px;
 }
 .hero-front .hero-content {
   max-width: $bp_tablet;
   padding-bottom: 100px;
+  text-align: center;
+  margin: 0 auto;
 }
 .hero h1 {
   font-size: 60px;
   color: white;
   background-color: rgba(46,74,87,0.8);
-  padding-top: 30px;
-  padding-bottom: 20px;
+  padding-top: 10px;
   display: inline;
-  line-height: 1.2;
 }
 .hero p {
   font-size: 26px;
@@ -53,8 +53,10 @@
 h1.highlighted {
   position: relative;
   left: 10px;
-  line-height: 1.87;
+  line-height: 1.3;
   box-shadow: 10px 0 0 rgba(46,74,87,0.8), -10px 0 0 rgba(46,74,87,0.8);
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .hero-button {
   color: white;
@@ -67,11 +69,10 @@ h1.highlighted {
   top: 60px;
 }
 .hero-contact a {
-  color: inherit;
+  color: white;
 }
 .hero-contact .email {
-  font-size: 28px;
-  text-decoration: underline;
+  text-decoration: none;
   font-style: italic;
   font-weight: 300;
 }
@@ -79,7 +80,7 @@ h1.highlighted {
   text-decoration: none;
   color: white;
 }
-.hero-about {
+.hero-about, .hero-events {
   padding-top: 40vh;
   min-height: 90vh;
   margin-bottom: -100px;
@@ -98,22 +99,35 @@ h1.highlighted {
   line-height: 1.5;
 }
 .about-goals {
-  padding-bottom: 50px;
+  padding-bottom: 80px;
+  padding-top: 80px;
 }
 .hero-about {
-  background: linear-gradient(rgba(46, 74, 87, 0.2), rgba(46, 74, 87, 0.2)), url(../images/team-above.jpg) no-repeat center center;
+  background: url(../images/about.jpg) no-repeat center center;
   margin-bottom: -100px;
   min-height: initial;
   background-size: cover;
 }
 .hero-resources {
-  background: linear-gradient(rgba(46, 74, 87, 0.2), rgba(46, 74, 87, 0.2)), url(../images/resources.jpg) no-repeat center center;
+  background: url(../images/courses.jpg) no-repeat center center;
   margin-bottom: -100px;
   min-height: initial;
   background-size: cover;
 }
+.hero-events {
+  background: url(../images/events.jpg) no-repeat center center;
+  min-height: initial;
+  background-size: cover;
+}
+.hero-contact {
+  background: url(../images/contact.jpg) no-repeat center center;
+  min-height: initial;
+  background-size: cover;
+}
 .hero-resources h1, .hero-about h1 {
-  background: none;
+  background: rgba(46, 74, 87, 0.8);
+  padding-left: 20px;
+  padding-right: 20px;
 }
 @media screen and (max-width: $bp_tablet) {
   .hero h1 {

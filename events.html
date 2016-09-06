@@ -2,11 +2,19 @@
 layout: default
 ---
 
+<div class="container-fluid hero hero-about hero-events">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Tuesdays, HSS 1346</h1>
+    </div>
+  </div>
+</div>
+
 <div class="container-fluid hero slant-border bg-blue hero-get_involved">
   <div class="container">
     <div class="hero-content col-sm-12 col-md-10 col-xl-8">
       <h1>Let's Hangout</h1><br>
-      <p>If you’re developing your professional design skills, starting to learn about design, or just looking to hang out, you’re in the right place. Our events include skill-building workshops, talks presented by design industry guests, community networking events, alumni panels, and social hangouts. Stay in the loop about design events and opportunities both on and off campus by subscribing to our newsletter.</p>
+      <p>If you’re developing your professional design skills, starting to learn about design, or just looking to hang out, you’re in the right place. <br/><br/>Our events include skill-building workshops, talks presented by design industry guests, community networking events, alumni panels, and social hangouts. <br/><br/>Stay in the loop about design events and opportunities both on and off campus by subscribing to our newsletter.</p>
       <form>
         <input type="text" name="email" id="email" placeholder="example@email.com" />
         <input type="submit" value="Subscribe" />
@@ -21,7 +29,7 @@ layout: default
       <h2>Upcoming Events</h2>
 
       {% for post in site.posts limit:3 %}
-        
+
         {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
 
         <div class="row tile tile-hoz">
