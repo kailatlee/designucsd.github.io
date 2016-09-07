@@ -77,3 +77,10 @@
     transform: rotate(3deg);
   }
 }
+
+/* Class for adding padding for slant sections */
+$slant_pad_height: 50px;
+.slant-pad {
+  padding-bottom: $slant_pad_height;
+  padding-top: $slant_pad_height;
+}

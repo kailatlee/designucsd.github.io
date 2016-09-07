@@ -3,12 +3,13 @@
 <head>
   <title>Design.UCSD</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="public/css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/public/css/styles.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="public/images/logo_square.png" />
+  <link rel="icon" type="image/png" href="/public/images/logo_square.png" />
 </head>
 
 <body>
@@ -22,7 +23,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="/index.html">
             design.ucsd
             <ul>
               <li>learn.</li>
@@ -33,10 +34,10 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="events.html">Events</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a id="nav-link-events" href="/events.html">Events</a></li>
+            <li><a id="nav-link-courses" href="/courses.html">Courses</a></li>
+            <li><a id="nav-link-about" href="/about.html">About</a></li>
+            <li><a id="nav-link-contact" href="/contact.html">Contact</a></li>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
@@ -56,13 +57,13 @@
   <div class="container">
     <div class="col-md-10">
       <h2>Our story.</h2><br>
-      <p>We’re a student-led group of designers focusing on UX design, research, and design thinking, but we’ve got an appreciation for all design fields and related disciplines. We’re your springboard into a design career. We support you by providing the resources, know-how, and the community to get you the design job you want -- you bring the drive to make it happen. (And don’t forget to bring a healthy appetite for our Taco Tuesdays hangouts.) </p>
+      <p>We’re a student-led group of designers focused on UX design, research, and design thinking, but we’ve got an appreciation for all design fields and related disciplines. We’re your springboard into a design career. We support you by providing the resources, know-how, and the community to get you the design job you want -- you bring the drive to make it happen. (And don’t forget to bring a healthy appetite for our Taco Tuesdays hangouts.) </p>
       <a class="hero-button" href="#" role="button">Get Involved</a>
     </div>
   </div>
 </div>
 
-<div class="container">
+<div class="container slant-pad">
   <div class="row">
     <div class="col-sm-12">
       <div class="text-center">
@@ -244,6 +245,11 @@
   </div>
 </div>
 
+<script>
+// Please forgive me
+document.getElementById("nav-link-about").style.borderBottom = "3px solid";
+document.getElementById("nav-link-about").style.marginBottom = "-3px";
+</script>
 
   <div class="footer-wrap">
     <footer class="container-fluid slant-border-reverse bg-blue no-after footer">
@@ -255,10 +261,10 @@
             </div>
 
             <ul class="white list inline uppercase social-links uppercase" >
-              <a href="events.html"><li>Events</li></a>
-              <a href="courses.html"><li>Courses</li></a>
-              <a href="about.html"><li>About</li></a>
-              <a href="contact.html"><li>Contact</li></a>
+              <a href="/events.html"><li>Events</li></a>
+              <a href="/courses.html"><li>Courses</li></a>
+              <a href="/about.html"><li>About</li></a>
+              <a href="/contact.html"><li>Contact</li></a>
             </ul>
 
             <div class="contact-links">
@@ -276,7 +282,7 @@
             </div>
           </div>
           <div class="col-sm-6 footer-signup">
-            <form>
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLScweTXK3jgpZ_stgRw1-SWt0pfxT8mQVrcM81Ill-vPyyOKQg/formResponse" method="POST">
               <h4>Sign up for our newsletter</h4>
               <label for="">Join hundreds of students and stay in the loop about design events, internships, jobs, and opportunities both on and off campus.</label><br>
               <input type="text" name="email" id="email" placeholder="example@email.com" />
