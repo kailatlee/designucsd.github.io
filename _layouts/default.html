@@ -5,12 +5,13 @@
 <head>
   <title>Design.UCSD</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="{{ site.base_url }}public/css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/public/css/styles.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="{{ site.base_url }}public/images/logo_square.png" />
+  <link rel="icon" type="image/png" href="/public/images/logo_square.png" />
 </head>
 
 <body>
@@ -24,7 +25,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="{{ site.base_url }}index.html">
+          <a class="navbar-brand" href="/index.html">
             design.ucsd
             <ul>
               <li>learn.</li>
@@ -35,10 +36,10 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="{{ site.base_url }}events.html">Events</a></li>
-            <li><a href="{{ site.base_url }}courses.html">Courses</a></li>
-            <li><a href="{{ site.base_url }}about.html">About</a></li>
-            <li><a href="{{ site.base_url }}contact.html">Contact</a></li>
+            <li><a id="nav-link-events" href="/events.html">Events</a></li>
+            <li><a id="nav-link-courses" href="/courses.html">Courses</a></li>
+            <li><a id="nav-link-about" href="/about.html">About</a></li>
+            <li><a id="nav-link-contact" href="/contact.html">Contact</a></li>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
@@ -57,10 +58,10 @@
             </div>
 
             <ul class="white list inline uppercase social-links uppercase" >
-              <a href="{{ site.base_url }}events.html"><li>Events</li></a>
-              <a href="{{ site.base_url }}courses.html"><li>Courses</li></a>
-              <a href="{{ site.base_url }}about.html"><li>About</li></a>
-              <a href="{{ site.base_url }}contact.html"><li>Contact</li></a>
+              <a href="/events.html"><li>Events</li></a>
+              <a href="/courses.html"><li>Courses</li></a>
+              <a href="/about.html"><li>About</li></a>
+              <a href="/contact.html"><li>Contact</li></a>
             </ul>
 
             <div class="contact-links">
@@ -78,9 +79,9 @@
             </div>
           </div>
           <div class="col-sm-6 footer-signup">
-            <form>
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLScweTXK3jgpZ_stgRw1-SWt0pfxT8mQVrcM81Ill-vPyyOKQg/formResponse" method="POST">
               <h4>Sign up for our newsletter</h4>
-              <label for="email">We’ll keep you up to date with design happenings on campus.</label><br>
+              <label for="">Join hundreds of students and stay in the loop about design events, internships, jobs, and opportunities both on and off campus.</label><br>
               <input type="text" name="email" id="email" placeholder="example@email.com" />
               <input type="submit" value="Subscribe" />
             </form>

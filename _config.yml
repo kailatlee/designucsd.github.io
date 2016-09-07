@@ -1,6 +1,6 @@
 # Site settings
 title: Design.UCSD
-url: "http://engai.github.io"
+url: "http://designucsd.github.io"
 
 kramdown:
   input: GFM

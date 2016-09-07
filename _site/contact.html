@@ -3,12 +3,13 @@
 <head>
   <title>Design.UCSD</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="public/css/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/public/css/styles.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="public/images/logo_square.png" />
+  <link rel="icon" type="image/png" href="/public/images/logo_square.png" />
 </head>
 
 <body>
@@ -22,7 +23,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="/index.html">
             design.ucsd
             <ul>
               <li>learn.</li>
@@ -33,10 +34,10 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="events.html">Events</a></li>
-            <li><a href="courses.html">Courses</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a id="nav-link-events" href="/events.html">Events</a></li>
+            <li><a id="nav-link-courses" href="/courses.html">Courses</a></li>
+            <li><a id="nav-link-about" href="/about.html">About</a></li>
+            <li><a id="nav-link-contact" href="/contact.html">Contact</a></li>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
@@ -55,10 +56,11 @@
   <div class="container">
     <div class="hero-content">
       <p>Feel free to reach out with any questions at:<br>
-      <a class="email" href="mailto:designucsd@gmail.com">designucsd@gmail.com</a><br>
-      Elsewhere on the internet:<br>
+      <a class="email" href="mailto:designucsd@gmail.com">designucsd@gmail.com</a><br><br>
+      Elsewhere on the internet:
       </p>
-      <a href="http://facebook.com/designucsd"><img class="fblogo" src="public/images/fb_logo.png"></a>
+      <a href="http://facebook.com/designucsd"><img class="social-logo" src="public/images/fb_logo.png"></a>
+      <a href="http://facebook.com/designucsd"><img class="social-logo" src="public/images/ig_logo.png"></a>
     </div>
   </div>
 </div>
@@ -67,20 +69,36 @@
   <div class="row">
     <div class="col-sm-12">
       <h2 class="text-center">Spaces</h2>
-      <div class="col-sm-6 contact-about">
-        <h4>H&SS 1346</h4>
-        <p> H&SS 1346 is our hangout and our event space. It’s a communal design space for students to collaborate on projects. The space is equipped with moveable furniture, prototyping materials, and small break-out rooms, making it a great space for collaborative design projects. If you’re a student in a design class lucky enough to have access to the room, it's your responsibility to help maintain it. </p>
+    </div>
+    <div class="col-sm-6 contact-about">
+      <h4>H&SS 1346</h4>
+      <p>H&SS 1346 is our hangout and our event space. It’s a communal design space for students to collaborate on projects. The space is equipped with moveable furniture, prototyping materials, and small break-out rooms, making it a great space for collaborative design projects. If you’re a student in a design class lucky enough to have access to the room, it's your responsibility to help maintain it. </p>
+    </div>
+    <div class="col-sm-6 contact-about">
+      <h4>Where is it?</h4>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/FLrMklZEYek" frameborder="0" allowfullscreen></iframe>
       </div>
-      <div class="col-sm-6 contact-about">
-        <h4>Where is it?</h4>
-        <div class="video-wrapper">
-          <iframe src="https://www.youtube.com/embed/tswZ7mc-x10" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-6 contact-about">
+      <h4>The Design Lab</h4>
+      <p>We sometimes host talks and workshops over at the Design Lab in Atkinskon Hall. Check out there website if you’re interested in learning more about the awesome work they do.</p>
+    </div>
+    <div class="col-sm-6 contact-about">
+      <h4>Where is it?</h4>
+      <img class="dlab-wrapper" src="public/images/dlab.jpg" >
     </div>
   </div>
 </div>
 
+<script>
+// Please forgive me
+document.getElementById("nav-link-contact").style.borderBottom = "3px solid";
+document.getElementById("nav-link-contact").style.marginBottom = "-3px";
+</script>
 
   <div class="footer-wrap">
     <footer class="container-fluid slant-border-reverse bg-blue no-after footer">
@@ -92,10 +110,10 @@
             </div>
 
             <ul class="white list inline uppercase social-links uppercase" >
-              <a href="events.html"><li>Events</li></a>
-              <a href="courses.html"><li>Courses</li></a>
-              <a href="about.html"><li>About</li></a>
-              <a href="contact.html"><li>Contact</li></a>
+              <a href="/events.html"><li>Events</li></a>
+              <a href="/courses.html"><li>Courses</li></a>
+              <a href="/about.html"><li>About</li></a>
+              <a href="/contact.html"><li>Contact</li></a>
             </ul>
 
             <div class="contact-links">
@@ -113,9 +131,9 @@
             </div>
           </div>
           <div class="col-sm-6 footer-signup">
-            <form>
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLScweTXK3jgpZ_stgRw1-SWt0pfxT8mQVrcM81Ill-vPyyOKQg/formResponse" method="POST">
               <h4>Sign up for our newsletter</h4>
-              <label for="email">We’ll keep you up to date with design happenings on campus.</label><br>
+              <label for="">Join hundreds of students and stay in the loop about design events, internships, jobs, and opportunities both on and off campus.</label><br>
               <input type="text" name="email" id="email" placeholder="example@email.com" />
               <input type="submit" value="Subscribe" />
             </form>
