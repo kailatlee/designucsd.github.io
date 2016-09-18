@@ -81,7 +81,15 @@
     </div>
   </div>
   <div class="row courses-list">
-    <div class="col-sm-4 col-md-3 courses-majors">
+    <div class="courses-majors">
+      <ul>
+        <li><a id="link-cogsci" href="#cogsci">Cognitive Science</a></li>
+        <li><a id="link-compsci" href="#compsci">Computer Science</a></li>
+        <li><a id="link-dsgn" href="#dsgn">Design</a></li>
+        <li><a id="link-other" href="#other">Other</a></li>
+      </ul>
+    </div>
+    <div class="col-sm-12 courses-majors-mobile">
       <ul>
         <li><a href="#cogsci">Cognitive Science</a></li>
         <li><a href="#compsci">Computer Science</a></li>
@@ -89,63 +97,71 @@
         <li><a href="#other">Other</a></li>
       </ul>
     </div>
+
+    <div class="col-sm-4 col-md-3"></div>
     <div class="col-sm-8 col-md-9">
       <div class="course-list" id="cogsci">
         <h4>Cognitive Science</h4>
         <ul>
-          <li>COGS 100 <span class="course-name">Cyborgs Now and in the Future</span></li>
-          <li>COGS 120 <span class="course-name"> Interaction Design</span></li>
-          <li>COGS 121 <span class="course-name">HCI Programming Studio</span></li>
-          <li>COGS 230<span class="course-name"> IxD Research</span></li>
-          <li>COGS 216<span class="course-name"> IxD Research</span></li>
-          <li>COGS 102C <span class="course-name">Cognitive Design Studio </span></li>
-          <li>COGS 187A <span class="course-name">Usability and Information Architecture</span></li>
-          <li>COGS 187B <span class="course-name">Practicum in Professional Web Design</span></li>
-          <li>COGS 160 <span class="course-name">Startup Studio</span></li>
-          <li>COGS 160 <span class="course-name">Social Computing</span></li>
-          <li>COGS 160 <span class="course-name">Advanced Interaction Design</span></li>
-          <li>COGS 220 <span class="course-name">Information Visualization</span></li>
-          <li>COGS 229<span class="course-name">Design@Large</span></li>
-          <li>COGS 260 <span class="course-name">Design of Educational Technology</span></li>
-          <li>COGS 260 <span class="course-name">Crowdsourcing</span></li>
+          <li>COGS 100 <a href=""><span class="course-name">Cyborgs Now and in the Future</span></a></li>
+          <li>COGS 102C <a href=""><span class="course-name">Cognitive Design Studio</span></a></li>
+          <li>COGS 120 <a href="http://d.ucsd.edu/class/intro-hci/2016/"><span class="course-name"> Interaction Design</span></a></li>
+          <li>COGS 121 <a href="http://cogs121.ucsd.edu/course-details/"><span class="course-name">HCI Programming Studio</span></a></li>
+          <li>COGS 230<a href=""><span class="course-name"> IxD Research</span></a></li>
+          <li>COGS 216<a href=""><span class="course-name"> IxD Research</span></a></li>
+          <li>COGS 102C <a href=""><span class="course-name">Cognitive Design Studio </span></a></li>
+          <li>COGS 187A <a href="http://beta.thiscourse.com/ucsd/cogs187a/lectures/4ed542ad4eee60be09000029"><span class="course-name">Usability and Information Architecture</span></a></li>
+          <li>COGS 187B <a href="http://beta.thiscourse.com/ucsd/cogs187b/lectures/4f74afe43dd21ee372000003"><span class="course-name">Practicum in Professional Web Design</span></a></li>
+          <li>COGS 160 <a href="http://startupstudio.ucsd.edu/"><span class="course-name">Startup Studio</span></a></li>
+          <li>COGS 160 <a href="http://socialcomputing.ucsd.edu/"><span class="course-name">Social Computing</span></a></li>
+          <li>COGS 160 <a href=""><span class="course-name">Advanced Interaction Design</span></a></li>
+          <li>COGS 220 <a href=""><span class="course-name">Information Visualization</span></a></li>
+          <li>COGS 229<a href="http://designlab.ucsd.edu/"><span class="course-name">Design@Large</span></a></li>
+          <li>COGS 230<a href="http://d.ucsd.edu/class/grad-IxD/2015/"><span class="course-name">IxD Research</span></a></li>
+          <li>COGS 260 <a href=""><span class="course-name">Design of Educational Technology</span></a></li>
+          <li>COGS 260 <a href=""><span class="course-name">Crowdsourcing</span></a></li>
         </ul>
       </div>
       <div class="course-list" id="compsci">
         <h4>Computer Science</h4>
         <ul>
-          <li>CSE 110<span class="course-name">Software Engineering</span></li>
-          <li>CSE 118<span class="course-name">Ubiquitous Computing</span></li>
-          <li>CSE 218<span class="course-name">Ubiquitous Computing</span></li>
-          <li>CSE170 <span class="course-name">Interaction Design</span></li>
-          <li>CSE190/291 <span class="course-name">HCI for Health (HCI4H)</span></li>
-          <li>CSE 190 <span class="course-name">Special topics in CSE</span></li>
+          <li>CSE 110<a href="http://ieng6.ucsd.edu/~cs110x/sp16/"><span class="course-name">Software Engineering</span></a></li>
+          <li>CSE 118<a href="http://ubicomp.ucsd.edu/cse118-218/"><span class="course-name">Ubiquitous Computing</span></a></li>
+          <li>CSE170 <a href="http://d.ucsd.edu/class/intro-hci/2016/"><span class="course-name">Interaction Design</span></a></li>
+          <li>CSE190/291 <a href=""><span class="course-name">HCI for Health (HCI4H)</span></a></li>
+          <li>CSE 190 <a href=""><span class="course-name">Special topics in CSE</span></a></li>
+          <li>CSE 190 <a href="http://hci4h.ucsd.edu"><span class="course-name">HCI for Health</span></a></li>
+          <li>CSE 216<a href="http://d.ucsd.edu/class/grad-IxD/2015/"><span class="course-name">IxD Research</span></a></li>
+          <li>CSE 218<a href="http://ubicomp.ucsd.edu/cse118-218/"><span class="course-name">Ubiquitous Computing</span></a></li>
+          <li>CSE 291 <a href="http://hci4h.ucsd.edu"><span class="course-name">HCI for Health</span></a></li>
         </ul>
       </div>
       <div class="course-list" id="dsgn">
         <h4>Design</h4>
         <ul>
-          <li>DSGN 1 <span class="course-name">Design of Everyday Things</span></li>
-          <li>DSGN 90 <span class="course-name">Special topics</span></li>
-          <li>DSGN 100 <span class="course-name">Design Communication</span></li>
+          <li>DSGN 1 <a href="https://docs.google.com/document/d/1Cz1Uht5ttR_RfIs_6e_wS8Zg7LTzm1A8Fx1ZGNrJ1uQ/edit"><span class="course-name">Design of Everyday Things</span></a></li>
+          <li>DSGN 90 <a href=""><span class="course-name">Special topics</span></a></li>
+          <li>DSGN 100 <a href=""><span class="course-name">Design Communication</span></a></li>
         </ul>
       </div>
 
       <div class="course-list" id="other">
         <h4>Other</h4>
         <ul>
-          <li>COMM 111D <span class="course-name">Critical Design Practice</span></li>
-          <li>VIS 142 <span class="course-name">Speculative Design</span></li>
-          <li>ENG 100A <span class="course-name">Team engineering</span></li>
-          <li>ENG 100B <span class="course-name">Engineering Leadership</span></li>
-          <li>MAE 156A <span class="course-name">Fund. Principles of Mechanical Design I</span></li>
-          <li>MAE 156B <span class="course-name">Mechanical Engineering Senior Projects</span></li>
-          <li>MAE 3 <span class="course-name"> Intro to Eng. Graphics and Design Lab</span></li>
+          <li>COMM 111D <a href="http://thiscourse.com/ucsd/comm111d/wi16/"><span class="course-name">Critical Design Practice</span></a></li>
+          <li>VIS 142 <a href=""><span class="course-name">Speculative Design</span></a></li>
+          <li>ENG 100A <a href="http://ucsd.edu/catalog/courses/SOE.html"><span class="course-name">Team engineering</span></a></li>
+          <li>ENG 100B <a href="http://ucsd.edu/catalog/courses/SOE.html"><span class="course-name">Engineering Leadership</span></a></li>
+          <li>MAE 156A <a href=""><span class="course-name">Fund. Principles of Mechanical Design I</span></a></li>
+          <li>MAE 156B <a href=""><span class="course-name">Mechanical Engineering Senior Projects</span></a></li>
+          <li>MAE 3 <a href=""><span class="course-name"> Intro to Eng. Graphics and Design Lab</span></a></li>
         </ul>
       </div>
     </div>
   </div>
 </div>
 
+<script src="public/js/courses.js"></script>
 <script>
 // Please forgive me
 document.getElementById("nav-link-courses").style.borderBottom = "3px solid";
@@ -195,6 +211,7 @@ document.getElementById("nav-link-courses").style.marginBottom = "-3px";
     </footer>
   </div> <!-- /container -->
 
+  <script src="public/js/hello.js"></script>
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -366,6 +366,7 @@ p a {
 }
 .courses .courses-list {
   margin-top: 60px;
+  position: relative;
 }
 .courses {
   padding-top: 40px;
@@ -377,7 +378,8 @@ p a {
 .courses li {
   line-height: 2;
 }
-.courses .courses-majors ul {
+.courses .courses-majors ul,
+.courses .courses-majors-mobile ul {
   padding-left: 0;
 
   li a {
@@ -385,13 +387,25 @@ p a {
     text-decoration: underline;
   }
 }
+.courses-majors {
+  position: absolute;
+  left: 15px;
+  top: 0;
+}
+.courses-majors.fixed {
+  position: fixed;
+}
 .course-list li {
   position: relative;
+}
+.course-list a {
+  color: inherit;
 }
 .course-list li .course-name {
   position: absolute;
   left: 110px;
   font-weight: bold;
+  display: inline;
   text-decoration: underline;
 }
 .courses .course-list h4 {
@@ -414,6 +428,14 @@ p a {
     position: static;
     left: auto;
     display: block;
+  }
+  .courses-majors {
+    display: none;
+  }
+}
+@media screen and (min-width: $bp_tablet) {
+  .courses-majors-mobile {
+    display: none;
   }
 }
 

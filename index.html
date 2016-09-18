@@ -16,8 +16,8 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-        <h2 class="quote">“Design is a powerful equalizing tool: all that is needed is observation, creativity, and hard work -- anyone can do it.”</h2>
-        <h4 class="quoted">&mdash; Don Norman</h4>
+        <h2 class="quote">“Design is a powerful equalizing tool: all that is needed is observation, creativity, and hard work &mdash; anyone can do it.”</h2>
+        <h4 class="quoted">- Don Norman</h4>
       </div>
     </div>
   </div>
@@ -43,7 +43,7 @@ layout: default
             <h3>{{ post.title }}</h3>
             <p class="strong inline italic uppercase">{{ post.time }}</p>
             <p class="strong inline italic pad-left">{{ post.location }}</p>
-            <p class="tile-text">{{ post.excerpt }} <a href="{{ post.url }}">More</a></p>
+            <p class="tile-text">{{ post.excerpt }} <!-- <a href="{{ post.url }}">More</a> --></p>
             <p class="tile-text">{{ post.hosted }}</p>
             {% if post.facebook %}
             <p class="fb-link" href="{{ post.facebook }}"><a>Facebook Event</a></p>
