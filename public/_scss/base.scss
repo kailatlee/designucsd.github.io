@@ -19,29 +19,27 @@
   display: inline-block;
 }
 
-
 /* Hero:*/
 .hero {
   background-size: cover;
   padding-top: 15vh;
-  padding-bottom: 10vh;
-  /*background: $dark_blue;*/
+  padding-bottom: 15vh;
+  background: $dark_blue;
 }
 .hero-front {
-  padding-top: 40vh;
-  min-height: 90vh;
   background: url(../images/home.jpg) center center;
   background-size: cover;
   margin-bottom: -100px;
 }
 .hero-front .hero-content {
   max-width: $bp_tablet;
-  padding-bottom: 100px;
+  padding-top: 125px;
+  padding-bottom: 75px;
   text-align: center;
   margin: 0 auto;
 }
 .hero h1 {
-  font-size: 60px;
+  font-size: 58px;
   color: white;
   background-color: rgba(46,74,87,0.8);
   padding-top: 10px;
@@ -110,7 +108,7 @@ h1.highlighted {
   padding-top: 80px;
 }
 .hero-about {
-  background: url(../images/about.jpg) no-repeat center center;
+  background: url(../images/about.jpg) no-repeat center 0;
   margin-bottom: -100px;
   min-height: initial;
   background-size: cover;
@@ -122,12 +120,12 @@ h1.highlighted {
   background-size: cover;
 }
 .hero-events {
-  background: url(../images/events.jpg) no-repeat center center;
+  background: url(../images/events.jpg) no-repeat center 0;
   min-height: initial;
   background-size: cover;
 }
 .hero-contact {
-  background: url(../images/contact.jpg) no-repeat center center;
+  background: url(../images/contact.jpg) no-repeat center 0;
   min-height: initial;
   background-size: cover;
 }
@@ -225,55 +223,11 @@ h1.highlighted {
   margin-bottom: 0;
   color: $card_cl;
 }
-
-/* Team Hover States */
-#michael:hover {
-  content: url(../images/team/michael-hover.jpg);
-}
-#elmer:hover {
-  content: url(../images/team/elmer-hover.jpg);
-}
-#alex:hover {
-  content: url(../images/team/alex-hover.jpg);
-}
-#alyssa:hover {
-  content: url(../images/team/alyssa-hover.jpg);
-}
-#charu:hover {
-  content: url(../images/team/charu-hover.jpg);
-}
-#chris:hover {
-  content: url(../images/team/chris-hover.jpg);
-}
-#danielle:hover {
-  content: url(../images/team/danielle-hover.jpg);
-}
-#ed:hover {
-  content: url(../images/team/ed-hover.jpg);
-}
-#ellen:hover {
-  content: url(../images/team/ellen-hover.jpg);
-}
-#jingchun:hover {
-  content: url(../images/team/jingchun-hover.jpg);
-}
-#joel:hover {
-  content: url(../images/team/joel-hover.jpg);
-}
-#joseph:hover {
-  content: url(../images/team/joseph-hover.jpg);
-}
-#kaichin:hover {
-  content: url(../images/team/kaichin-hover.jpg);
-}
-#lizzy:hover {
-  content: url(../images/team/lizzy-hover.jpg);
-}
-#thomas:hover {
-  content: url(../images/team/thomas-hover.jpg);
-}
-#vince:hover {
-  content: url(../images/team/vince-hover.jpg);
+.img-tile {
+  width: 100%;
+  padding-bottom: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /* Tiles */
@@ -350,9 +304,24 @@ h4.subheader {
   line-height: 1.4;
   color: $text_gray;
 }
+.contact-content {
+  text-align: center;
+  color: white;
+
+  a.email {
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    display: block;
+  }
+}
 
 /* Youtube video embed classes */
-.video-wrapper {
+.video-wrapper,
+.dlab-wrapper {
   position: relative;
   width: 100%;
   height: 0;
@@ -364,6 +333,16 @@ h4.subheader {
   left: 0;
   width: 100%;
   height: 100%;
+}
+.dlab-wrapper {
+  background: url(../images/dlab.jpg) no-repeat center center;
+}
+.video-header {
+  font-size: 22px !important;
+  line-height: 33px;
+}
+p a {
+  font-size: inherit;
 }
 
 /* Resources */
