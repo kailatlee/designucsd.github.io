@@ -366,6 +366,7 @@ p a {
 }
 .courses .courses-list {
   margin-top: 60px;
+  position: relative;
 }
 .courses {
   padding-top: 40px;
@@ -384,6 +385,13 @@ p a {
     color: inherit;
     text-decoration: underline;
   }
+}
+.courses-majors {
+  position: absolute;
+  left: 15px;
+}
+.courses-majors.fixed {
+  position: fixed;
 }
 .course-list li {
   position: relative;

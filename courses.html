@@ -33,7 +33,7 @@ layout: default
     </div>
   </div>
   <div class="row courses-list">
-    <div class="col-sm-4 col-md-3 courses-majors">
+    <div class="courses-majors">
       <ul>
         <li><a href="#cogsci">Cognitive Science</a></li>
         <li><a href="#compsci">Computer Science</a></li>
@@ -41,6 +41,8 @@ layout: default
         <li><a href="#other">Other</a></li>
       </ul>
     </div>
+
+    <div class="col-sm-4 col-md-3"></div>
     <div class="col-sm-8 col-md-9">
       <div class="course-list" id="cogsci">
         <h4>Cognitive Science</h4>
@@ -103,6 +105,7 @@ layout: default
   </div>
 </div>
 
+<script src="{{ site.base_url }}public/js/courses.js"></script>
 <script>
 // Please forgive me
 document.getElementById("nav-link-courses").style.borderBottom = "3px solid";
