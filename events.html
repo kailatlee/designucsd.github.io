@@ -46,7 +46,7 @@ layout: default
             <p class="tile-text">{{ post.excerpt }} <!-- <a href="{{ post.url }}">More</a> --></p>
             <p class="tile-text">{{ post.hosted }}</p>
             {% if post.facebook %}
-            <p class="fb-link" href="{{ post.facebook }}"><a>Facebook Event</a></p>
+            <p class="fb-link"><a href="{{ post.facebook }}">Facebook Event</a></p>
             {% endif %}
           </div>
         </div>
@@ -79,7 +79,7 @@ layout: default
         <p class="tile-text">{{ post.excerpt }}<!--  <a href="{{ post.url }}">More</a> --></p>
         <p class="tile-text">{{ post.hosted }}</p>
         {% if post.facebook %}
-          <p class="fb-link small" href="{{ post.facebook }}"><a>Facebook Event</a></p>
+          <p class="fb-link small"><a href="{{ post.facebook }}">Facebook Event</a></p>
         {% endif %}
       </div>
     {% endfor %}
