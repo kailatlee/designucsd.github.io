@@ -187,6 +187,8 @@ h1.highlighted {
   font-style: italic;
   font-size: 36px;
   font-weight: 200;
+  text-align: center;
+  width: 100%;
 }
 @media screen and (max-width: $bp_tablet) {
   .quote-section .quote,
@@ -295,7 +297,7 @@ h1.highlighted {
 .tile .tile-text,
 .tile .tile-text a {
   margin-top: 20px;
-  font-size: 22px;
+  font-size: 20px;
 }
 .tile .tile-text a:before {
   content: "...(";
@@ -304,6 +306,10 @@ h1.highlighted {
 .tile .tile-text a:after {
   content: ")";
   color: $text_gray;
+}
+h4.subheader {
+  font-size: 22px;
+  margin-bottom: 35px;
 }
 .tile .tile-text {
   color: $text_gray;
@@ -317,8 +323,7 @@ h1.highlighted {
   height: 200px;
 }
 .tile h3 {
-  font-size: 36px;
-  font-weight: bold;
+  font-size: 32px;
 }
 .tile-vert h3 {
   font-size: 28px;
