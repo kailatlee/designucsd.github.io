@@ -5,7 +5,7 @@
 }
 .footer-wrap .slant-border-reverse {
   margin-bottom: 0;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 .footer .footer-signup {
   text-align: left;
@@ -51,7 +51,6 @@
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-
   }
 
   &:nth-of-type(1) {
@@ -67,7 +66,8 @@
   text-decoration: underline;
 }
 input[type="text"],
-input[type="submit"] {
+input[type="submit"],
+input[type="email"] {
   outline: none;
   border: none;
   height: 40px;
@@ -77,11 +77,12 @@ input[type="submit"] {
   margin-top: 15px;
 }
 input[type="submit"] {
-  background-color: #ff535b;
+  background-color: $salmon;
   padding-left: 14px;
   padding-right: 14px;
 }
-input[type="text"] {
+input[type="text"],
+input[type="email"] {
   color: $dark_blue;
   width: 75%;
 
