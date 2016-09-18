@@ -43,7 +43,7 @@ layout: default
             <h3>{{ post.title }}</h3>
             <p class="strong inline italic uppercase">{{ post.time }}</p>
             <p class="strong inline italic pad-left">{{ post.location }}</p>
-            <p class="tile-text">{{ post.excerpt }} <a href="{{ post.url }}">More</a></p>
+            <p class="tile-text">{{ post.excerpt }} <!-- <a href="{{ post.url }}">More</a> --></p>
             <p class="tile-text">{{ post.hosted }}</p>
             {% if post.facebook %}
             <p class="fb-link" href="{{ post.facebook }}"><a>Facebook Event</a></p>
@@ -76,7 +76,7 @@ layout: default
         <h3>{{ post.title }}</h3>
         <!-- <p class="strong">{{ post.time }}</p>
         <p class="strong">{{ post.location }}</p> -->
-        <p class="tile-text">{{ post.excerpt }} <a href="{{ post.url }}">More</a></p>
+        <p class="tile-text">{{ post.excerpt }}<!--  <a href="{{ post.url }}">More</a> --></p>
         <p class="tile-text">{{ post.hosted }}</p>
         {% if post.facebook %}
           <p class="fb-link small" href="{{ post.facebook }}"><a>Facebook Event</a></p>
