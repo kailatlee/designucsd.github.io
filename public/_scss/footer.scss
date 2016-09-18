@@ -90,6 +90,16 @@ input[type="email"] {
     width: 60%;
   }
 }
+.email-form .form-success {
+  display: none;
+  color: white;
+  margin-top: 25px;
+
+  .form-again {
+    color: white;
+    text-decoration: underline
+  }
+}
 .footer p {
   font-size: 22px;
   margin-bottom: 4px;

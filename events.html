@@ -15,9 +15,12 @@ layout: default
     <div class="hero-content col-sm-12 col-md-10 col-xl-8">
       <h1>Let's Hangout</h1><br>
       <p>If you’re developing your professional design skills, starting to learn about design, or just looking to hang out, you’re in the right place. <br/><br/>Our events include skill-building workshops, talks presented by design industry guests, community networking events, alumni panels, and social hangouts. <br/><br/>Stay in the loop about design events and opportunities both on and off campus by subscribing to our newsletter.</p>
-      <form action="https://docs.google.com/forms/d/e/1FAIpQLScweTXK3jgpZ_stgRw1-SWt0pfxT8mQVrcM81Ill-vPyyOKQg/formResponse" method="POST">
-        <input required type="email" name="email" id="email" placeholder="example@email.com" />
+      <script type="text/javascript">var submitted=false;</script>
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"onload="if(submitted) {submitted=false}"></iframe>
+      <form class="email-form" action="https://docs.google.com/forms/d/e/1FAIpQLScweTXK3jgpZ_stgRw1-SWt0pfxT8mQVrcM81Ill-vPyyOKQg/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+        <input required type="email" name="entry.150099549" id="email" placeholder="example@email.com" />
         <input type="submit" value="Subscribe" />
+        <p class="form-success">Thanks for joining our mailing list!<br><a class="form-again">Submit another</a></p>
       </form>
     </div>
   </div>
@@ -31,25 +34,25 @@ layout: default
       
       {% for post in site.posts limit:3 %}
 
-        {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
+      {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
 
-        <div class="row tile tile-hoz">
-          <div class="col-xs-12 col-sm-5">
-            <a href="{{ post.url }}">
-              <div class="tile-image" style="background: url({{ img_url }}) no-repeat center center"></div>
-            </a>
-          </div>
-          <div class="col-xs-12 col-sm-7 tile-content">
-            <h3>{{ post.title }}</h3>
-            <p class="strong inline italic uppercase">{{ post.time }}</p>
-            <p class="strong inline italic pad-left">{{ post.location }}</p>
-            <p class="tile-text">{{ post.excerpt }} <!-- <a href="{{ post.url }}">More</a> --></p>
-            <p class="tile-text">{{ post.hosted }}</p>
-            {% if post.facebook %}
-            <p class="fb-link"><a href="{{ post.facebook }}">Facebook Event</a></p>
-            {% endif %}
-          </div>
+      <div class="row tile tile-hoz">
+        <div class="col-xs-12 col-sm-5">
+          <a href="{{ post.url }}">
+            <div class="tile-image" style="background: url({{ img_url }}) no-repeat center center"></div>
+          </a>
         </div>
+        <div class="col-xs-12 col-sm-7 tile-content">
+          <h3>{{ post.title }}</h3>
+          <p class="strong inline italic uppercase">{{ post.time }}</p>
+          <p class="strong inline italic pad-left">{{ post.location }}</p>
+          <p class="tile-text">{{ post.excerpt }} <!-- <a href="{{ post.url }}">More</a> --></p>
+          <p class="tile-text">{{ post.hosted }}</p>
+          {% if post.facebook %}
+          <p class="fb-link"><a href="{{ post.facebook }}">Facebook Event</a></p>
+          {% endif %}
+        </div>
+      </div>
 
       {% endfor %}
 
@@ -67,27 +70,27 @@ layout: default
 
     {% for post in site.posts limit:3 %}
 
-      {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
+    {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
 
-      <div class="col-sm-6 col-md-4 tile tile-vert">
-        <a href="{{ post.url }}">
-          <div class="tile-image" style="background: url({{ img_url }}) no-repeat center center"></div>
-        </a>
-        <h3>{{ post.title }}</h3>
+    <div class="col-sm-6 col-md-4 tile tile-vert">
+      <a href="{{ post.url }}">
+        <div class="tile-image" style="background: url({{ img_url }}) no-repeat center center"></div>
+      </a>
+      <h3>{{ post.title }}</h3>
         <!-- <p class="strong">{{ post.time }}</p>
         <p class="strong">{{ post.location }}</p> -->
         <p class="tile-text">{{ post.excerpt }}<!--  <a href="{{ post.url }}">More</a> --></p>
         <p class="tile-text">{{ post.hosted }}</p>
         {% if post.facebook %}
-          <p class="fb-link small"><a href="{{ post.facebook }}">Facebook Event</a></p>
+        <p class="fb-link small"><a href="{{ post.facebook }}">Facebook Event</a></p>
         {% endif %}
       </div>
-    {% endfor %}
+      {% endfor %}
 
+    </div>
   </div>
-</div>
 
-<script>
+  <script>
 // Please forgive me
 document.getElementById("nav-link-events").style.borderBottom = "3px solid";
 document.getElementById("nav-link-events").style.marginBottom = "-3px";
