@@ -35,4 +35,4 @@ $ git push origin master
 All directories other than `_posts` and `images` are MIT Licensed and are free for you to use, with or without mentioning us (though please do :).
 
 ## Issues
-If you happen to find any issues, feel free to list them or contact us at designucsd@gmail.com.
+If you happen to find any issues, feel free to list them or contact us at designatucsd@gmail.com.
