@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% assign curDate = site.time | date: '%s' %}
 
 <div class="container-fluid hero hero-about hero-events">
   <div class="container">
@@ -32,29 +33,36 @@ layout: default
       <h2>Upcoming Events</h2>
       <h4 class="subheader">Our doors are open to everyone</h4>
       
-      {% for post in site.posts limit:3 %}
+      {% assign upcomingCount = 0 %}
+      {% for post in site.posts %}
+        {% assign postStartDate = post.date | date: '%s' %}
 
-      {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
+        {% if upcomingCount < 3 %}
+          {% if postStartDate > curDate %}
+            {% assign upcomingCount = upcomingCount | plus: 1 %}
+            {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
 
-      <div class="row tile tile-hoz">
-        <div class="col-xs-12 col-sm-4">
-          <!-- <a href="{{ post.url }}"> -->
-          <a class="tile-link">
-            <div class="tile-image" style="background: url({{ img_url }}) no-repeat center center"></div>
-          </a>
-        </div>
-        <div class="col-xs-12 col-sm-8 tile-content">
-          <h3>{{ post.title }}</h3>
-          <p class="strong inline italic uppercase">{{ post.time }}</p>
-          <p class="strong inline italic pad-left">{{ post.location }}</p>
-          <p class="tile-text">{{ post.excerpt }} <!-- <a href="{{ post.url }}">More</a> --></p>
-          <p class="tile-text">{{ post.hosted }}</p>
-          {% if post.facebook %}
-          <p class="fb-link"><a href="{{ post.facebook }}">Facebook Event</a></p>
+            <div class="row tile tile-hoz">
+              <div class="col-xs-12 col-sm-4">
+                <!-- Disable links -->
+                <!-- <a class="tile-link" href="{{ post.url }}"> -->
+                <a class="tile-link">
+                  <div class="tile-image" style="background: url({{ img_url }}) no-repeat center center"></div>
+                </a>
+              </div>
+              <div class="col-xs-12 col-sm-8 tile-content">
+                <h3>{{ post.title }}</h3>
+                <p class="strong inline italic uppercase">{{ post.time }}</p>
+                <p class="strong inline italic pad-left">{{ post.location }}</p>
+                <p class="tile-text">{{ post.excerpt }} <!-- <a href="{{ post.url }}">More</a> --></p>
+                <p class="tile-text">{{ post.hosted }}</p>
+                {% if post.facebook %}
+                <p class="fb-link"><a href="{{ post.facebook }}">Facebook Event</a></p>
+                {% endif %}
+              </div>
+            </div>
+            {% endif %}
           {% endif %}
-        </div>
-      </div>
-
       {% endfor %}
 
     </div>
@@ -68,30 +76,36 @@ layout: default
     </div>
   </div>
   <div class="row">
+    
+    {% assign oldCount = 0 %}
+    {% for post in site.posts %}
+      {% assign postStartDate = post.date | date: '%s' %}
+      
+        {% if oldCount < 3 %}
+          {% if postStartDate < curDate %}
+            {% assign oldCount = oldCount | plus: 1 %}
+            {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
 
-    {% for post in site.posts limit:3 %}
-
-    {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
-
-    <div class="col-sm-6 col-md-4 tile tile-vert">
-      <!-- <a href="{{ post.url }}"> -->
-        <a class="tile-link">
-          <div class="tile-image" style="background: url({{ img_url }}) no-repeat center center"></div>
-        </a>
-      <!-- </a> -->
-      <h3>{{ post.title }}</h3>
-        <!-- <p class="strong">{{ post.time }}</p>
-        <p class="strong">{{ post.location }}</p> -->
-        <p class="tile-text">{{ post.excerpt }}<!--  <a href="{{ post.url }}">More</a> --></p>
-        <p class="tile-text">{{ post.hosted }}</p>
-        {% if post.facebook %}
-        <p class="fb-link small"><a href="{{ post.facebook }}">Facebook Event</a></p>
+            <div class="col-sm-6 col-md-4 tile tile-vert">
+              <!-- <a href="{{ post.url }}"> -->
+              <a class="tile-link">
+                <div class="tile-image" style="background: url({{ img_url }}) no-repeat center center"></div>
+              </a>
+              <!-- </a> -->
+              <h3>{{ post.title }}</h3>
+              <!-- <p class="strong">{{ post.time }}</p>
+              <p class="strong">{{ post.location }}</p> -->
+              <p class="tile-text">{{ post.excerpt }}<!--  <a href="{{ post.url }}">More</a> --></p>
+              <p class="tile-text">{{ post.hosted }}</p>
+              {% if post.facebook %}
+              <p class="fb-link small"><a href="{{ post.facebook }}">Facebook Event</a></p>
+            {% endif %}
+          </div>
         {% endif %}
-      </div>
-      {% endfor %}
-
-    </div>
+      {% endif %}
+    {% endfor %}
   </div>
+</div>
 
   <script>
 // Please forgive me
