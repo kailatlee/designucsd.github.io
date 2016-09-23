@@ -107,7 +107,20 @@ xmlns:fb="http://ogp.me/ns/fb#">
     <footer class="container-fluid slant-border-reverse bg-blue no-after footer">
       <div class="container">
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-sm-6 col-sm-push-6 footer-signup">
+            <script type="text/javascript">var submitted=false;</script>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"onload="if(submitted) {submitted=false}"></iframe>
+            <form class="email-form" action="https://docs.google.com/forms/d/e/1FAIpQLScweTXK3jgpZ_stgRw1-SWt0pfxT8mQVrcM81Ill-vPyyOKQg/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+              <h4>Sign up for our newsletter</h4>
+              <label for="">Join hundreds of students and stay in the loop about design events, internships, jobs, and opportunities both on and off campus.</label><br>
+              <input required type="email" name="entry.150099549" id="email" placeholder="example@email.com" />
+              <input type="submit" value="Subscribe" />
+              <p class="form-success">Thanks for joining our mailing list!<br><a class="form-again">Submit another</a></p>
+            </form>
+            <p class="footer-github">View this site on <a href="http://github.com/designucsd/designucsd.github.io" class="footer-link">GitHub</a></p>
+          </div>
+          
+          <div class="col-sm-6 col-sm-pull-6">
             <div class="navbar-brand-wrap">
               <div class="navbar-brand">design.ucsd</div>
             </div>
@@ -133,33 +146,22 @@ xmlns:fb="http://ogp.me/ns/fb#">
               </div>
             </div>
           </div>
-          <div class="col-sm-6 footer-signup">
-            <script type="text/javascript">var submitted=false;</script>
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"onload="if(submitted) {submitted=false}"></iframe>
-            <form class="email-form" action="https://docs.google.com/forms/d/e/1FAIpQLScweTXK3jgpZ_stgRw1-SWt0pfxT8mQVrcM81Ill-vPyyOKQg/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
-            <h4>Sign up for our newsletter</h4>
-            <label for="">Join hundreds of students and stay in the loop about design events, internships, jobs, and opportunities both on and off campus.</label><br>
-            <input required type="email" name="entry.150099549" id="email" placeholder="example@email.com" />
-            <input type="submit" value="Subscribe" />
-            <p class="form-success">Thanks for joining our mailing list!<br><a class="form-again">Submit another</a></p>
-          </form>
         </div>
       </div>
-    </div>
-  </footer>
-</div> <!-- /container -->
+    </footer>
+  </div> <!-- /container -->
 
-<script src="public/js/form.js"></script>
-<script src="public/js/hello.js"></script>
+  <script src="public/js/form.js"></script>
+  <script src="public/js/hello.js"></script>
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-84330975-1', 'auto');
-  ga('send', 'pageview');
-</script>
+    ga('create', 'UA-84330975-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </body>
 </html>

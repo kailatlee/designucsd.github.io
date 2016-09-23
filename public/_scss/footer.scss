@@ -9,7 +9,6 @@
 }
 .footer .footer-signup {
   text-align: left;
-  padding-top: 20px;
   font-size: 14px;
 
   h4, label {
@@ -109,6 +108,21 @@ input[type="email"] {
 .footer .crafted {
   margin-top: 40px;
   font-size: 26px;
+}
+.footer-github {
+  margin-top: 20px;
+
+  @media screen and (max-width: $bp_tablet) {
+    margin-top: 36px;
+    margin-bottom: 26px !important;
+  }
+}
+.footer-link {
+  color: white;
+  text-decoration: underline;
+}
+.footer a:hover {
+  color: $salmon;
 }
 @media screen and (max-width: $bp_tablet) {
   .footer {
