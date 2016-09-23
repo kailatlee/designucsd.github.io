@@ -42,10 +42,10 @@ xmlns:fb="http://ogp.me/ns/fb#">
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a id="nav-link-events" href="/events.html">Events</a></li>
-            <li><a id="nav-link-courses" href="/courses.html">Courses</a></li>
-            <li><a id="nav-link-about" href="/about.html">About</a></li>
-            <li><a id="nav-link-contact" href="/contact.html">Contact</a></li>
+            <li><a id="nav-link-events" {% if page.url contains "events" %} class="nav-active" {% endif %} href="/events.html">Events</a></li>
+            <li><a id="nav-link-courses" {% if page.url contains "courses" %} class="nav-active" {% endif %} href="/courses.html">Courses</a></li>
+            <li><a id="nav-link-about" {% if page.url contains "about" %} class="nav-active" {% endif %} href="/about.html">About</a></li>
+            <li><a id="nav-link-contact" {% if page.url contains "contact" %} class="nav-active" {% endif %} href="/contact.html">Contact</a></li>
           </ul>
         </div><!--/.navbar-collapse -->
       </div>
