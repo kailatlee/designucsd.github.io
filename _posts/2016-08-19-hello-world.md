@@ -1,14 +1,11 @@
 ---
 layout: post
-title: Design @ Large by Bill Buxton
-hosted: Hosted by the Design Lab
-time: Wednesday 4pm
-location: CSE 1202
-facebook: https://facebook.com
-image: placeholder.jpg
+title: Personal Branding
+hosted: Hosted by Design.UCSD
+time: Tuesday, April 5 @ 8pm
+location: HSS 1346
+image: personalbranding.jpg
 
-excerpt: Stop by for a talk on design at large. Hosted by Design Lab. Stop by for a talk on design at large. Hosted by Design Lab. Hosted by Design Lab. Stop by for a talk on design at large
+excerpt: Get ready to roll up your sleeves as Alyssa and Dani help you get started on sketching your spirit animal... I mean, personal logo!
 ---
-Hello World!
-
-Stop by for a talk on design at large. Hosted by Design Lab. Stop by for a talk on design at large. Hosted by Design Lab. Hosted by Design Lab. Stop by for a talk on design at large
+Get ready to roll up your sleeves as Alyssa and Dani help you get started on sketching your spirit animal... I mean, personal logo!
