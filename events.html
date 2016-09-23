@@ -37,12 +37,13 @@ layout: default
       {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
 
       <div class="row tile tile-hoz">
-        <div class="col-xs-12 col-sm-5">
-          <a href="{{ post.url }}">
+        <div class="col-xs-12 col-sm-4">
+          <!-- <a href="{{ post.url }}"> -->
+          <a class="tile-link">
             <div class="tile-image" style="background: url({{ img_url }}) no-repeat center center"></div>
           </a>
         </div>
-        <div class="col-xs-12 col-sm-7 tile-content">
+        <div class="col-xs-12 col-sm-8 tile-content">
           <h3>{{ post.title }}</h3>
           <p class="strong inline italic uppercase">{{ post.time }}</p>
           <p class="strong inline italic pad-left">{{ post.location }}</p>
@@ -73,9 +74,11 @@ layout: default
     {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
 
     <div class="col-sm-6 col-md-4 tile tile-vert">
-      <a href="{{ post.url }}">
-        <div class="tile-image" style="background: url({{ img_url }}) no-repeat center center"></div>
-      </a>
+      <!-- <a href="{{ post.url }}"> -->
+        <a class="tile-link">
+          <div class="tile-image" style="background: url({{ img_url }}) no-repeat center center"></div>
+        </a>
+      <!-- </a> -->
       <h3>{{ post.title }}</h3>
         <!-- <p class="strong">{{ post.time }}</p>
         <p class="strong">{{ post.location }}</p> -->
