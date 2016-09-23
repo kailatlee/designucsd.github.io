@@ -65,8 +65,10 @@
   height: 0;
 }
 .navbar .nav-active {
-  border-bottom: 3px solid;
-  margin-bottom: -3px;
+  @media screen and (min-width: $bp_tablet) {
+    border-bottom: 3px solid;
+    margin-bottom: -3px;
+  }
 }
 @media screen and (max-width: 768px) {
   .navbar .navbar-brand {
