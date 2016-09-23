@@ -33,7 +33,8 @@ layout: default
       <h4 class="subheader">Our doors are open to everyone</h4>
       
       {% for post in site.posts limit:3 %}
-
+{{ post.old }}
+{% if post.old == "false" %}
       {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
 
       <div class="row tile tile-hoz">
@@ -54,6 +55,7 @@ layout: default
           {% endif %}
         </div>
       </div>
+      {% endif %}
 
       {% endfor %}
 
@@ -70,6 +72,7 @@ layout: default
   <div class="row">
 
     {% for post in site.posts limit:3 %}
+{% if post.old == "true" %}
 
     {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
 
@@ -88,6 +91,7 @@ layout: default
         <p class="fb-link small"><a href="{{ post.facebook }}">Facebook Event</a></p>
         {% endif %}
       </div>
+      {% endif %}
       {% endfor %}
 
     </div>

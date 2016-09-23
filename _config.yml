@@ -12,3 +12,5 @@ sass:
 include:
 - public/css
 - public/js
+
+future: true
