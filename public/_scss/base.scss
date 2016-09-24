@@ -242,7 +242,10 @@ h1.highlighted {
   margin-bottom: 20px;
   padding-bottom: 20px;
   display: table;
-  width: 100%;
+
+  @media screen and (min-width: $bp_tablet) {
+    width: 100%;
+  }
 }
 .tile-hoz h3 {
   margin-top: 5px;
