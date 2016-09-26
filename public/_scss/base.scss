@@ -206,6 +206,40 @@ h1.highlighted {
 }
 
 /* Meet the team */
+#teamselect {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.team-slant {
+  padding-bottom: 80px;
+}
+.btn-teamselect {
+  text-align: center;
+  background-color: white;
+  border-width: 2px;
+  border-radius: 0;
+  padding-bottom: 8px;
+  color: $salmon;
+  border-color: $salmon;
+  box-shadow: none !important;
+
+  &.active {
+    border-color: $salmon;
+    background-color: $salmon;
+    color: white;
+  }
+  &:hover,
+  &.active:hover {
+    border-color: lighten($salmon, 5%);
+    background-color: lighten($salmon, 5%);
+    color: white;   
+  }
+  &:active {
+    border-color: $salmon !important;
+    background-color: $salmon !important;
+    color: white;
+  }
+}
 .team-member {
   width: 100%;
   background-color: $card_bg;
