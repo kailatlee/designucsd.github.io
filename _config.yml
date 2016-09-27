@@ -13,4 +13,7 @@ include:
 - public/css
 - public/js
 
+# Show future events/posts
 future: true
+
+timezone: America/Los_Angeles
