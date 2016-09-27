@@ -33,8 +33,7 @@ $ git push origin master
 
 ## License
 All directories other than `_posts` and `images` are MIT Licensed and are free for you to use, with or without mentioning us (though please do :).
-
-## Contributions
+<!-- ## Contributions
 Danielle Tobey: PM
 
 Michael Hohl: Designer
@@ -44,6 +43,6 @@ Elmer Barrera: Designer
 Ed Ngai: Developer [Github](http://github.com/engai)
 
 Vincent Liaw: Developer [Github](http://github.com/liawesomesaucer)
-
+ -->
 ## Issues
 If you happen to find any issues, feel free to list them or contact us at designatucsd@gmail.com.
