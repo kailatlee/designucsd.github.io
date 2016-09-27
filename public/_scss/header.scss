@@ -46,6 +46,7 @@
   background-size: auto 100%;
   font-size: 32px;
   font-weight: 600;
+  letter-spacing: 0.5px;
   height: 40px;
 
   @media screen and (max-width: $bp_tablet) {
@@ -73,6 +74,7 @@
 }
 .navbar-fixed-top {
   position: relative;
+  letter-spacing: 0.5px;
   top: auto;
   margin-bottom: -50px;
   height: 0;

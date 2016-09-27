@@ -27,6 +27,7 @@
   padding-left: 110px;
   display: block;
   text-align: left;
+  letter-spacing: 0.5px;
 
   @media screen and (max-width: $bp_tablet) {
     width: auto;
@@ -39,7 +40,8 @@
 .footer .social-links {
   font-size: 14px;
   font-weight: 400;
-
+  letter-spacing: 0.5px;
+  
   @media screen and (max-width: $bp_tablet) {
     padding-top: 30px;
   }
