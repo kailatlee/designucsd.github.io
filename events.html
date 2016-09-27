@@ -34,7 +34,7 @@ layout: default
       <h4 class="subheader">Our doors are open to everyone</h4>
       
       {% assign upcomingCount = 0 %}
-      {% for post in site.posts %}
+      {% for post in site.posts reversed %}
         {% assign postStartDate = post.date | date: '%s' %}
 
         {% if upcomingCount < 3 %}
