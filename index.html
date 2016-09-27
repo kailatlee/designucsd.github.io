@@ -37,12 +37,7 @@ layout: default
         {% if upcomingCount < 3 %}
           {% if postStartDate > curDate %}
             {% assign upcomingCount = upcomingCount | plus: 1 %}
-            
-            {% if post.image == true %}
-              {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
-            {% else %}
-              {% assign img_url = "public/images/events/placeholder.png" %}
-            {% endif %}
+            {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
 
             <div class="row tile tile-hoz">
               <div class="col-xs-12 col-sm-4">
