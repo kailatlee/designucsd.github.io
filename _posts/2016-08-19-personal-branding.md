@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Personal Branding
-hosted: Hosted by DesignatUCSD
+hosted: Hosted by Design at UCSD
 time: Tuesday, April 5 @ 8pm
 location: H&SS 1346
 image: branding_gbm.png

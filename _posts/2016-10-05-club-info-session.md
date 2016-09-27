@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Club Info Session & Kickoff!
-hosted: Hosted by DesignatUCSD
+hosted: Hosted by Design at UCSD
 time: Wednesday, October 5 @ 7PM
 location: H&SS 1346
 image: GBM1.png

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Career Pathways&#58; Flavors of Design in Tech
-hosted: Hosted by DesignatUCSD
+hosted: Hosted by Design at UCSD
 time: Wednesday, October 12 @ 7PM
 location: H&SS 1346
 image: GBM2.png

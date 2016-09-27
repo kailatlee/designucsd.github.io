@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Viz x Design
-hosted: Hosted by DesignatUCSD
+hosted: Hosted by Design at UCSD
 time: Tuesday, April 19 @ 8pm
 location: H&SS 1346
 image: dataviz_gbm.png
