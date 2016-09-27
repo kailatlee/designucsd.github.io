@@ -319,7 +319,7 @@ h4.subheader {
 }
 .tile .tile-image {
   width: 100%;
-  background-size: contain !important;
+  background-size: cover !important;
   height: 280px;
 }
 .tile-vert .tile-image {
@@ -491,4 +491,19 @@ p a {
 /* Posts */
 .post-container {
   padding-top: 200px;
+}
+
+.hero-mission {
+  padding-bottom: 10vh;
+}
+.mission {
+  height: auto;
+}
+.navbar .logo-at {
+  color: lighten($dark_blue, 15%);
+  font-size: inherit;
+}
+.footer .logo-at {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: inherit;
 }
