@@ -35,7 +35,7 @@ layout: default
         {% assign postStartDate = post.date | date: '%s' %}
 
         {% if upcomingCount < 3 %}
-          {% if postStartDate > curDate %}
+          {% if postStartDate >= curDate %}
             {% assign upcomingCount = upcomingCount | plus: 1 %}
             {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
 
