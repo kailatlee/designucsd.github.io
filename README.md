@@ -1,4 +1,4 @@
-# Design.UCSD website
+# Design at UCSD website
 
 ## How to set up:
 First, clone this repo and `cd` into the directory.
