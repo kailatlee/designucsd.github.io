@@ -24,6 +24,8 @@ $ bundle exec jekyll serve
 ```
 Head over to `http://localhost:4000` to see the live version of your site. Make sure to check for any issues while jekyll is building and to verify that your new content has been added.
 
+Note: you cannot use colons between the `---`. Use `&#58;` instead.
+
 Then use git to deploy it to live (branch `master`). Here are the list of the commands for reference:
 ```
 $ git add .
@@ -33,8 +35,8 @@ $ git push origin master
 
 ## License
 All directories other than `_posts` and `images` are MIT Licensed and are free for you to use, with or without mentioning us (though please do :).
-<!-- ## Contributions
-Danielle Tobey: PM
+## Contributions
+Danielle Tobey: PM [LinkedIn](http://linkedin.com/in/danielletobey)
 
 Michael Hohl: Designer
 
@@ -43,6 +45,6 @@ Elmer Barrera: Designer
 Ed Ngai: Developer [Github](http://github.com/engai)
 
 Vincent Liaw: Developer [Github](http://github.com/liawesomesaucer)
- -->
+
 ## Issues
 If you happen to find any issues, feel free to list them or contact us at designatucsd@gmail.com.
