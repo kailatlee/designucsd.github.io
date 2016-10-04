@@ -92,7 +92,8 @@ input[type="email"] {
     width: 60%;
   }
 }
-.email-form .form-success {
+.email-form .form-success,
+.signin-form .form-success {
   display: none;
   color: white;
   margin-top: 25px;
