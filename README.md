@@ -24,7 +24,7 @@ $ bundle exec jekyll serve
 ```
 Head over to `http://localhost:4000` to see the live version of your site. Make sure to check for any issues while jekyll is building and to verify that your new content has been added.
 
-Note: you cannot use colons between the `---`. Use `&#58;` instead.
+Note: you cannot use colons in Jekyll front matter (between the `---`). Use `&#58;` instead.
 
 Then use git to deploy it to live (branch `master`). Here are the list of the commands for reference:
 ```
