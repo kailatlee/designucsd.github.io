@@ -42,8 +42,7 @@ layout: default
             <div class="row tile tile-hoz">
               <div class="col-xs-12 col-sm-4">
                 <!-- Disable links -->
-                <!-- <a class="tile-link" href="{{ post.url }}"> -->
-                <a class="tile-link">
+                <a class="tile-link" {% if post.url %} href="{{ post.url }}" {% endif %}>
                   <div class="tile-image" style="background: url({{ img_url }}) no-repeat center center"></div>
                 </a>
               </div>
