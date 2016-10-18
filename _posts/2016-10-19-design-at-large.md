@@ -1,0 +1,12 @@
+---
+layout: post
+title: Design at Large&#58; Chris Le Dantec
+hosted: Hosted by the Design Lab
+time: Wednesday, October 19 @ 4PM-5&#58;15PM
+location: CSE 1202
+image: design-large-chris-le-dantec.jpg
+published: true
+
+excerpt: Smart cities and digital democracy have begun to converge and create opportunities to enact new civic imaginaries. Much of the momentum behind these efforts derives from computing's promise of improved efficiency derived from the application of data to familiar problems. This application of technology to government holds a number of assumptions about government and citizenship, many of which rely on objective, rational, and consumption-based notions of service selection and delivery. This talk addresses how community-based design can be developed to sustain community engagement and empowerment through forms of data-based participation.
+---
+Smart cities and digital democracy have begun to converge and create opportunities to enact new civic imaginaries. Much of the momentum behind these efforts derives from computing's promise of improved efficiency derived from the application of data to familiar problems. This application of technology to government holds a number of assumptions about government and citizenship, many of which rely on objective, rational, and consumption-based notions of service selection and delivery. This talk addresses how community-based design can be developed to sustain community engagement and empowerment through forms of data-based participation by first recognizing that data are social-whether through the act of collecting them, to marshaling them for argument and advocacy, or by being acted on by them. Building on recent work in participatory design, I argue that designers and research working in community settings are not simply creating end products that make use of data but are designing publics through the creation, collection, and curation of data. These publics are socio-technical articulations that address the different tensions, boundaries, and values present in community contexts and arise in response to issues, form through a range of attachments, and ultimately act through the creation of new socio-technical infrastructures.
