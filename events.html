@@ -59,6 +59,9 @@ layout: default
                 {% if post.facebook %}
                 <p class="fb-link"><a href="{{ post.facebook }}">Facebook Event</a></p>
                 {% endif %}
+                {% if post.form %}
+                <p class="fb-link"><a href="{{ post.form }}">Link to Form</a></p>
+                {% endif %}
               </div>
             </div>
             {% endif %}
