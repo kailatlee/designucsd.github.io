@@ -6,6 +6,9 @@ $salmon: #FF5E5B;
 $card_bg: #F2F3F4;
 $card_cl: #7B7B7B;
 $text_gray: #555;
+$syntax_default_color: $text_gray;
+$syntax_tag_color: lighten($dark_blue, 15%);
+$syntax_comment_color: lighten($text_gray, 15%);
 
 $bp_tablet: 768px;
 $bp_desktop: 1024px;

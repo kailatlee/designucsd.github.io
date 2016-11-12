@@ -27,13 +27,17 @@ You should see something like this:
 Now go ahead and paste this code into your index.html:
 <h2>Example of code</h2>
 
-<pre>
-    <div class="container">
-        <div class="block two first">
+```html
+<!DOCTYPE html>
+<html>
+    <head><!-- Contains info about this html file that isn't displayed -->
+        <title>Welcome to HTML and CSS!</title>
+    </head>
+    <body><!-- Contains all contents of html document -->
+        <div class="container">
             <h2>Your title</h2>
-            <div class="wrap">
-            //Your content
-            </div>
         </div>
-    </div>
-</pre>
+    </body>
+</html>
+```
+Ayylmao
