@@ -11,33 +11,126 @@ excerpt: Knowing HTML and CSS can help you build great websites, though getting 
 ---
 ## Getting Set Up
 
-If you haven't already done so, find and install a text editor. Here are two I recommend:
+If you haven't already done so, find and install a text editor. Here are two we recommend:
 
 * [Sublime Text](https://www.sublimetext.com/)
 * [Atom](https://atom.io/)
 
-Go ahead and create a folder to hold everything in this workshop. Call it something logical like `HTMLWorkshop` or `LoveDesignatUCSD`. Navigate into that directory and create a file called `index.html` using your new code editor.
+Go ahead and create a folder to hold everything in this workshop. Call it something like `HTMLWorkshop`. Navigate into that directory and create a file called `index.html` using your new code editor.
 
-Now go ahead and write some words your `index.html`, then navigate to the file in your browser to view it. 
+Now go ahead and write this in your `index.html`
 
-You should see something like this:
 ```
+Hello World
 ```
+
+Then navigate to the file in your browser to view it. You should see something like this:
+
+```
+TODO: insert HELLO WORLD clip
+```
+
+### Wait, so what do HTML and CSS do?
+
+HTML (HyperText Markup Language) basically describes the structure of a webpage, while CSS (Cascading Style Sheets) gives the styles (positioning, colors, etc) of elements on the webpage.
+
+### Introductory HTML
 
 Now go ahead and paste this code into your index.html:
-<h2>Example of code</h2>
 
 ```html
 <!DOCTYPE html>
 <html>
-    <head><!-- Contains info about this html file that isn't displayed -->
+    <head>
         <title>Welcome to HTML and CSS!</title>
     </head>
-    <body><!-- Contains all contents of html document -->
-        <div class="container">
-            <h2>Your title</h2>
+    <body>
+        <div>
+            <h1>My first HTML page</h1>
+            <p>This is my first HTML page</p>
+            <!-- This is a comment and it won't show up -->
         </div>
     </body>
 </html>
 ```
-Ayylmao
+Now refresh the browser to view this new content.
+
+The elements inside the angled brackets are called `tags`. Most of these tags require a corresponding **closing tag**, ie `<h1>` and `</h1>`. Here's what each of these do:
+
+* `<!DOCTYPE html>` Tells the browser this is an HTML5 file.
+* `<html>` Root element of HTML page
+* `<head>` Contains undisplayed information about this HTML document
+* `<title>` Denotes title (displayed on tab or window bar) of page
+* `<body>` Contains all content of an HTML document
+* `<div>` Denotes a division (like a section) of an HTML document
+* `<h1>` Largest header tag - used for key headers
+* `<p>` A paragraph tag - used for most text content
+
+There are many more types of tags you'll encounter as you continue learning frontend, but these should be enough for now.
+
+### Cascading Style Sheets
+
+Given your newfound knowledge of basic HTML, it's time to dive into basic CSS. 
+
+First let's try something. Change your `<p>` tag in your HTML file to `<p style="color: red">`. Refresh your browser and see what happens.
+
+Imagine if you had to add *inline styles* (like we just did) to style every element on the page. There must be some more reusable and less cluttery way to denote styling. This is where **classes** and **ids** come in. CSS can specify properties (read: styles like color or positioning) that define the behavior of **certain classes and ids**. This gives us immense power and separated, reusable code. Note that ids are unique (so you can only have one of a certain id on a page).
+
+You can add classes and ids like so:
+
+```html
+<p class="your-class" id="your-id">Content here</p>
+```
+
+We'll also need to link our stylesheet. Create a file called `stylesheet.css` and add this line to in your HTML `head`.
+
+```html
+<link rel="stylesheet" href="stylesheet.css">
+```
+
+Let's try to add a class and add properties with our stylesheet. Add a class to your `<h1>` and add this in your CSS, replacing the class name.
+
+```css
+/* This is a css comment */
+.your-class-name {
+  color: blue;
+}
+```
+
+Now refresh your page and see what happens. Cool, right? Note that the period before the class name in the css is necessary (but in the HTML don't include the period). Similar for hashtags, which are used for ids; here's the syntax for ids:
+
+```css
+#your-id-name {
+  /* Your properties */
+}
+```
+
+Currently the colors we've added don't seem to add the best aesthetic, so we'd like to probably like to pick better colors. [Here's](http://colorhunt.co/) a quick resource.
+
+
+## TODO
+```
+
+CSS basics
+  Content
+  Basic properties
+  Centering things
+
+Then Bootstrap 
+```
+
+## What's next?
+Bootstrap, mobile-friendliness, etc.
+
+## Additional resources
+Here you've covered the basics of HTML and CSS
+
+* [This Medium post](https://medium.freecodecamp.com/from-zero-to-front-end-hero-part-1-7d4f7f0bff02): A good post on how to get started with frontend development in general.
+* [CodeAcademy Tutorial](https://www.codecademy.com/learn/web): A hands-on tutorial teaching you the basics of HTML, CSS, and later on Bootstrap (also recommended by the above post).
+
+## References
+Credits to these resources we've looked at while writing this.
+
+Codeacademy
+W3Schools
+

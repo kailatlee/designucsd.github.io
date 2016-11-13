@@ -61,41 +61,141 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 <div class="container-fluid slant-border bg-white">
   <div class="container">
-    <h2 id="getting-set-up">Getting Set Up</h2>
+    <div class="row">
+      <div class="col-sm-12 col-md-8 col-md-push-2">
+        <h2 id="getting-set-up">Getting Set Up</h2>
 
-<p>If you haven’t already done so, find and install a text editor. Here are two I recommend:</p>
+<p>If you haven’t already done so, find and install a text editor. Here are two we recommend:</p>
 
 <ul>
   <li><a href="https://www.sublimetext.com/">Sublime Text</a></li>
   <li><a href="https://atom.io/">Atom</a></li>
 </ul>
 
-<p>Go ahead and create a folder to hold everything in this workshop. Call it something logical like <code class="highlighter-rouge">HTMLWorkshop</code> or <code class="highlighter-rouge">LoveDesignatUCSD</code>. Navigate into that directory and create a file called <code class="highlighter-rouge">index.html</code> using your new code editor.</p>
+<p>Go ahead and create a folder to hold everything in this workshop. Call it something like <code class="highlighter-rouge">HTMLWorkshop</code>. Navigate into that directory and create a file called <code class="highlighter-rouge">index.html</code> using your new code editor.</p>
 
-<p>Now go ahead and write some words your <code class="highlighter-rouge">index.html</code>, then navigate to the file in your browser to view it.</p>
+<p>Now go ahead and write this in your <code class="highlighter-rouge">index.html</code></p>
 
-<p>You should see something like this:
-<code class="highlighter-rouge">
-</code></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>Hello World
+</code></pre>
+</div>
+
+<p>Then navigate to the file in your browser to view it. You should see something like this:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>TODO: insert HELLO WORLD clip
+</code></pre>
+</div>
+
+<h3 id="wait-so-what-do-html-and-css-do">Wait, so what do HTML and CSS do?</h3>
+
+<p>HTML (HyperText Markup Language) basically describes the structure of a webpage, while CSS (Cascading Style Sheets) gives the styles (positioning, colors, etc) of elements on the webpage.</p>
+
+<h3 id="introductory-html">Introductory HTML</h3>
 
 <p>Now go ahead and paste this code into your index.html:</p>
-<h2>Example of code</h2>
 
 <div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="nt">&lt;html&gt;</span>
-    <span class="nt">&lt;head&gt;</span><span class="c">&lt;!-- Contains info about this html file that isn't displayed --&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
         <span class="nt">&lt;title&gt;</span>Welcome to HTML and CSS!<span class="nt">&lt;/title&gt;</span>
     <span class="nt">&lt;/head&gt;</span>
-    <span class="nt">&lt;body&gt;</span><span class="c">&lt;!-- Contains all contents of html document --&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;h2&gt;</span>Your title<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;div&gt;</span>
+            <span class="nt">&lt;h1&gt;</span>My first HTML page<span class="nt">&lt;/h1&gt;</span>
+            <span class="nt">&lt;p&gt;</span>This is my first HTML page<span class="nt">&lt;/p&gt;</span>
+            <span class="c">&lt;!-- This is a comment and it won't show up --&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
 </code></pre>
 </div>
-<p>Ayylmao</p>
+<p>Now refresh the browser to view this new content.</p>
 
+<p>The elements inside the angled brackets are called <code class="highlighter-rouge">tags</code>. Most of these tags require a corresponding <strong>closing tag</strong>, ie <code class="highlighter-rouge">&lt;h1&gt;</code> and <code class="highlighter-rouge">&lt;/h1&gt;</code>. Here’s what each of these do:</p>
+
+<ul>
+  <li><code class="highlighter-rouge"><span class="cp">&lt;!DOCTYPE html&gt;</span></code> Tells the browser this is an HTML5 file.</li>
+  <li><code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> Root element of HTML page</li>
+  <li><code class="highlighter-rouge">&lt;head&gt;</code> Contains undisplayed information about this HTML document</li>
+  <li><code class="highlighter-rouge">&lt;title&gt;</code> Denotes title (displayed on tab or window bar) of page</li>
+  <li><code class="highlighter-rouge">&lt;body&gt;</code> Contains all content of an HTML document</li>
+  <li><code class="highlighter-rouge">&lt;div&gt;</code> Denotes a division (like a section) of an HTML document</li>
+  <li><code class="highlighter-rouge">&lt;h1&gt;</code> Largest header tag - used for key headers</li>
+  <li><code class="highlighter-rouge">&lt;p&gt;</code> A paragraph tag - used for most text content</li>
+</ul>
+
+<p>There are many more types of tags you’ll encounter as you continue learning frontend, but these should be enough for now.</p>
+
+<h3 id="cascading-style-sheets">Cascading Style Sheets</h3>
+
+<p>Given your newfound knowledge of basic HTML, it’s time to dive into basic CSS.</p>
+
+<p>First let’s try something. Change your <code class="highlighter-rouge">&lt;p&gt;</code> tag in your HTML file to <code class="highlighter-rouge">&lt;p style="color: red"&gt;</code>. Refresh your browser and see what happens.</p>
+
+<p>Imagine if you had to add <em>inline styles</em> (like we just did) to style every element on the page. There must be some more reusable and less cluttery way to denote styling. This is where <strong>classes</strong> and <strong>ids</strong> come in. CSS can specify properties (read: styles like color or positioning) that define the behavior of <strong>certain classes and ids</strong>. This gives us immense power and separated, reusable code. Note that ids are unique (so you can only have one of a certain id on a page).</p>
+
+<p>You can add classes and ids like so:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"your-class"</span> <span class="na">id=</span><span class="s">"your-id"</span><span class="nt">&gt;</span>Content here<span class="nt">&lt;/p&gt;</span>
+</code></pre>
+</div>
+
+<p>We’ll also need to link our stylesheet. Create a file called <code class="highlighter-rouge">stylesheet.css</code> and add this line to in your HTML <code class="highlighter-rouge">head</code>.</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"stylesheet.css"</span><span class="nt">&gt;</span>
+</code></pre>
+</div>
+
+<p>Let’s try to add a class and add properties with our stylesheet. Add a class to your <code class="highlighter-rouge">&lt;h1&gt;</code> and add this in your CSS, replacing the class name.</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="c">/* This is a css comment */</span>
+<span class="nc">.your-class-name</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Now refresh your page and see what happens. Cool, right? Note that the period before the class name in the css is necessary (but in the HTML don’t include the period). Similar for hashtags, which are used for ids; here’s the syntax for ids:</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nf">#your-id-name</span> <span class="p">{</span>
+  <span class="c">/* Your properties */</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Currently the colors we’ve added don’t seem to add the best aesthetic, so we’d like to probably like to pick better colors. <a href="http://colorhunt.co/">Here’s</a> a quick resource.</p>
+
+<h2 id="todo">TODO</h2>
+<div class="highlighter-rouge"><pre class="highlight"><code>
+CSS basics
+  Content
+  Basic properties
+  Centering things
+
+Then Bootstrap 
+</code></pre>
+</div>
+
+<h2 id="whats-next">What’s next?</h2>
+<p>Bootstrap, mobile-friendliness, etc.</p>
+
+<h2 id="additional-resources">Additional resources</h2>
+<p>Here you’ve covered the basics of HTML and CSS</p>
+
+<ul>
+  <li><a href="https://medium.freecodecamp.com/from-zero-to-front-end-hero-part-1-7d4f7f0bff02">This Medium post</a>: A good post on how to get started with frontend development in general.</li>
+  <li><a href="https://www.codecademy.com/learn/web">CodeAcademy Tutorial</a>: A hands-on tutorial teaching you the basics of HTML, CSS, and later on Bootstrap (also recommended by the above post).</li>
+</ul>
+
+<h2 id="references">References</h2>
+<p>Credits to these resources we’ve looked at while writing this.</p>
+
+<p>Codeacademy
+W3Schools</p>
+
+
+      </div>
+    </div>
   </div>
 </div>
   </div>

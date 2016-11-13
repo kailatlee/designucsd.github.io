@@ -208,3 +208,12 @@
   color: $syntax_default_color;
   background-color: $card_bg;
 }
+.highlight * {
+  font-family: monospace !important;
+  font-size: 16px;
+}
+.highlighter-rouge,
+.highlighter-rouge * {
+  font-family: monospace !important;
+  font-size: 16px !important;
+}
