@@ -76,15 +76,13 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 <p>Now go ahead and write this in your <code class="highlighter-rouge">index.html</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Hello World
+<div class="highlighter-rouge"><pre class="highlight"><code>Hello World!
 </code></pre>
 </div>
 
 <p>Then navigate to the file in your browser to view it. You should see something like this:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>TODO: insert HELLO WORLD clip
-</code></pre>
-</div>
+<p><img src="/public/images/events/FA16_IntroHTML_HelloWorld.jpg" alt="" /></p>
 
 <h3 id="wait-so-what-do-html-and-css-do">Wait, so what do HTML and CSS do?</h3>
 
@@ -104,6 +102,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
             <span class="nt">&lt;h1&gt;</span>My first HTML page<span class="nt">&lt;/h1&gt;</span>
             <span class="nt">&lt;p&gt;</span>This is my first HTML page<span class="nt">&lt;/p&gt;</span>
             <span class="c">&lt;!-- This is a comment and it won't show up --&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Here's some text content <span class="nt">&lt;/p&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
@@ -150,20 +149,32 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 <div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="c">/* This is a css comment */</span>
 <span class="nc">.your-class-name</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#A31C88</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
 
-<p>Now refresh your page and see what happens. Cool, right? Note that the period before the class name in the css is necessary (but in the HTML don’t include the period). Similar for hashtags, which are used for ids; here’s the syntax for ids:</p>
+<p>Now refresh your page and see what happens. Cool, right? Note that the period before the class name in the css is necessary (but in the HTML don’t include the period). Similar for hashtags, which are used for ids. Tags (like <code class="highlighter-rouge">&lt;p&gt;</code> or <code class="highlighter-rouge">&lt;div&gt;</code>) require no preceding characters. Here’s the syntax:</p>
 
 <div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nf">#your-id-name</span> <span class="p">{</span>
+  <span class="c">/* Your properties */</span>
+<span class="p">}</span>
+<span class="nt">div</span> <span class="p">{</span>
   <span class="c">/* Your properties */</span>
 <span class="p">}</span>
 </code></pre>
 </div>
 
-<p>Currently the colors we’ve added don’t seem to add the best aesthetic, so we’d like to probably like to pick better colors. <a href="http://colorhunt.co/">Here’s</a> a quick resource.</p>
+<p>Currently the colors we’ve added don’t seem to add the best aesthetic, so we’d like to probably like to pick better colors. <a href="http://colorhunt.co/">Here’s</a> a quick resource. Try using classes and ids to change the colors of your text. For text content it’s often good to use a gray to reduce contrast. Here’s a good one: <code class="highlighter-rouge">#555</code>.</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="c">/* If you're stuck, you can try this: */</span>
+<span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#555</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>To make our text a bit more readable,</p>
 
 <h2 id="todo">TODO</h2>
 <div class="highlighter-rouge"><pre class="highlight"><code>
@@ -171,6 +182,8 @@ CSS basics
   Content
   Basic properties
   Centering things
+  Making text more readable (color, fonts)
+    Helvetica, font color
 
 Then Bootstrap 
 </code></pre>
@@ -185,6 +198,7 @@ Then Bootstrap
 <ul>
   <li><a href="https://medium.freecodecamp.com/from-zero-to-front-end-hero-part-1-7d4f7f0bff02">This Medium post</a>: A good post on how to get started with frontend development in general.</li>
   <li><a href="https://www.codecademy.com/learn/web">CodeAcademy Tutorial</a>: A hands-on tutorial teaching you the basics of HTML, CSS, and later on Bootstrap (also recommended by the above post).</li>
+  <li><a href="http://jgthms.com/web-design-in-4-minutes/">Check this out</a> for an intersting, quick brief on effective lightweight HTML/CSS</li>
 </ul>
 
 <h2 id="references">References</h2>

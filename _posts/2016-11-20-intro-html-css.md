@@ -21,14 +21,12 @@ Go ahead and create a folder to hold everything in this workshop. Call it someth
 Now go ahead and write this in your `index.html`
 
 ```
-Hello World
+Hello World!
 ```
 
 Then navigate to the file in your browser to view it. You should see something like this:
 
-```
-TODO: insert HELLO WORLD clip
-```
+![](/public/images/events/FA16_IntroHTML_HelloWorld.jpg)
 
 ### Wait, so what do HTML and CSS do?
 
@@ -49,6 +47,7 @@ Now go ahead and paste this code into your index.html:
             <h1>My first HTML page</h1>
             <p>This is my first HTML page</p>
             <!-- This is a comment and it won't show up -->
+            <p>Here's some text content </p>
         </div>
     </body>
 </html>
@@ -66,7 +65,7 @@ The elements inside the angled brackets are called `tags`. Most of these tags re
 * `<h1>` Largest header tag - used for key headers
 * `<p>` A paragraph tag - used for most text content
 
-There are many more types of tags you'll encounter as you continue learning frontend, but these should be enough for now.
+There are many more types of tags you'll encounter as you continue learning frontend, but these should be enough for now. 
 
 ### Cascading Style Sheets
 
@@ -93,20 +92,31 @@ Let's try to add a class and add properties with our stylesheet. Add a class to 
 ```css
 /* This is a css comment */
 .your-class-name {
-  color: blue;
+  color: #A31C88;
 }
 ```
 
-Now refresh your page and see what happens. Cool, right? Note that the period before the class name in the css is necessary (but in the HTML don't include the period). Similar for hashtags, which are used for ids; here's the syntax for ids:
+Now refresh your page and see what happens. Cool, right? Note that the period before the class name in the css is necessary (but in the HTML don't include the period). Similar for hashtags, which are used for ids. Tags (like `<p>` or `<div>`) require no preceding characters. Here's the syntax:
 
 ```css
 #your-id-name {
   /* Your properties */
 }
+div {
+  /* Your properties */
+}
 ```
 
-Currently the colors we've added don't seem to add the best aesthetic, so we'd like to probably like to pick better colors. [Here's](http://colorhunt.co/) a quick resource.
+Currently the colors we've added don't seem to add the best aesthetic, so we'd like to probably like to pick better colors. [Here's](http://colorhunt.co/) a quick resource. Try using classes and ids to change the colors of your text. For text content it's often good to use a gray to reduce contrast. Here's a good one: `#555`.
 
+```css
+/* If you're stuck, you can try this: */
+p {
+  color: #555;
+}
+```
+
+To make our text a bit more readable,
 
 ## TODO
 ```
@@ -115,6 +125,8 @@ CSS basics
   Content
   Basic properties
   Centering things
+  Making text more readable (color, fonts)
+    Helvetica, font color
 
 Then Bootstrap 
 ```
@@ -127,6 +139,7 @@ Here you've covered the basics of HTML and CSS
 
 * [This Medium post](https://medium.freecodecamp.com/from-zero-to-front-end-hero-part-1-7d4f7f0bff02): A good post on how to get started with frontend development in general.
 * [CodeAcademy Tutorial](https://www.codecademy.com/learn/web): A hands-on tutorial teaching you the basics of HTML, CSS, and later on Bootstrap (also recommended by the above post).
+* [Check this out](http://jgthms.com/web-design-in-4-minutes/) for an intersting, quick brief on effective lightweight HTML/CSS
 
 ## References
 Credits to these resources we've looked at while writing this.
