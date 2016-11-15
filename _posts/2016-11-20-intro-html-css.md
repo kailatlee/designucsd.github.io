@@ -9,6 +9,8 @@ published: true
 
 excerpt: Knowing HTML and CSS can help you build great websites, though getting started with it may seem daunting at first. Join us at this hands-on workshop where we tackle the basics of HTML and CSS. Just bring your computer and your favorite text editor.
 ---
+Note: this guide is still a WIP
+
 ## Getting Set Up
 
 If you haven't already done so, find and install a text editor. Here are two we recommend:
@@ -139,23 +141,18 @@ h1, p {
 }
 ```
 
-Now refresh your browser and see what happens. 
+Now refresh your browser and see what happens. Isn't that so much more readable? Currently, though, we don't have much content. 
 
-
-## TODO
-```
-CSS basics
-  Content
-  Basic properties
-  Centering things
-  Making text more readable (color, fonts)
-    Helvetica, font color
-
-Then Bootstrap 
-```
+## Building a hero page
 
 ## What's next?
-Bootstrap, mobile-friendliness, etc.
+Now that we've covered the basics of HTML and CSS, what's next? To become a frontend developer, you'd need to learn and do a couple more things:
+
+* Javascript
+* Mobile friendliness
+* Frontend frameworks (like Bootstrap)
+* Practice, practice, practice!
+
 
 ## Additional resources
 Here are some resources for you to continue learning frontend:
