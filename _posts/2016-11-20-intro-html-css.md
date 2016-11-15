@@ -112,6 +112,8 @@ div {
 }
 ```
 
+**An important note about css**: Generally (but not always), later properties will override new ones. Try adding `color: blue` and `color: red` to the same class and see what happens.
+
 
 ## Building a website
 
@@ -128,7 +130,7 @@ Now that you've got a hang of basic HTML and CSS, we can move on to more advance
         <h1>The Gnat and the Bull</h1>
         <div>
             <p>
-              A Gnat alighted on one of the horns of a Bull, and remained sitting there for a considerable time. When it had rested sufficiently and was about to fly away, it said to the Bull, “Do you mind if I go now?” The Bull merely raised his eyes and remarked, without interest, “It’s all one to me; I didn’t notice when you came, and I shan’t know when you go away.”
+              A Gnat alighted on one of the horns of a Bull, and remained sitting there for a considerable time. When it had rested sufficiently and was about to fly away, it said to the Bull, "Do you mind if I go now?" The Bull merely raised his eyes and remarked, without interest, "It’s all one to me; I didn’t notice when you came, and I shan’t know when you go away."
             </p>
             <p>
               We may often be of more consequence in our own eyes than in the eyes of our neighbours.
@@ -199,6 +201,7 @@ Right now, our text appears to span the entire width of the page, making it diff
 .your-div-class-name {
   margin: auto;
   max-width: 700px;
+  color: #555;
 }
 ```
 
@@ -216,6 +219,9 @@ body {
 }
 ```
 
+We can also update font sizes to improve readability. Try changing the `font-size` property for your `.hero h1` and `p` elements using CSS.
+
+
 <!-- However, currently the colors we've added don't seem to add the best aesthetic, so we'd like to probably like to pick better colors. [Here's](http://colorhunt.co/) a quick resource. Try using classes and ids to change the colors of your text. For text content it's often good to use a gray to reduce contrast. Here's a good one: `#555`.
 
 ```css
@@ -225,9 +231,24 @@ body {
 }
 ``` -->
 
+### Finishing up
+Can you think of more touches you'd like to add to your site? Here's some things you can play around with:
+
+* Fonts and font-sizes
+* Colors
+* Your hero background image
+* Adding more text content
+
+How about adding a class and making Aesop's punchline "We may often be..." more unique? [Here's](http://designatucsd.org/examples/htmlcss1/) an example of what your site might look like at the end of this tutorial. You can view its code [here](https://github.com/designucsd/examples/tree/master/htmlcss1).
+
+## Feedback
+
+If you've completed this tutorial (remotely or on-site), please fill out this form to let us know how we did.
+
 ## What's next?
 Now that we've covered the basics of HTML and CSS, what's next? To become a frontend developer, you'd need to learn and do a couple more things:
 
+* Familiarize with the [CSS Box Model](http://www.w3schools.com/css/css_boxmodel.asp) to understand
 * Javascript
 * Mobile friendliness
 * Frontend frameworks (like Bootstrap) - we'll be having a workshop on this soon!
@@ -239,3 +260,4 @@ Here are some resources for you to continue learning frontend:
 * [This Medium post](https://medium.freecodecamp.com/from-zero-to-front-end-hero-part-1-7d4f7f0bff02): A good post on how to get started with frontend development in general.
 * [CodeAcademy Tutorial](https://www.codecademy.com/learn/web): A hands-on tutorial teaching you the basics of HTML, CSS, and later on Bootstrap (also recommended by the above post).
 * [Check this out](http://jgthms.com/web-design-in-4-minutes/) for an interesting, quick brief on effective lightweight HTML/CSS, in which some of this tutorial is based on
+* Your favorite search engines and StackOverflow: If you've got an issue at this point, chances are someone else has encountered it before.
