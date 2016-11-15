@@ -4,7 +4,7 @@ title: Intro to HTML/CSS Workshop
 hosted: Hosted by Design at UCSD
 time: Wednesday, Nov 20, 7:00-8:30pm
 location: H&SS 1346
-image: GBM2.png
+image: FA16_IntroHTML.png
 published: true
 
 excerpt: Knowing HTML and CSS can help you build great websites, though getting started with it may seem daunting at first. Join us at this hands-on workshop where we tackle the basics of HTML and CSS. Just bring your computer and your favorite text editor.
