@@ -31,7 +31,8 @@
   background-size: cover;
   margin-bottom: -100px;
 }
-.hero-front .hero-content {
+.hero-front .hero-content,
+.hero-post .hero-content {
   max-width: $bp_tablet;
   padding-top: 125px;
   padding-bottom: 75px;
@@ -496,9 +497,9 @@ p a {
 
 /* Posts */
 .post-container {
-  padding-top: 200px;
+  padding-top: 10vh;
+  padding-bottom: 5vh;
 }
-
 .hero-mission {
   padding-bottom: 10vh;
 }

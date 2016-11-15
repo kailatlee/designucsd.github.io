@@ -2,8 +2,11 @@
 title: Design.UCSD
 url: "http://designucsd.github.io"
 
+markdown: kramdown
+
 kramdown:
   input: GFM
+  syntax_highlighter: rouge
 
 sass:
   style: compressed
@@ -17,3 +20,5 @@ include:
 future: true
 
 timezone: America/Los_Angeles
+
+highlighter: rouge
