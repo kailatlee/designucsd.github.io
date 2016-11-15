@@ -116,11 +116,34 @@ p {
 }
 ```
 
-To make our text a bit more readable,
+Right now, our text appears to span the entire width of the page, making it difficult to read, so let's update that. Add a class for your `<div>` tag with a relevant name (like 'container') and add some css.
+
+```css
+.your-div-class-name {
+  margin: auto;
+  max-width: 800px;
+}
+```
+
+Now viewing this in desktop, we can see that the content centers nicely on the page. Congratulations! You've learned a way to center things in CSS. 
+
+There's definitely more we can do though. How about using a nicer font? Let's start with a [web safe](http://www.w3schools.com/cssref/css_websafe_fonts.asp) font. We'll pick a nice, popular sans-serif, ~~Comic Sans~~ Helvetica. 
+
+```css
+/* See how we can deal with multiple tags at once
+ * Also note that we're using 'sans-serif' as a fallback
+ * font for Helvetica.
+ */
+h1, p {
+  font-family: Helvetica, sans-serif;
+}
+```
+
+Now refresh your browser and see what happens. 
+
 
 ## TODO
 ```
-
 CSS basics
   Content
   Basic properties
@@ -135,15 +158,8 @@ Then Bootstrap
 Bootstrap, mobile-friendliness, etc.
 
 ## Additional resources
-Here you've covered the basics of HTML and CSS
+Here are some resources for you to continue learning frontend:
 
 * [This Medium post](https://medium.freecodecamp.com/from-zero-to-front-end-hero-part-1-7d4f7f0bff02): A good post on how to get started with frontend development in general.
 * [CodeAcademy Tutorial](https://www.codecademy.com/learn/web): A hands-on tutorial teaching you the basics of HTML, CSS, and later on Bootstrap (also recommended by the above post).
-* [Check this out](http://jgthms.com/web-design-in-4-minutes/) for an intersting, quick brief on effective lightweight HTML/CSS
-
-## References
-Credits to these resources we've looked at while writing this.
-
-Codeacademy
-W3Schools
-
+* [Check this out](http://jgthms.com/web-design-in-4-minutes/) for an interesting, quick brief on effective lightweight HTML/CSS, in which some of this tutorial is based on
