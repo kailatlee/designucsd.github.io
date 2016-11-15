@@ -9,7 +9,10 @@ published: true
 
 excerpt: Knowing HTML and CSS can help you build great websites, though getting started with it may seem daunting at first. Join us at this hands-on workshop where we tackle the basics of HTML and CSS. Just bring your computer and your favorite text editor.
 ---
-Note: this guide is still a WIP
+## Table of Contents
+
+* TOC
+{:toc}
 
 ## Getting Set Up
 
@@ -30,9 +33,10 @@ Then navigate to the file in your browser to view it. You should see something l
 
 ![](/public/images/events/FA16_IntroHTML_HelloWorld.jpg)
 
-### Wait, so what do HTML and CSS do?
+## What are HTML and CSS?
 
-HTML (HyperText Markup Language) basically describes the structure of a webpage, while CSS (Cascading Style Sheets) gives the styles (positioning, colors, etc) of elements on the webpage.
+* HTML (HyperText Markup Language) describes the structure of a webpage
+* CSS (Cascading Style Sheets) gives the styles (positioning, colors, etc) of elements on the webpage.
 
 ### Introductory HTML
 
@@ -48,8 +52,7 @@ Now go ahead and paste this code into your index.html:
         <div>
             <h1>My first HTML page</h1>
             <p>This is my first HTML page</p>
-            <!-- This is a comment and it won't show up -->
-            <p>Here's some text content </p>
+            <!-- This is a HTML comment and it won't show up -->
         </div>
     </body>
 </html>
@@ -75,9 +78,9 @@ Given your newfound knowledge of basic HTML, it's time to dive into basic CSS.
 
 First let's try something. Change your `<p>` tag in your HTML file to `<p style="color: red">`. Refresh your browser and see what happens.
 
-Imagine if you had to add *inline styles* (like we just did) to style every element on the page. There must be some more reusable and less cluttery way to denote styling. This is where **classes** and **ids** come in. CSS can specify properties (read: styles like color or positioning) that define the behavior of **certain classes and ids**. This gives us immense power and separated, reusable code. Note that ids are unique (so you can only have one of a certain id on a page).
+Imagine if you had to add *inline styles* (like we just did) to style every element on the page. There must be some more reusable and less cluttery way to denote styling. 
 
-You can add classes and ids like so:
+This is where **classes** and **ids** come in. CSS can specify style properties that define the behavior of **certain classes, ids, and HTML tags**. This gives more power and separated, reusable code. (Note that ids are unique so you can only have one of a certain id on a page). You can add classes and ids like so:
 
 ```html
 <p class="your-class" id="your-id">Content here</p>
@@ -118,16 +121,32 @@ p {
 }
 ```
 
-Right now, our text appears to span the entire width of the page, making it difficult to read, so let's update that. Add a class for your `<div>` tag with a relevant name (like 'container') and add some css.
+Now that looks a lot more readable!
 
-```css
-.your-div-class-name {
-  margin: auto;
-  max-width: 800px;
-}
+## Building a website
+
+Now that you've got a hang of basic HTML and CSS, we can move on to more advanced content. Copy paste this HTML into a new file and create an empty file called `stylesheet.css` in the same directory. Then, open the HTML file in your browser.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The Gnat and the Bull</title>
+        <link rel="stylesheet" href="stylesheet.css" />
+    </head>
+    <body>
+        <h1>The Gnat and the Bull</h1>
+        <div>
+            <p>
+              A Gnat alighted on one of the horns of a Bull, and remained sitting there for a considerable time. When it had rested sufficiently and was about to fly away, it said to the Bull, “Do you mind if I go now?” The Bull merely raised his eyes and remarked, without interest, “It’s all one to me; I didn’t notice when you came, and I shan’t know when you go away.”
+            </p>
+            <p>
+              We may often be of more consequence in our own eyes than in the eyes of our neighbours.
+            </p>
+        </div>
+    </body>
+</html>
 ```
-
-Now viewing this in desktop, we can see that the content centers nicely on the page. Congratulations! You've learned a way to center things in CSS. 
 
 There's definitely more we can do though. How about using a nicer font? Let's start with a [web safe](http://www.w3schools.com/cssref/css_websafe_fonts.asp) font. We'll pick a nice, popular sans-serif, ~~Comic Sans~~ Helvetica. 
 
@@ -138,12 +157,55 @@ There's definitely more we can do though. How about using a nicer font? Let's st
  */
 h1, p {
   font-family: Helvetica, sans-serif;
+  color: #555;
 }
 ```
 
-Now refresh your browser and see what happens. Isn't that so much more readable? Currently, though, we don't have much content. 
+Side note: try playing around with other font names. Let's make our text a bit more readable. 
 
-## Building a hero page
+### A Heroic Step
+
+Now let's add a hero for the title. Add a `<div class="hero">` to wrap your title `<h1>` tag. Make sure to include the closing `</div>`.
+
+```css
+.hero {
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+  text-align: center;
+  background-color: gray; /* Or your choice color */
+}
+```
+
+The white border on the edge of the page can be gotten rid of with:
+
+```
+html, body {
+  padding: 0;
+  margin: 0;
+}
+```
+
+What if we added an image to be the background of our page? You can head over to 
+
+Right now, our text appears to span the entire width of the page, making it difficult to read, so let's update that. Add a class for your `<div>` tag with a relevant name (like 'container') and add some css.
+
+```css
+.your-div-class-name {
+  margin: auto;
+  max-width: 700px;
+}
+```
+
+* `margin`: denotes space around (outside) elements; auto denotes to base it off width of element and width of container
+* `max-width`: denotes the largest width of an element
+
+Now viewing this in desktop, we can see that the content centers nicely on the page. 
+
+Head over to unsplash and find a better image
+
+Go to google and include a font of your liking
+
+Now refresh your browser and see what happens. 
 
 ## What's next?
 Now that we've covered the basics of HTML and CSS, what's next? To become a frontend developer, you'd need to learn and do a couple more things:
@@ -152,7 +214,6 @@ Now that we've covered the basics of HTML and CSS, what's next? To become a fron
 * Mobile friendliness
 * Frontend frameworks (like Bootstrap)
 * Practice, practice, practice!
-
 
 ## Additional resources
 Here are some resources for you to continue learning frontend:
