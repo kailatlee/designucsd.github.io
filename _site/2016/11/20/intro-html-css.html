@@ -75,6 +75,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
   </li>
   <li><a href="#building-a-website" id="markdown-toc-building-a-website">Building a website</a>    <ul>
       <li><a href="#a-heroic-step" id="markdown-toc-a-heroic-step">A Heroic Step</a></li>
+      <li><a href="#readability" id="markdown-toc-readability">Readability</a></li>
     </ul>
   </li>
   <li><a href="#whats-next" id="markdown-toc-whats-next">What’s next?</a></li>
@@ -185,17 +186,6 @@ xmlns:fb="http://ogp.me/ns/fb#">
 </code></pre>
 </div>
 
-<p>Currently the colors we’ve added don’t seem to add the best aesthetic, so we’d like to probably like to pick better colors. <a href="http://colorhunt.co/">Here’s</a> a quick resource. Try using classes and ids to change the colors of your text. For text content it’s often good to use a gray to reduce contrast. Here’s a good one: <code class="highlighter-rouge">#555</code>.</p>
-
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="c">/* If you're stuck, you can try this: */</span>
-<span class="nt">p</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="m">#555</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre>
-</div>
-
-<p>Now that looks a lot more readable!</p>
-
 <h2 id="building-a-website">Building a website</h2>
 
 <p>Now that you’ve got a hang of basic HTML and CSS, we can move on to more advanced content. Copy paste this HTML into a new file and create an empty file called <code class="highlighter-rouge">stylesheet.css</code> in the same directory. Then, open the HTML file in your browser.</p>
@@ -227,14 +217,13 @@ xmlns:fb="http://ogp.me/ns/fb#">
  * Also note that we're using 'sans-serif' as a fallback
  * font for Helvetica.
  */</span>
-<span class="nt">h1</span><span class="o">,</span> <span class="nt">p</span> <span class="p">{</span>
-  <span class="nl">font-family</span><span class="p">:</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="m">#555</span><span class="p">;</span>
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"Helvetica"</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
 
-<p>Side note: try playing around with other font names. Let’s make our text a bit more readable.</p>
+<p>Side note: try playing around with other web-safe font names.</p>
 
 <h3 id="a-heroic-step">A Heroic Step</h3>
 
@@ -251,14 +240,33 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 <p>The white border on the edge of the page can be gotten rid of with:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>html, body {
-  padding: 0;
-  margin: 0;
-}
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">html</span><span class="o">,</span> <span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre>
 </div>
 
-<p>What if we added an image to be the background of our page? You can head over to</p>
+<p>What if we added an image to be the background of our page? You can look in <a href="http://unsplash.com">Unsplash</a> for good stock photos - or just use the example</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.hero</span> <span class="p">{</span>
+  <span class="c">/* background-image: url("path/to/your/image"); */</span>
+  <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url("https://images.unsplash.com/photo-1474905187624-b3deaf7aa4c2")</span><span class="p">;</span>
+  <span class="nl">background-size</span><span class="p">:</span> <span class="n">cover</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.hero</span> <span class="nt">h1</span> <span class="p">{</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">white</span> <span class="c">/* Or your choice color */</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<ul>
+  <li><code class="highlighter-rouge">.hero h1</code>: This property applies to <strong>all h1 descendants of an element with class ‘hero’</strong></li>
+  <li><code class="highlighter-rouge">background-image</code>: self-explanatory</li>
+  <li><code class="highlighter-rouge">background-size: cover</code>: Tells the browser to stretch the image to fit window</li>
+</ul>
+
+<h3 id="readability">Readability</h3>
 
 <p>Right now, our text appears to span the entire width of the page, making it difficult to read, so let’s update that. Add a class for your <code class="highlighter-rouge">&lt;div&gt;</code> tag with a relevant name (like ‘container’) and add some css.</p>
 
@@ -274,13 +282,25 @@ xmlns:fb="http://ogp.me/ns/fb#">
   <li><code class="highlighter-rouge">max-width</code>: denotes the largest width of an element</li>
 </ul>
 
-<p>Now viewing this in desktop, we can see that the content centers nicely on the page.</p>
+<p>Now viewing this in desktop, we can see that the content centers nicely on the page. Let’s try a custom font to add more personality. Here at DesignatUCSD, we’re big fans of <a href="https://fonts.google.com/specimen/Lato">Lato</a></p>
 
-<p>Head over to unsplash and find a better image</p>
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="k">@import</span> <span class="sx">url('https://fonts.googleapis.com/css?family=Lato')</span><span class="p">;</span>
 
-<p>Go to google and include a font of your liking</p>
+<span class="c">/* You can edit your existing body tag */</span>
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"Lato"</span><span class="p">,</span> <span class="s1">"Helvetica"</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
-<p>Now refresh your browser and see what happens.</p>
+<!-- However, currently the colors we've added don't seem to add the best aesthetic, so we'd like to probably like to pick better colors. [Here's](http://colorhunt.co/) a quick resource. Try using classes and ids to change the colors of your text. For text content it's often good to use a gray to reduce contrast. Here's a good one: `#555`.
+
+```css
+/* If you're stuck, you can try this: */
+.your-div-class-name {
+  color: #555; /* Or your choice color */
+}
+``` -->
 
 <h2 id="whats-next">What’s next?</h2>
 <p>Now that we’ve covered the basics of HTML and CSS, what’s next? To become a frontend developer, you’d need to learn and do a couple more things:</p>
@@ -288,7 +308,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
 <ul>
   <li>Javascript</li>
   <li>Mobile friendliness</li>
-  <li>Frontend frameworks (like Bootstrap)</li>
+  <li>Frontend frameworks (like Bootstrap) - we’ll be having a workshop on this soon!</li>
   <li>Practice, practice, practice!</li>
 </ul>
 

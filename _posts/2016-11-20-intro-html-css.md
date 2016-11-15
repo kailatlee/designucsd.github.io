@@ -112,16 +112,6 @@ div {
 }
 ```
 
-Currently the colors we've added don't seem to add the best aesthetic, so we'd like to probably like to pick better colors. [Here's](http://colorhunt.co/) a quick resource. Try using classes and ids to change the colors of your text. For text content it's often good to use a gray to reduce contrast. Here's a good one: `#555`.
-
-```css
-/* If you're stuck, you can try this: */
-p {
-  color: #555;
-}
-```
-
-Now that looks a lot more readable!
 
 ## Building a website
 
@@ -155,13 +145,12 @@ There's definitely more we can do though. How about using a nicer font? Let's st
  * Also note that we're using 'sans-serif' as a fallback
  * font for Helvetica.
  */
-h1, p {
-  font-family: Helvetica, sans-serif;
-  color: #555;
+body {
+  font-family: "Helvetica", sans-serif;
 }
 ```
 
-Side note: try playing around with other font names. Let's make our text a bit more readable. 
+Side note: try playing around with other web-safe font names. 
 
 ### A Heroic Step
 
@@ -178,14 +167,31 @@ Now let's add a hero for the title. Add a `<div class="hero">` to wrap your titl
 
 The white border on the edge of the page can be gotten rid of with:
 
-```
+```css
 html, body {
   padding: 0;
   margin: 0;
 }
 ```
 
-What if we added an image to be the background of our page? You can head over to 
+What if we added an image to be the background of our page? You can look in [Unsplash](http://unsplash.com) for good stock photos - or just use the example
+
+```css
+.hero {
+  /* background-image: url("path/to/your/image"); */
+  background-image: url("https://images.unsplash.com/photo-1474905187624-b3deaf7aa4c2");
+  background-size: cover;
+}
+.hero h1 {
+  color: white /* Or your choice color */
+}
+```
+
+* `.hero h1`: This property applies to **all h1 descendants of an element with class 'hero'**
+* `background-image`: self-explanatory
+* `background-size: cover`: Tells the browser to stretch the image to fit window
+
+### Readability
 
 Right now, our text appears to span the entire width of the page, making it difficult to read, so let's update that. Add a class for your `<div>` tag with a relevant name (like 'container') and add some css.
 
@@ -199,20 +205,32 @@ Right now, our text appears to span the entire width of the page, making it diff
 * `margin`: denotes space around (outside) elements; auto denotes to base it off width of element and width of container
 * `max-width`: denotes the largest width of an element
 
-Now viewing this in desktop, we can see that the content centers nicely on the page. 
+Now viewing this in desktop, we can see that the content centers nicely on the page. Let's try a custom font to add more personality. Here at DesignatUCSD, we're big fans of [Lato](https://fonts.google.com/specimen/Lato)
 
-Head over to unsplash and find a better image
+```css
+@import url('https://fonts.googleapis.com/css?family=Lato');
 
-Go to google and include a font of your liking
+/* You can edit your existing body tag */
+body {
+  font-family: "Lato", "Helvetica", sans-serif;
+}
+```
 
-Now refresh your browser and see what happens. 
+<!-- However, currently the colors we've added don't seem to add the best aesthetic, so we'd like to probably like to pick better colors. [Here's](http://colorhunt.co/) a quick resource. Try using classes and ids to change the colors of your text. For text content it's often good to use a gray to reduce contrast. Here's a good one: `#555`.
+
+```css
+/* If you're stuck, you can try this: */
+.your-div-class-name {
+  color: #555; /* Or your choice color */
+}
+``` -->
 
 ## What's next?
 Now that we've covered the basics of HTML and CSS, what's next? To become a frontend developer, you'd need to learn and do a couple more things:
 
 * Javascript
 * Mobile friendliness
-* Frontend frameworks (like Bootstrap)
+* Frontend frameworks (like Bootstrap) - we'll be having a workshop on this soon!
 * Practice, practice, practice!
 
 ## Additional resources
