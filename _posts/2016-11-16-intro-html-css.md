@@ -2,7 +2,7 @@
 layout: post
 title: Intro to HTML/CSS Workshop
 hosted: Hosted by Design at UCSD
-time: Wednesday, Nov 20, 7:00-8:30pm
+time: Wednesday, Nov 16, 7:00-8:30pm
 location: H&SS 1346
 image: FA16_IntroHTML.png
 published: true
@@ -18,8 +18,8 @@ excerpt: Knowing HTML and CSS can help you build great websites, though getting 
 
 If you haven't already done so, find and install a text editor. Here are two we recommend:
 
-* [Sublime Text](https://www.sublimetext.com/)
-* [Atom](https://atom.io/)
+* [Sublime Text](https://www.sublimetext.com/){:target="_blank"}
+* [Atom](https://atom.io/){:target="_blank"}
 
 Go ahead and create a folder to hold everything in this workshop. Call it something like `HTMLWorkshop`. Navigate into that directory and create a file called `index.html` using your new code editor.
 
@@ -114,7 +114,6 @@ div {
 
 **An important note about css**: Generally (but not always), later properties will override new ones. Try adding `color: blue` and `color: red` to the same class and see what happens.
 
-
 ## Building a website
 
 Now that you've got a hang of basic HTML and CSS, we can move on to more advanced content. Copy paste this HTML into a new file and create an empty file called `stylesheet.css` in the same directory. Then, open the HTML file in your browser.
@@ -140,7 +139,7 @@ Now that you've got a hang of basic HTML and CSS, we can move on to more advance
 </html>
 ```
 
-There's definitely more we can do though. How about using a nicer font? Let's start with a [web safe](http://www.w3schools.com/cssref/css_websafe_fonts.asp) font. We'll pick a nice, popular sans-serif, ~~Comic Sans~~ Helvetica. 
+There's definitely more we can do though. How about using a nicer font? Let's start with a [web safe](http://www.w3schools.com/cssref/css_websafe_fonts.asp){:target="_blank"} font. We'll pick a nice, popular sans-serif, ~~Comic Sans~~ Helvetica. 
 
 ```css
 /* See how we can deal with multiple tags at once
@@ -176,12 +175,12 @@ html, body {
 }
 ```
 
-What if we added an image to be the background of our page? You can look in [Unsplash](http://unsplash.com) for good stock photos - or just use the example
+What if we added an image to be the background of our page? You can look in [Unsplash](http://unsplash.com){:target="_blank"} for good stock photos or use the example provided
 
 ```css
 .hero {
   /* background-image: url("path/to/your/image"); */
-  background-image: url("https://images.unsplash.com/photo-1474905187624-b3deaf7aa4c2");
+  background-image: url("http://designatucsd.org/examples/htmlcss1/bull_background.jpg");
   background-size: cover;
 }
 .hero h1 {
@@ -221,6 +220,7 @@ body {
 
 We can also update font sizes to improve readability. Try changing the `font-size` property for your `.hero h1` and `p` elements using CSS.
 
+### Cards
 
 <!-- However, currently the colors we've added don't seem to add the best aesthetic, so we'd like to probably like to pick better colors. [Here's](http://colorhunt.co/) a quick resource. Try using classes and ids to change the colors of your text. For text content it's often good to use a gray to reduce contrast. Here's a good one: `#555`.
 
@@ -236,10 +236,11 @@ Can you think of more touches you'd like to add to your site? Here's some things
 
 * Fonts and font-sizes
 * Colors
+* Widths of content
 * Your hero background image
-* Adding more text content
+* Adding more/editing text content
 
-How about adding a class and making Aesop's punchline "We may often be..." more unique? [Here's](http://designatucsd.org/examples/htmlcss1/) an example of what your site might look like at the end of this tutorial. You can view its code [here](https://github.com/designucsd/examples/tree/master/htmlcss1).
+How about adding a class and making Aesop's punchline "We may often be..." more unique? [Here's](http://designatucsd.org/examples/htmlcss1/){:target="_blank"} an example of what your site might look like at the end of this tutorial. You can view its code [here](https://github.com/designucsd/examples/tree/master/htmlcss1){:target="_blank"}.
 
 ## Feedback
 
@@ -257,7 +258,7 @@ Now that we've covered the basics of HTML and CSS, what's next? To become a fron
 ## Additional resources
 Here are some resources for you to continue learning frontend:
 
-* [This Medium post](https://medium.freecodecamp.com/from-zero-to-front-end-hero-part-1-7d4f7f0bff02): A good post on how to get started with frontend development in general.
-* [CodeAcademy Tutorial](https://www.codecademy.com/learn/web): A hands-on tutorial teaching you the basics of HTML, CSS, and later on Bootstrap (also recommended by the above post).
-* [Check this out](http://jgthms.com/web-design-in-4-minutes/) for an interesting, quick brief on effective lightweight HTML/CSS, in which some of this tutorial is based on
+* [This Medium post](https://medium.freecodecamp.com/from-zero-to-front-end-hero-part-1-7d4f7f0bff02){:target="_blank"}: A good post on how to get started with frontend development in general.
+* [CodeAcademy Tutorial](https://www.codecademy.com/learn/web){:target="_blank"}: A hands-on tutorial teaching you the basics of HTML, CSS, and later on Bootstrap (also recommended by the above post).
+* [Check this out](http://jgthms.com/web-design-in-4-minutes/){:target="_blank"} for an interesting, quick brief on effective lightweight HTML/CSS, in which some of this tutorial is based on
 * Your favorite search engines and StackOverflow: If you've got an issue at this point, chances are someone else has encountered it before.
