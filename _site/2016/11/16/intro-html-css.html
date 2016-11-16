@@ -62,7 +62,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
 <div class="container-fluid slant-border bg-white">
   <div class="container">
     <div class="row">
-      <div class="col-sm-12 col-md-8 col-md-push-2 post-wrapper">
+      <div class="col-sm-12 col-md-10 col-md-push-1 col-lg-8 col-lg-push-2 post-wrapper">
         <h2 id="table-of-contents">Table of Contents</h2>
 
 <ul id="markdown-toc">
@@ -70,6 +70,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
   <li><a href="#getting-set-up" id="markdown-toc-getting-set-up">Getting Set Up</a></li>
   <li><a href="#what-are-html-and-css" id="markdown-toc-what-are-html-and-css">What are HTML and CSS?</a>    <ul>
       <li><a href="#introductory-html" id="markdown-toc-introductory-html">Introductory HTML</a></li>
+      <li><a href="#html-block-vs-inline" id="markdown-toc-html-block-vs-inline">HTML: Block vs Inline</a></li>
       <li><a href="#cascading-style-sheets" id="markdown-toc-cascading-style-sheets">Cascading Style Sheets</a></li>
     </ul>
   </li>
@@ -80,9 +81,12 @@ xmlns:fb="http://ogp.me/ns/fb#">
       <li><a href="#finishing-up" id="markdown-toc-finishing-up">Finishing up</a></li>
     </ul>
   </li>
-  <li><a href="#feedback" id="markdown-toc-feedback">Feedback</a></li>
-  <li><a href="#whats-next" id="markdown-toc-whats-next">What’s next?</a></li>
-  <li><a href="#additional-resources" id="markdown-toc-additional-resources">Additional resources</a></li>
+  <li><a href="#feedback-and-thank-you" id="markdown-toc-feedback-and-thank-you">Feedback and thank you</a></li>
+  <li><a href="#whats-next" id="markdown-toc-whats-next">What’s next?</a>    <ul>
+      <li><a href="#the-next-logical-steps" id="markdown-toc-the-next-logical-steps">The next logical steps</a></li>
+      <li><a href="#additional-resources" id="markdown-toc-additional-resources">Additional resources</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="getting-set-up">Getting Set Up</h2>
@@ -102,7 +106,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
 </code></pre>
 </div>
 
-<p>Then navigate to the file in your browser to view it. You should see something like this:</p>
+<p>Then navigate to the file in your browser to view it. On Macs, you can also drag the file from Finder into Chrome to open it. You should see something like this:</p>
 
 <p><img src="/public/images/events/FA16_IntroHTML_HelloWorld.jpg" alt="" /></p>
 
@@ -126,6 +130,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
         <span class="nt">&lt;div&gt;</span>
             <span class="nt">&lt;h1&gt;</span>My first HTML page<span class="nt">&lt;/h1&gt;</span>
             <span class="nt">&lt;p&gt;</span>This is my first HTML page<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://stackoverflow.com"</span><span class="nt">&gt;</span>This is a link<span class="nt">&lt;/a&gt;</span>
             <span class="c">&lt;!-- This is a HTML comment and it won't show up --&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/body&gt;</span>
@@ -145,9 +150,38 @@ xmlns:fb="http://ogp.me/ns/fb#">
   <li><code class="highlighter-rouge">&lt;div&gt;</code> Denotes a division (like a section) of an HTML document</li>
   <li><code class="highlighter-rouge">&lt;h1&gt;</code> Largest header tag - used for key headers</li>
   <li><code class="highlighter-rouge">&lt;p&gt;</code> A paragraph tag - used for most text content</li>
+  <li><code class="highlighter-rouge">&lt;a&gt;</code> An anchor tag (used to link; the <code class="highlighter-rouge">href</code> specifies where the content links to)</li>
 </ul>
 
 <p>There are many more types of tags you’ll encounter as you continue learning frontend, but these should be enough for now.</p>
+
+<h3 id="html-block-vs-inline">HTML: Block vs Inline</h3>
+
+<p>There are two ways HTML can be displayed:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">block</code>: these elements take up the full width available
+    <ul>
+      <li>Examples: <code class="highlighter-rouge">div</code>, <code class="highlighter-rouge">p</code>, <code class="highlighter-rouge">h1</code></li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">inline</code>: these elements take as much width as they need
+    <ul>
+      <li>Examples: <code class="highlighter-rouge">span</code>, <code class="highlighter-rouge">a</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>To see this, try placing two <code class="highlighter-rouge">&lt;a&gt;</code> tags next to each other and two <code class="highlighter-rouge">p</code> tags next to each other and see what happens:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>Paragraph 1<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;</span>Paragraph 2<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;a&gt;</span>Anchor 1<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;a&gt;</span>Anchor 2<span class="nt">&lt;/a&gt;</span>
+</code></pre>
+</div>
+
+<p>Note: you can also change the <code class="highlighter-rouge">display</code> type of an element with CSS, which we’ll get into now.</p>
 
 <h3 id="cascading-style-sheets">Cascading Style Sheets</h3>
 
@@ -157,23 +191,36 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 <p>Imagine if you had to add <em>inline styles</em> (like we just did) to style every element on the page. There must be some more reusable and less cluttery way to denote styling.</p>
 
-<p>This is where <strong>classes</strong> and <strong>ids</strong> come in. CSS can specify style properties that define the behavior of <strong>certain classes, ids, and HTML tags</strong>. This gives more power and separated, reusable code. (Note that ids are unique so you can only have one of a certain id on a page). You can add classes and ids like so:</p>
+<p>This is where <strong>classes</strong> and <strong>ids</strong> come in. CSS can specify style properties that define the behavior of <strong>certain classes, ids, and HTML tags</strong>. This gives more power and separated, reusable code. (Note that ids are unique so you can only have one of a certain id on a page).</p>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"your-class"</span> <span class="na">id=</span><span class="s">"your-id"</span><span class="nt">&gt;</span>Content here<span class="nt">&lt;/p&gt;</span>
-</code></pre>
-</div>
-
-<p>We’ll also need to link our stylesheet. Create a file called <code class="highlighter-rouge">stylesheet.css</code> and add this line to in your HTML <code class="highlighter-rouge">head</code>.</p>
+<p>However, we’ll first need to link our stylesheet. Create a file called <code class="highlighter-rouge">stylesheet.css</code> and add this line to in your HTML <code class="highlighter-rouge">head</code>.</p>
 
 <div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"stylesheet.css"</span><span class="nt">&gt;</span>
 </code></pre>
 </div>
 
+<ul>
+  <li><code class="highlighter-rouge">link</code>: tags define a link to an external resource (usually stylesheets)</li>
+  <li><code class="highlighter-rouge">rel</code>: specifies external resource’s relationship to this document (in this case, it’s a stylesheet)</li>
+  <li><code class="highlighter-rouge">href</code>: specifies location of document</li>
+</ul>
+
+<p>Now, you can add classes and ids like so:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"your-class"</span> <span class="na">id=</span><span class="s">"your-id"</span><span class="nt">&gt;</span>Content here<span class="nt">&lt;/p&gt;</span>
+</code></pre>
+</div>
+
 <p>Let’s try to add a class and add properties with our stylesheet. Add a class to your <code class="highlighter-rouge">&lt;h1&gt;</code> and add this in your CSS, replacing the class name.</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="c">&lt;!-- This is what your &lt;h1&gt; might look like --&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"your-class-name"</span><span class="nt">&gt;</span>My first HTML page<span class="nt">&lt;/h1&gt;</span>
+</code></pre>
+</div>
 
 <div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="c">/* This is a css comment */</span>
 <span class="nc">.your-class-name</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="m">#A31C88</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
@@ -210,6 +257,9 @@ xmlns:fb="http://ogp.me/ns/fb#">
             <span class="nt">&lt;p&gt;</span>
               We may often be of more consequence in our own eyes than in the eyes of our neighbours.
             <span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p&gt;</span>
+              Read more Aesop's Fables <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://femmebot.github.io/google-type/"</span><span class="nt">&gt;</span>here<span class="nt">&lt;/a&gt;</span>
+            <span class="nt">&lt;/p&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/body&gt;</span>
 <span class="nt">&lt;/html&gt;</span>
@@ -228,7 +278,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
 </code></pre>
 </div>
 
-<p>Side note: try playing around with other web-safe font names.</p>
+<p>Side note: try playing around with other web-safe fonts.</p>
 
 <h3 id="a-heroic-step">A Heroic Step</h3>
 
@@ -260,7 +310,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
   <span class="nl">background-size</span><span class="p">:</span> <span class="n">cover</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nc">.hero</span> <span class="nt">h1</span> <span class="p">{</span>
-  <span class="nl">color</span><span class="p">:</span> <span class="no">white</span> <span class="c">/* Or your choice color */</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span> <span class="c">/* Or your choice color */</span>
 <span class="p">}</span>
 </code></pre>
 </div>
@@ -278,6 +328,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
 <div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.your-div-class-name</span> <span class="p">{</span>
   <span class="nl">margin</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
   <span class="nl">max-width</span><span class="p">:</span> <span class="m">700px</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
   <span class="nl">color</span><span class="p">:</span> <span class="m">#555</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
@@ -285,62 +336,107 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 <ul>
   <li><code class="highlighter-rouge">margin</code>: denotes space around (outside) elements; auto denotes to base it off width of element and width of container</li>
+  <li><code class="highlighter-rouge">padding</code>: denotes space around (on the inside) elements. <code class="highlighter-rouge">10px</code> means there will be a space between content and the edge of the container 10px wide (on all edges).</li>
   <li><code class="highlighter-rouge">max-width</code>: denotes the largest width of an element</li>
+  <li>Note: there exists properties like <code class="highlighter-rouge">padding-left</code> and <code class="highlighter-rouge">margin-left</code> and for each other direction.</li>
 </ul>
 
-<p>Now viewing this in desktop, we can see that the content centers nicely on the page. Let’s try a custom font to add more personality. Here at DesignatUCSD, we’re big fans of <a href="https://fonts.google.com/specimen/Lato">Lato</a></p>
+<p>Now viewing this in desktop, we can see that the content centers nicely on the page. Let’s try a custom font to add more personality. Here at DesignatUCSD, we’re big fans of <a href="https://fonts.google.com/specimen/Lato">Lato</a>. You can always head to <a href="https://fonts.google.com">fonts.google.com</a> to pick a different font to use. Just make sure to also use <code class="highlighter-rouge">font-family</code> in the tags/classes/ids where you’d like the font to be used.</p>
 
 <div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="k">@import</span> <span class="sx">url('https://fonts.googleapis.com/css?family=Lato')</span><span class="p">;</span>
 
 <span class="c">/* You can edit your existing body tag */</span>
 <span class="nt">body</span> <span class="p">{</span>
   <span class="nl">font-family</span><span class="p">:</span> <span class="s1">"Lato"</span><span class="p">,</span> <span class="s1">"Helvetica"</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">1.4</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+<ul>
+  <li><code class="highlighter-rouge">line-height</code>: denotes the height of the line relative to the size of text.</li>
+</ul>
+
+<p>We can also update font sizes to improve readability. Try changing the <code class="highlighter-rouge">font-size</code> property for your <code class="highlighter-rouge">.hero h1</code> to 48px and <code class="highlighter-rouge">p</code> elements to 20px using CSS.</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.hero</span> <span class="nt">h1</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">48px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">p</span> <span class="p">{</span>
+  <span class="c">/* Try figuring this out */</span>
 <span class="p">}</span>
 </code></pre>
 </div>
 
-<p>We can also update font sizes to improve readability. Try changing the <code class="highlighter-rouge">font-size</code> property for your <code class="highlighter-rouge">.hero h1</code> and <code class="highlighter-rouge">p</code> elements using CSS.</p>
-
 <h3 id="cards">Cards</h3>
 
-<!-- However, currently the colors we've added don't seem to add the best aesthetic, so we'd like to probably like to pick better colors. [Here's](http://colorhunt.co/) a quick resource. Try using classes and ids to change the colors of your text. For text content it's often good to use a gray to reduce contrast. Here's a good one: `#555`.
+<p>Cards are a major feature that are often show up on many sites and help separate different sections of content. In this case, let’s try separating the majority of our content, Let’s try making our different paragraphs basic cards. Try to add these properties into your existing <code class="highlighter-rouge">p</code> selector in CSS.</p>
 
-```css
-/* If you're stuck, you can try this: */
-.your-div-class-name {
-  color: #555; /* Or your choice color */
-}
-``` -->
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">p</span> <span class="p">{</span>
+  <span class="c">/* Previous styles */</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#f1f1f1</span><span class="p">;</span> <span class="c">/* Or your choice color */</span>
+  <span class="nl">box-shadow</span><span class="p">:</span> <span class="m">0</span> <span class="m">4px</span> <span class="m">8px</span> <span class="m">0</span> <span class="m">#ddd</span><span class="p">;</span> <span class="c">/* This adds some depth */</span>
+  <span class="nl">margin-top</span><span class="p">:</span> <span class="m">10px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Try refreshing and observe how the cards help give the page some organization.</p>
 
 <h3 id="finishing-up">Finishing up</h3>
 <p>Can you think of more touches you’d like to add to your site? Here’s some things you can play around with:</p>
 
 <ul>
-  <li>Fonts and font-sizes</li>
-  <li>Colors</li>
-  <li>Widths of content</li>
-  <li>Your hero background image</li>
+  <li>Fonts and font-sizes
+    <ul>
+      <li>Try changing the header to a different font. Maybe Montserrat?</li>
+    </ul>
+  </li>
+  <li>Colors
+    <ul>
+      <li>Try changing the color of that link</li>
+    </ul>
+  </li>
+  <li>Content sizes</li>
+  <li>Your hero background image
+    <ul>
+      <li>Try including your own image or finding one online</li>
+    </ul>
+  </li>
   <li>Adding more/editing text content</li>
 </ul>
 
 <p>How about adding a class and making Aesop’s punchline “We may often be…” more unique? <a href="http://designatucsd.org/examples/htmlcss1/" target="_blank">Here’s</a> an example of what your site might look like at the end of this tutorial. You can view its code <a href="https://github.com/designucsd/examples/tree/master/htmlcss1" target="_blank">here</a>.</p>
 
-<h2 id="feedback">Feedback</h2>
+<h2 id="feedback-and-thank-you">Feedback and thank you</h2>
 
-<p>If you’ve completed this tutorial (remotely or on-site), please fill out this form to let us know how we did.</p>
+<p>Here at Design at UCSD, we’re passionate about putting forward educational, hands-on and fun workshops, and are always looking to improve and iterate, so if you’ve completed this tutorial (remotely or on-site), please fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSdAA4XAQWcP46BNcQp_NwobYA-2eRV5ahP03KflYlm0js18zw/viewform" target="_blank">this</a> form to let us know how we did.</p>
 
 <h2 id="whats-next">What’s next?</h2>
+
+<p>Congratulations! If you’ve done everything up to this point this means you’ve built a basic HTML and CSS site. If you’re wondering where to go from here, there are many, many available resources and clubs at UCSD; here’s some you should check out:</p>
+
+<ul>
+  <li><a href="http://cses.ucsd.edu" target="_blank">CSES</a>: Holds workshops on web development similar to this one</li>
+  <li><a href="http://tesc.ucsd.edu" target="_blank">TESC</a>: Holds Decaf, SD Hacks, and works on some really cool projects</li>
+  <li><a href="http://designatucsd.org" target="_blank">DesignatUCSD</a>: Well this is us. Hope you enjoyed and please come back</li>
+</ul>
+
+<p>Our advice? Either <strong>get involved with a project</strong> or <strong>start building your own website</strong>. There are many projects occurring on campus that are in need of passionate designers and developers.</p>
+
+<p>If you’re ever interested in getting more involved with DesignatUCSD, have general feedback, or just want to love us, email us at <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#100;&#101;&#115;&#105;&#103;&#110;&#097;&#116;&#117;&#099;&#115;&#100;&#046;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">designatucsd@gmail.com</a>.</p>
+
+<h3 id="the-next-logical-steps">The next logical steps</h3>
 <p>Now that we’ve covered the basics of HTML and CSS, what’s next? To become a frontend developer, you’d need to learn and do a couple more things:</p>
 
 <ul>
-  <li>Familiarize with the <a href="http://www.w3schools.com/css/css_boxmodel.asp" target="_blank">CSS Box Model</a> to understand</li>
   <li>Javascript</li>
   <li>Mobile friendliness</li>
   <li>Frontend frameworks (like Bootstrap) - we’ll be having a workshop on this soon!</li>
   <li>Practice, practice, practice!</li>
 </ul>
 
-<h2 id="additional-resources">Additional resources</h2>
+<h3 id="additional-resources">Additional resources</h3>
 <p>Here are some resources for you to continue learning frontend:</p>
 
 <ul>
