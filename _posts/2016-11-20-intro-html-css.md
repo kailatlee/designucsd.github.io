@@ -248,7 +248,7 @@ If you've completed this tutorial (remotely or on-site), please fill out this fo
 ## What's next?
 Now that we've covered the basics of HTML and CSS, what's next? To become a frontend developer, you'd need to learn and do a couple more things:
 
-* Familiarize with the [CSS Box Model](http://www.w3schools.com/css/css_boxmodel.asp) to understand
+* Familiarize with the [CSS Box Model](http://www.w3schools.com/css/css_boxmodel.asp)
 * Javascript
 * Mobile friendliness
 * Frontend frameworks (like Bootstrap) - we'll be having a workshop on this soon!
