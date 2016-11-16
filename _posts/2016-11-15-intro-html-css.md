@@ -2,7 +2,7 @@
 layout: post
 title: Intro to HTML/CSS Workshop
 hosted: Hosted by Design at UCSD
-time: Wednesday, Nov 20, 7:00-8:30pm
+time: Wednesday, Nov 16, 7:00-8:30pm
 location: H&SS 1346
 image: FA16_IntroHTML.png
 published: true
