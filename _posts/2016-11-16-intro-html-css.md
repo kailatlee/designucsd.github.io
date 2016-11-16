@@ -29,7 +29,7 @@ Now go ahead and write this in your `index.html`
 Hello World!
 ```
 
-Then navigate to the file in your browser to view it. You should see something like this:
+Then navigate to the file in your browser to view it. On Macs, you can also drag the file from Finder into Chrome to open it. You should see something like this:
 
 ![](/public/images/events/FA16_IntroHTML_HelloWorld.jpg)
 
@@ -52,6 +52,7 @@ Now go ahead and paste this code into your index.html:
         <div>
             <h1>My first HTML page</h1>
             <p>This is my first HTML page</p>
+            <a href="https://stackoverflow.com">This is a link</a>
             <!-- This is a HTML comment and it won't show up -->
         </div>
     </body>
@@ -69,8 +70,29 @@ The elements inside the angled brackets are called `tags`. Most of these tags re
 * `<div>` Denotes a division (like a section) of an HTML document
 * `<h1>` Largest header tag - used for key headers
 * `<p>` A paragraph tag - used for most text content
+* `<a>` An anchor tag (used to link; the `href` specifies where the content links to)
 
 There are many more types of tags you'll encounter as you continue learning frontend, but these should be enough for now. 
+
+### HTML: Block vs Inline
+
+There are two ways HTML can be displayed:
+
+* `block`: these elements take up the full width available
+  * Examples: `div`, `p`, `h1`
+* `inline`: these elements take as much width as they need
+  * Examples: `span`, `a`
+
+To see this, try placing two `<a>` tags next to each other and two `p` tags next to each other and see what happens:
+
+```html
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+<a>Anchor 1</a>
+<a>Anchor 2</a>
+```
+
+Note: you can also change the `display` type of an element with CSS, which we'll get into now.
 
 ### Cascading Style Sheets
 
@@ -80,24 +102,35 @@ First let's try something. Change your `<p>` tag in your HTML file to `<p style=
 
 Imagine if you had to add *inline styles* (like we just did) to style every element on the page. There must be some more reusable and less cluttery way to denote styling. 
 
-This is where **classes** and **ids** come in. CSS can specify style properties that define the behavior of **certain classes, ids, and HTML tags**. This gives more power and separated, reusable code. (Note that ids are unique so you can only have one of a certain id on a page). You can add classes and ids like so:
+This is where **classes** and **ids** come in. CSS can specify style properties that define the behavior of **certain classes, ids, and HTML tags**. This gives more power and separated, reusable code. (Note that ids are unique so you can only have one of a certain id on a page). 
 
-```html
-<p class="your-class" id="your-id">Content here</p>
-```
-
-We'll also need to link our stylesheet. Create a file called `stylesheet.css` and add this line to in your HTML `head`.
+However, we'll first need to link our stylesheet. Create a file called `stylesheet.css` and add this line to in your HTML `head`.
 
 ```html
 <link rel="stylesheet" href="stylesheet.css">
 ```
 
+* `link`: tags define a link to an external resource (usually stylesheets)
+* `rel`: specifies external resource's relationship to this document (in this case, it's a stylesheet)
+* `href`: specifies location of document
+
+Now, you can add classes and ids like so:
+
+```html
+<p class="your-class" id="your-id">Content here</p>
+```
+
 Let's try to add a class and add properties with our stylesheet. Add a class to your `<h1>` and add this in your CSS, replacing the class name.
+
+```html
+<!-- This is what your <h1> might look like -->
+<h1 class="your-class-name">My first HTML page</h1>
+```
 
 ```css
 /* This is a css comment */
 .your-class-name {
-  color: #A31C88;
+  color: blue;
 }
 ```
 
@@ -134,6 +167,9 @@ Now that you've got a hang of basic HTML and CSS, we can move on to more advance
             <p>
               We may often be of more consequence in our own eyes than in the eyes of our neighbours.
             </p>
+            <p>
+              Read more Aesop's Fables <a href="https://femmebot.github.io/google-type/">here</a>
+            </p>
         </div>
     </body>
 </html>
@@ -151,7 +187,7 @@ body {
 }
 ```
 
-Side note: try playing around with other web-safe font names. 
+Side note: try playing around with other web-safe fonts. 
 
 ### A Heroic Step
 
@@ -184,7 +220,7 @@ What if we added an image to be the background of our page? You can look in [Uns
   background-size: cover;
 }
 .hero h1 {
-  color: white /* Or your choice color */
+  color: white; /* Or your choice color */
 }
 ```
 
@@ -200,14 +236,17 @@ Right now, our text appears to span the entire width of the page, making it diff
 .your-div-class-name {
   margin: auto;
   max-width: 700px;
+  padding: 10px;
   color: #555;
 }
 ```
 
 * `margin`: denotes space around (outside) elements; auto denotes to base it off width of element and width of container
+* `padding`: denotes space around (on the inside) elements. `10px` means there will be a space between content and the edge of the container 10px wide (on all edges).
 * `max-width`: denotes the largest width of an element
+* Note: there exists properties like `padding-left` and `margin-left` and for each other direction.
 
-Now viewing this in desktop, we can see that the content centers nicely on the page. Let's try a custom font to add more personality. Here at DesignatUCSD, we're big fans of [Lato](https://fonts.google.com/specimen/Lato)
+Now viewing this in desktop, we can see that the content centers nicely on the page. Let's try a custom font to add more personality. Here at DesignatUCSD, we're big fans of [Lato](https://fonts.google.com/specimen/Lato). You can always head to [fonts.google.com](https://fonts.google.com) to pick a different font to use. Just make sure to also use `font-family` in the tags/classes/ids where you'd like the font to be used.
 
 ```css
 @import url('https://fonts.googleapis.com/css?family=Lato');
@@ -215,47 +254,77 @@ Now viewing this in desktop, we can see that the content centers nicely on the p
 /* You can edit your existing body tag */
 body {
   font-family: "Lato", "Helvetica", sans-serif;
+  line-height: 1.4;
+}
+```
+* `line-height`: denotes the height of the line relative to the size of text.
+
+We can also update font sizes to improve readability. Try changing the `font-size` property for your `.hero h1` to 48px and `p` elements to 20px using CSS. 
+
+```css
+.hero h1 {
+  font-size: 48px;
+}
+p {
+  /* Try figuring this out */
 }
 ```
 
-We can also update font sizes to improve readability. Try changing the `font-size` property for your `.hero h1` and `p` elements using CSS.
-
 ### Cards
 
-<!-- However, currently the colors we've added don't seem to add the best aesthetic, so we'd like to probably like to pick better colors. [Here's](http://colorhunt.co/) a quick resource. Try using classes and ids to change the colors of your text. For text content it's often good to use a gray to reduce contrast. Here's a good one: `#555`.
+Cards are a major feature that are often show up on many sites and help separate different sections of content. In this case, let's try separating the majority of our content, Let's try making our different paragraphs basic cards. Try to add these properties into your existing `p` selector in CSS.
 
-```css
-/* If you're stuck, you can try this: */
-.your-div-class-name {
-  color: #555; /* Or your choice color */
+```css 
+p {
+  /* Previous styles */
+  padding: 10px;
+  background-color: #f1f1f1; /* Or your choice color */
+  box-shadow: 0 4px 8px 0 #ddd; /* This adds some depth */
+  margin-top: 10px;
 }
-``` -->
+```
+
+Try refreshing and observe how the cards help give the page some organization. 
 
 ### Finishing up
 Can you think of more touches you'd like to add to your site? Here's some things you can play around with:
 
 * Fonts and font-sizes
+  * Try changing the header to a different font. Maybe Montserrat?
 * Colors
-* Widths of content
+  * Try changing the color of that link
+* Content sizes
 * Your hero background image
+  * Try including your own image or finding one online
 * Adding more/editing text content
 
 How about adding a class and making Aesop's punchline "We may often be..." more unique? [Here's](http://designatucsd.org/examples/htmlcss1/){:target="_blank"} an example of what your site might look like at the end of this tutorial. You can view its code [here](https://github.com/designucsd/examples/tree/master/htmlcss1){:target="_blank"}.
 
-## Feedback
+## Feedback and thank you
 
-If you've completed this tutorial (remotely or on-site), please fill out this form to let us know how we did.
+Here at Design at UCSD, we're passionate about putting forward educational, hands-on and fun workshops, and are always looking to improve and iterate, so if you've completed this tutorial (remotely or on-site), please fill out [this](https://docs.google.com/forms/d/e/1FAIpQLSdAA4XAQWcP46BNcQp_NwobYA-2eRV5ahP03KflYlm0js18zw/viewform){:target="_blank"} form to let us know how we did. 
 
 ## What's next?
+
+Congratulations! If you've done everything up to this point this means you've built a basic HTML and CSS site. If you're wondering where to go from here, there are many, many available resources and clubs at UCSD; here's some you should check out:
+
+* [CSES](http://cses.ucsd.edu){:target="_blank"}: Holds workshops on web development similar to this one
+* [TESC](http://tesc.ucsd.edu){:target="_blank"}: Holds Decaf, SD Hacks, and works on some really cool projects
+* [DesignatUCSD](http://designatucsd.org){:target="_blank"}: Well this is us. Hope you enjoyed and please come back
+
+Our advice? Either **get involved with a project** or **start building your own website**. There are many projects occurring on campus that are in need of passionate designers and developers. 
+
+If you're ever interested in getting more involved with DesignatUCSD, have general feedback, or just want to love us, email us at [designatucsd@gmail.com](mailto:designatucsd.gmail.com).
+
+### The next logical steps
 Now that we've covered the basics of HTML and CSS, what's next? To become a frontend developer, you'd need to learn and do a couple more things:
 
-* Familiarize with the [CSS Box Model](http://www.w3schools.com/css/css_boxmodel.asp){:target="_blank"} to understand
 * Javascript
 * Mobile friendliness
 * Frontend frameworks (like Bootstrap) - we'll be having a workshop on this soon!
 * Practice, practice, practice!
 
-## Additional resources
+### Additional resources
 Here are some resources for you to continue learning frontend:
 
 * [This Medium post](https://medium.freecodecamp.com/from-zero-to-front-end-hero-part-1-7d4f7f0bff02){:target="_blank"}: A good post on how to get started with frontend development in general.
