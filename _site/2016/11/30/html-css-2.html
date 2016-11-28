@@ -277,34 +277,79 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 <p>In code, this looks like</p>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"info"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"half"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"half-content"</span><span class="nt">&gt;</span>
-              <span class="nt">&lt;h2&gt;</span>
-                Powerful design<span class="nt">&lt;br&gt;</span>
-                prototyping tools
-              <span class="nt">&lt;/h2&gt;</span>
-              <span class="nt">&lt;p&gt;</span>
-                Get high-fidelity in under 5 minutes. Upload your design files and add animations, gestures, and transitions to transform your static screens into clickable, interactive prototypes.
-              <span class="nt">&lt;/p&gt;</span>
-              <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"italic"</span><span class="nt">&gt;</span>
-                "InVision is a window into everything that's being designed at Twitter. It gets all of our best work in one place."
-              <span class="nt">&lt;/p&gt;</span>
-          <span class="nt">&lt;/div&gt;</span>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"half"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"half-content"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h2&gt;</span>
+          Powerful design<span class="nt">&lt;br&gt;</span>
+          prototyping tools
+        <span class="nt">&lt;/h2&gt;</span>
+        <span class="nt">&lt;p&gt;</span>
+          Get high-fidelity in under 5 minutes. Upload your design files and add animations, gestures, and transitions to transform your static screens into clickable, interactive prototypes.
+        <span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"italic"</span><span class="nt">&gt;</span>
+          "InVision is a window into everything that's being designed at Twitter. It gets all of our best work in one place."
+        <span class="nt">&lt;/p&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"half"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"half-content"</span><span class="nt">&gt;</span>
-          <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://designatucsd.org/examples/envision/checkpoint3/images/featurette.png"</span> <span class="nt">/&gt;</span>
-          <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;&lt;div</span> <span class="na">class=</span><span class="s">"half"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"half-content"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/featurette.png"</span> <span class="nt">/&gt;</span>
       <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
 </code></pre>
 </div>
 
 <h3 id="styilng-info">Styilng Info</h3>
 
+<p>Let’s start with a few basic properties on our <code class="highlighter-rouge">.info</code> <code class="highlighter-rouge">div</code> and define our <code class="highlighter-rouge">.italics</code> class.</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.info</span> <span class="p">{</span>
+  <span class="nl">max-width</span><span class="p">:</span> <span class="m">1100px</span><span class="p">;</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">100px</span> <span class="m">15px</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.italic</span> <span class="p">{</span>
+  <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
 <h3 id="how-to-split-left-and-right">How to split left and right</h3>
-<p>With inline-block</p>
+
+<p>Refresh the browser and check out what we have so far. Sweet, looks like be just need to separate the two halves.</p>
+
+<p>Take a look at our HTML and brainstorm some ways we can split our two <code class="highlighter-rouge">.half</code> classes. We know each <code class="highlighter-rouge">div</code> takes about half of the page, so we should set our <code class="highlighter-rouge">width: 50%</code>. Additionally, this would be a great place to use our <code class="highlighter-rouge">display: inline-block</code> property since we want our divs to be inline with each other, and its inner content to be block elements.</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.half</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+  <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+<ul>
+  <li><code class="highlighter-rouge">width: 50%</code>: For width, we can you relative % values. This is saying that the width should take up 50% of the first parent div, which in our case is <code class="highlighter-rouge">.info</code>, that has a width defined.</li>
+  <li><code class="highlighter-rouge">vertical-align</code>: sets the vertical alignment of an element</li>
+</ul>
+
+<p>Finally, we’ll add a few text and image properties to the contents of our info section.</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.half-content</span> <span class="nt">h2</span> <span class="p">{</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">300</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">42px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.half-content</span> <span class="nt">p</span> <span class="p">{</span>
+  <span class="nl">line-height</span><span class="p">:</span> <span class="m">1.6</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="m">#5c6772</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.half-content</span> <span class="nt">img</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
 
 <h2 id="building-the-navigation">Building the Navigation</h2>
 
