@@ -74,7 +74,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
     </ul>
   </li>
   <li><a href="#building-the-info-section" id="markdown-toc-building-the-info-section">Building the Info Section</a>    <ul>
-      <li><a href="#styilng-info" id="markdown-toc-styilng-info">Styilng Info</a></li>
+      <li><a href="#styling-info" id="markdown-toc-styling-info">Styling Info</a></li>
       <li><a href="#how-to-split-left-and-right" id="markdown-toc-how-to-split-left-and-right">How to split left and right</a></li>
     </ul>
   </li>
@@ -301,7 +301,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
 </code></pre>
 </div>
 
-<h3 id="styilng-info">Styilng Info</h3>
+<h3 id="styling-info">Styling Info</h3>
 
 <p>Let’s start with a few basic properties on our <code class="highlighter-rouge">.info</code> <code class="highlighter-rouge">div</code> and define our <code class="highlighter-rouge">.italics</code> class.</p>
 
@@ -352,6 +352,55 @@ xmlns:fb="http://ogp.me/ns/fb#">
 </div>
 
 <h2 id="building-the-navigation">Building the Navigation</h2>
+
+<p>Let’s look at the navigation in the example and figure out what we need. We’ll need a left-aligned area for our logo, a list for all the links in our navigation, and a button in the upper right. As before, we’ll need to figure out a way to align elements to the left and the right, and figure out how to display list elements <code class="highlighter-rouge">inline</code>.</p>
+
+<p>Let’s try to break down the structure of the navigation</p>
+
+<ul>
+  <li><code class="highlighter-rouge">div</code> - <strong>An outer div to wrap all our navigation sounds nice.</strong> Let’s use class=’nav’
+    <ul>
+      <li><code class="highlighter-rouge">div</code> - <strong>We need another inside div to specify a <code class="highlighter-rouge">max-width</code>.</strong> Let’s use class=’nav-content’
+        <ul>
+          <li><code class="highlighter-rouge">div</code> - <strong>For our left content.</strong> Let’s use class=’nav-left’
+            <ul>
+              <li><code class="highlighter-rouge">span</code> - <strong>For the logo.</strong> Let’s use class=’logo’. Note here we’re using text, but you can use an image also.</li>
+            </ul>
+          </li>
+          <li><code class="highlighter-rouge">ul</code> - <strong>For our right content.</strong> Since unordered lists are <code class="highlighter-rouge">display: block</code> by default (like <code class="highlighter-rouge">divs</code>), we don’t need another div to wrap them. Here we can use multiple classnames for sets of properties that accomplish different goals. Let’s use class=’nav-right nav-list’, and use <code class="highlighter-rouge">nav-right</code> for aligning the list on the right and <code class="highlighter-rouge">nav-list</code> for list-specific properties
+            <ul>
+              <li><code class="highlighter-rouge">li</code> - <strong>Our links to individual pages</strong></li>
+              <li><code class="highlighter-rouge">li class='button'</code> - <strong>A rightmost call to action button</strong></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>With that, you can try writing the basic HTML</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav-content"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"nav-left"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"logo"</span><span class="nt">&gt;</span>envision<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav-right nav-list"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li&gt;</span>Tour<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>Customers<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>New Features<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>Enterprise<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>Blog<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>Login<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>
+                Sign up Free
+            <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
 
 <h3 id="different-positioning-types">Different positioning types</h3>
 
