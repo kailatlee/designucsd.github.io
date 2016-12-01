@@ -338,18 +338,18 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 <p>Refresh the browser and check out what we have so far. Sweet, looks like be just need to separate the two halves.</p>
 
-<p>Take a look at our HTML and brainstorm some ways we can split our two <code class="highlighter-rouge">.ucsd-half</code> classes. We know each <code class="highlighter-rouge">div</code> takes about half of the page, so we should set our <code class="highlighter-rouge">width: 50%</code>. Additionally, this would be a great place to use our <code class="highlighter-rouge">display: inline-block</code> property since we want our divs to be inline with each other, and its inner content to be block elements.</p>
+<p>Take a look at our HTML and brainstorm some ways we can split our two <code class="highlighter-rouge">.ucsd-half</code> classes. We know each <code class="highlighter-rouge">div</code> takes about half of the page, so we should set our <code class="highlighter-rouge">width: 49%</code>. Additionally, this would be a great place to use our <code class="highlighter-rouge">display: inline-block</code> property since we want our divs to be inline with each other, and its inner content to be block elements.</p>
 
 <div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="c">/* Split left/right */</span>
 <span class="nc">.ucsd-half</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">49%</span><span class="p">;</span>
   <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
   <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
 <ul>
-  <li><code class="highlighter-rouge">width: 50%</code>: For width, we can use relative % values. This is saying that the width should take up 50% of the first parent div, which in our case is <code class="highlighter-rouge">.info</code>, that has a width defined.</li>
+  <li><code class="highlighter-rouge">width: 49%</code>: For width, we can use relative % values. This is saying that the width should take up 49% of the first parent div, which in our case is <code class="highlighter-rouge">.info</code>, that has a width defined. We’re using 49% because we want to prevent accidental wrapping of elements.</li>
   <li><code class="highlighter-rouge">vertical-align</code>: sets the vertical alignment of an element</li>
 </ul>
 
