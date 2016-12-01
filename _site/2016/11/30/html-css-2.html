@@ -167,12 +167,12 @@ xmlns:fb="http://ogp.me/ns/fb#">
 <span class="nc">.ucsd-hero</span> <span class="p">{</span>
    <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#112333</span><span class="p">;</span> <span class="c">/*fallback if the background image isn't there*/</span>
-   <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('http://orig13.deviantart.net/4a63/f/2013/118/2/4/tumblr_background__repeat__by_janku_roketto-d63dzsa.jpg')</span><span class="p">;</span>
+   <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('../images/background.jpg')</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
 <ul>
-  <li><code class="highlighter-rouge">background-image</code>: Adds a background image to the div</li>
+  <li><code class="highlighter-rouge">background-image: url('../images/background.jpg')</code>: Adds a background image to the div. <code class="highlighter-rouge">..</code> goes to the parent directory to find the <code class="highlighter-rouge">/images</code> folder and the <code class="highlighter-rouge">background.jpg</code> file within it.</li>
 </ul>
 
 <p>Notice here that we defined a color using using a 6 digit hexcode. In CSS, most colors can be indicated using this notation, which represents RGB colors in Hexadecimal. To explore different colors, check out <a href="http://www.color-hex.com/">Color Hex</a>.</p>
