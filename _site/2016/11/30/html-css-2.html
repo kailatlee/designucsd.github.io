@@ -95,7 +95,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 <p>If you haven’t already, make sure you understand the concepts from our <a href="http://designatucsd.org/2016/11/16/intro-html-css.html">first tutorial</a></p>
 
-<p>Go ahead and grab the TODO - Link this: starter code here. You can hit download in the upper right corner, and then open <code class="highlighter-rouge">index.html</code> in your browser and in your favorite text editor.</p>
+<p>Go ahead and grab the <a href="https://drive.google.com/drive/folders/0B7y-UXfAtMC8TXpYeDU5SUk2SGs?usp=sharing" target="_blank">starter code</a>. You can hit download in the upper right corner, and then open <code class="highlighter-rouge">index.html</code> in your browser and in your favorite text editor.</p>
 
 <p>We’re going to be building a site that looks like <a href="http://designatucsd.org/examples/envision/checkpoint3/">this</a>, a dumbed down version of Invision’s <a href="https://www.invisionapp.com/">site</a>. Let’s pretend this is the ‘mockup’ that is given to us by the designer that we need to implement</p>
 
@@ -144,13 +144,9 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 <h3 id="styling-hero">Styling Hero</h3>
 
-<p>Awesome! We’ve added our hero content, but it could really use a bit of styling. Let’s open the file <code class="highlighter-rouge">stylesheet.css</code> in our <code class="highlighter-rouge">css</code> folder. Don’t forget, we have to also link our HTML page to our newly created css file. You can do that by using the <code class="highlighter-rouge">&lt;link&gt;</code> tag in the <code class="highlighter-rouge">&lt;head&gt;</code> section of <code class="highlighter-rouge">index.html</code>.</p>
+<p>Awesome! We’ve added our hero content, but it could really use a bit of styling. Let’s open our <code class="highlighter-rouge">stylesheet.css</code> in the /css folder.</p>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"css/stylesheet.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
-</code></pre>
-</div>
-
-<p>Once you’re ready, let’s start by removing default browser spacing and set up our font. Just like in our last workshop, we’ll be using Lato.</p>
+<p>Once you’re ready, start by removing default browser spacing and set up our font. Just like in our last workshop, we’ll be using Lato.</p>
 
 <div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="c">/* Font imports */</span>
 <span class="k">@import</span> <span class="sx">url('https://fonts.googleapis.com/css?family=Lato:300,300i,400')</span><span class="p">;</span>
@@ -168,15 +164,15 @@ xmlns:fb="http://ogp.me/ns/fb#">
 <p>Time to add color and a background! We can select the outermost <code class="highlighter-rouge">div</code> using the css selector <code class="highlighter-rouge">.ucsd-hero</code> and change it’s <code class="highlighter-rouge">color</code>, <code class="highlighter-rouge">background-color</code>, and <code class="highlighter-rouge">background-image</code> properties</p>
 
 <div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="c">/* Hero section */</span>
-<span class="nc">.ucsd-hero</span> <span class="p">{</span>    
+<span class="nc">.ucsd-hero</span> <span class="p">{</span>
    <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
    <span class="nl">background-color</span><span class="p">:</span> <span class="m">#112333</span><span class="p">;</span> <span class="c">/*fallback if the background image isn't there*/</span>
-   <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('http://orig13.deviantart.net/4a63/f/2013/118/2/4/tumblr_background__repeat__by_janku_roketto-d63dzsa.jpg')</span><span class="p">;</span>
+   <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('../images/background.jpg')</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
 <ul>
-  <li><code class="highlighter-rouge">background-image</code>: Adds a background image to the div</li>
+  <li><code class="highlighter-rouge">background-image: url('../images/background.jpg')</code>: Adds a background image to the div. <code class="highlighter-rouge">..</code> goes to the parent directory to find the <code class="highlighter-rouge">/images</code> folder and the <code class="highlighter-rouge">background.jpg</code> file within it.</li>
 </ul>
 
 <p>Notice here that we defined a color using using a 6 digit hexcode. In CSS, most colors can be indicated using this notation, which represents RGB colors in Hexadecimal. To explore different colors, check out <a href="http://www.color-hex.com/">Color Hex</a>.</p>
@@ -232,7 +228,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
   <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'Lato'</span><span class="p">,</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
   <span class="nl">cursor</span><span class="p">:</span> <span class="nb">pointer</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nc">.ucsd-button</span><span class="nd">:hover</span><span class="p">{</span>  
+<span class="nc">.ucsd-button</span><span class="nd">:hover</span><span class="p">{</span>
   <span class="nl">background-color</span><span class="p">:</span> <span class="m">#0e4374</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
@@ -411,7 +407,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
             <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ucsd-nav-right__item"</span><span class="nt">&gt;</span>Blog<span class="nt">&lt;/li&gt;</span>
             <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ucsd-nav-right__item"</span><span class="nt">&gt;</span>Login<span class="nt">&lt;/li&gt;</span>
             <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"ucsd-nav-right__item"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ucsd-button"</span><span class="nt">&gt;</span>Sign up Free<span class="nt">&lt;/button&gt;</span>            
+                <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ucsd-button"</span><span class="nt">&gt;</span>Sign up Free<span class="nt">&lt;/button&gt;</span>
             <span class="nt">&lt;/li&gt;</span>
         <span class="nt">&lt;/ul&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
@@ -514,7 +510,7 @@ xmlns:fb="http://ogp.me/ns/fb#">
 <span class="p">}</span>
 </code></pre>
 </div>
-<!-- 
+<!--
 ## Mobile-Friendliness
 
 Our site looks great on desktop, but let's try seeing if works great on mobile too. Open your code inspector by clicking right click->inspect element. Click the button in the upper right to Toggle Device Toolbar.
@@ -522,7 +518,6 @@ Our site looks great on desktop, but let's try seeing if works great on mobile t
 ### Media Queries -->
 
 <h2 id="whats-next">What’s Next?</h2>
-
 
       </div>
     </div>
