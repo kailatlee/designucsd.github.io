@@ -113,13 +113,13 @@ xmlns:fb="http://ogp.me/ns/fb#">
 <p>Here’s a basic bullet point visualization of how we might structure our html elements:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">div</code> - <strong>An outer div to wrap all of our hero.</strong> Let’s use class=’hero’
+  <li><code class="highlighter-rouge">div</code> - <strong>An outer div to wrap all of our hero.</strong> Let’s use class=’ucsd-hero’
     <ul>
-      <li><code class="highlighter-rouge">div</code> - <strong>An inner div to wrap our text and buttons.</strong> Let’s use class=’hero-content’
+      <li><code class="highlighter-rouge">div</code> - <strong>An inner div to wrap our text and buttons.</strong> Let’s use class=’ucsd-hero-content’
         <ul>
-          <li><code class="highlighter-rouge">h1</code> - <strong>For our main header.</strong> A class=’title’ sounds good</li>
-          <li><code class="highlighter-rouge">h3</code> - <strong>A smaller header.</strong> A class=’subtitle’ sounds good</li>
-          <li><code class="highlighter-rouge">a</code> - <strong>Our anchor tag for our button.</strong> Since it’s a button, let’s use class=’button’</li>
+          <li><code class="highlighter-rouge">h1</code> - <strong>For our main header.</strong> A class=’ucsd-title’ sounds good</li>
+          <li><code class="highlighter-rouge">h3</code> - <strong>A smaller header.</strong> A class=’ucsd-subtitle’ sounds good</li>
+          <li><code class="highlighter-rouge">a</code> - <strong>Our anchor tag for our button.</strong> Since it’s a button, let’s use class=’ucsd-button’</li>
         </ul>
       </li>
     </ul>
@@ -128,15 +128,16 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 <p>Put into code, it might look something like this:</p>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hero"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hero-content"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"title"</span><span class="nt">&gt;</span>Design Better. Faster. Together<span class="nt">&lt;/h1&gt;</span>
-        <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"subtitle"</span><span class="nt">&gt;</span>The world's leading prototyping, collaboration <span class="err">&amp;</span> workflow platform<span class="nt">&lt;/h3&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"button"</span><span class="nt">&gt;</span>
-            Get Started - Free Forever!
-        <span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="c">&lt;!-- Step 1 --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ucsd-hero"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ucsd-hero-content"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"ucsd-title"</span><span class="nt">&gt;</span>Design Better. Faster. Together<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"ucsd-subtitle"</span><span class="nt">&gt;</span>The world's leading prototyping, collaboration <span class="err">&amp;</span> workflow platform<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"ucsd-button"</span><span class="nt">&gt;</span>
+      Get Started - Free Forever!
+    <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- End hero-content --&gt;</span>
+<span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- End hero --&gt;</span>
 </code></pre>
 </div>
 
@@ -153,27 +154,33 @@ xmlns:fb="http://ogp.me/ns/fb#">
 <span class="nt">html</span><span class="o">,</span> <span class="nt">body</span> <span class="p">{</span>
   <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
   <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span>
-  <span class="nl">font-family</span><span class="p">:</span> <span class="n">Lato</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'Lato'</span><span class="p">,</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
 
-<p>Time to add color! We can select the outermost <code class="highlighter-rouge">&lt;div&gt;</code> using the css selector <code class="highlighter-rouge">.hero</code> and change it’s <code class="highlighter-rouge">color</code> and <code class="highlighter-rouge">background-color</code> properties</p>
+<p>Time to add color and a background! We can select the outermost <code class="highlighter-rouge">div</code> using the css selector <code class="highlighter-rouge">.ucsd-hero</code> and change it’s <code class="highlighter-rouge">color</code>, <code class="highlighter-rouge">background-color</code>, and <code class="highlighter-rouge">background-image</code> properties</p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.hero</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="c">/* Hero section */</span>
+<span class="nc">.ucsd-hero</span> <span class="p">{</span>    
    <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
-   <span class="nl">background-color</span><span class="p">:</span> <span class="m">#112333</span><span class="p">;</span> <span class="c">/* Hexcode for navy blue */</span>
+   <span class="nl">background-color</span><span class="p">:</span> <span class="m">#112333</span><span class="p">;</span> <span class="c">/*fallback if the background image isn't there*/</span>
+   <span class="nl">background-image</span><span class="p">:</span> <span class="sx">url('http://orig13.deviantart.net/4a63/f/2013/118/2/4/tumblr_background__repeat__by_janku_roketto-d63dzsa.jpg')</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
+<ul>
+  <li><code class="highlighter-rouge">background-image</code>: Adds a background image to the div</li>
+</ul>
 
 <p>Notice here that we defined a color using using a 6 digit hexcode. In CSS, most colors can be indicated using this notation, which represents RGB colors in Hexadecimal. To explore different colors, check out <a href="http://www.color-hex.com/">Color Hex</a>.</p>
 
 <p>Refresh your browser to see that your styling is working. If not, double check that your <code class="highlighter-rouge">&lt;link&gt;</code> tag is referring to the correct CSS file.</p>
 
-<p>Now that we have some color, lets add some spacing and align our text to the center in our <code class="highlighter-rouge">.hero-content</code> <code class="highlighter-rouge">&lt;div&gt;</code></p>
+<p>Now that we have some color, lets add some spacing and align our text to the center in our <code class="highlighter-rouge">.ucsd-hero-content</code> <code class="highlighter-rouge">&lt;div&gt;</code></p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.hero-content</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.ucsd-hero-content</span> <span class="p">{</span>
   <span class="nl">padding-top</span><span class="p">:</span> <span class="m">220px</span><span class="p">;</span>
   <span class="nl">padding-bottom</span><span class="p">:</span> <span class="m">220px</span><span class="p">;</span>
   <span class="nl">text-align</span><span class="p">:</span> <span class="nb">center</span><span class="p">;</span>
@@ -181,15 +188,15 @@ xmlns:fb="http://ogp.me/ns/fb#">
 </code></pre>
 </div>
 
-<p>From here, we can add a bit of font styling to our <code class="highlighter-rouge">.title</code> and <code class="highlighter-rouge">.subtitle</code>.</p>
+<p>From here, we can add a bit of font styling to our <code class="highlighter-rouge">.ucsd-title</code> and <code class="highlighter-rouge">.ucsd-subtitle</code>.</p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.title</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.ucsd-title</span> <span class="p">{</span>
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">48px</span><span class="p">;</span>
   <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
   <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">1.5px</span><span class="p">;</span>
   <span class="nl">font-weight</span><span class="p">:</span> <span class="m">300</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nc">.subtitle</span> <span class="p">{</span>
+<span class="nc">.ucsd-subtitle</span> <span class="p">{</span>
   <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span><span class="p">;</span>
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">24px</span><span class="p">;</span>
   <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">1px</span><span class="p">;</span>
@@ -204,24 +211,29 @@ xmlns:fb="http://ogp.me/ns/fb#">
   <li><code class="highlighter-rouge">font-weight</code>: Sets how thick or thin characters in text should be displayed</li>
 </ul>
 
-<p>Last but not least, lets give the our <code class="highlighter-rouge">.button</code> some styling</p>
+<p>Last but not least, lets give the our <code class="highlighter-rouge">.ucsd-button</code> some styling</p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.button</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.ucsd-button</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
   <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="m">28px</span><span class="p">;</span>
-  <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">1.5px</span><span class="p">;</span>
   <span class="nl">text-transform</span><span class="p">:</span> <span class="nb">uppercase</span><span class="p">;</span>
+  <span class="nl">letter-spacing</span><span class="p">:</span> <span class="m">1.5px</span><span class="p">;</span>
   <span class="nl">height</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
-  <span class="nl">line-height</span><span class="p">:</span> <span class="m">50px</span><span class="p">;</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">14px</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
   <span class="nl">border-radius</span><span class="p">:</span> <span class="m">25px</span><span class="p">;</span>
   <span class="nl">background-color</span><span class="p">:</span> <span class="m">#34699A</span><span class="p">;</span>
   <span class="nl">color</span><span class="p">:</span> <span class="no">white</span><span class="p">;</span>
-  <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
+  <span class="nl">border</span><span class="p">:</span> <span class="nb">none</span><span class="p">;</span>
+  <span class="nl">font-family</span><span class="p">:</span> <span class="s2">'Lato'</span><span class="p">,</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="n">Arial</span><span class="p">,</span> <span class="nb">sans-serif</span><span class="p">;</span>
+  <span class="nl">cursor</span><span class="p">:</span> <span class="nb">pointer</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.ucsd-button</span><span class="nd">:hover</span><span class="p">{</span>  
+  <span class="nl">background-color</span><span class="p">:</span> <span class="m">#0e4374</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
-
 <ul>
+  <li><code class="highlighter-rouge">ucsd-button:hover</code>: this defines properties when the cursor is hovered over our <code class="highlighter-rouge">div</code></li>
   <li><code class="highlighter-rouge">display: inline-block</code>: The inside of this div is formatted as a block, but the div itself is formatted as an inline element</li>
 </ul>
 
@@ -249,24 +261,24 @@ xmlns:fb="http://ogp.me/ns/fb#">
 <p>Here’s a basic bullet point visualization of how we might structure our html elements:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">div</code> - <strong>An outer div to wrap the entire Info section.</strong> Let’s use class=’info’
+  <li><code class="highlighter-rouge">div</code> - <strong>An outer div to wrap the entire Info section.</strong> Let’s use class=’ucsd-info’
     <ul>
-      <li><code class="highlighter-rouge">div</code> - <strong>An inner div to wrap our first half of content</strong> Let’s use class=’half’
+      <li><code class="highlighter-rouge">div</code> - <strong>An inner div to wrap our first half of content</strong> Let’s use class=’ucsd-half’
         <ul>
-          <li><code class="highlighter-rouge">div</code> - <strong>Another div to wrap its contents</strong> Let’s use class=’half-content’
+          <li><code class="highlighter-rouge">div</code> - <strong>Another div to wrap its contents</strong> Let’s use class=’ucsd-half-content’
             <ul>
-              <li><code class="highlighter-rouge">h2</code> - <strong>For our main header.</strong></li>
+              <li><code class="highlighter-rouge">h2</code> - <strong>For our main header.</strong> Let’s class= <code class="highlighter-rouge">ucsd-half-content-header</code></li>
               <li><code class="highlighter-rouge">p</code> - <strong>A paragraph.</strong> A class=’subtitle’ sounds good</li>
-              <li><code class="highlighter-rouge">p</code> - <strong>Another paragraph.</strong> We’ll make this italic later on using class=’italic’</li>
+              <li><code class="highlighter-rouge">p</code> - <strong>Another paragraph.</strong> We’ll make this italic later on using class=’ucsd-italic’</li>
             </ul>
           </li>
         </ul>
       </li>
-      <li><code class="highlighter-rouge">div</code> - <strong>An inner div to wrap our second half of content</strong> Let’s use class=’half’
+      <li><code class="highlighter-rouge">div</code> - <strong>An inner div to wrap our second half of content</strong> Let’s use class=’ucsd-half’
         <ul>
-          <li><code class="highlighter-rouge">div</code> - <strong>Another div to wrap its contents</strong> Let’s use class=’half-content’
+          <li><code class="highlighter-rouge">div</code> - <strong>Another div to wrap its contents</strong> Let’s use class=’ucsd-half-content’
             <ul>
-              <li><code class="highlighter-rouge">img</code> - <strong>For our image.</strong></li>
+              <li><code class="highlighter-rouge">img</code> - <strong>For our image.</strong> Let’s use class=’ucsd-computer-image’</li>
             </ul>
           </li>
         </ul>
@@ -277,24 +289,24 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 <p>In code, this looks like</p>
 
-<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"content"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"half"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"half-content"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;h2&gt;</span>
-          Powerful design<span class="nt">&lt;br&gt;</span>
-          prototyping tools
-        <span class="nt">&lt;/h2&gt;</span>
-        <span class="nt">&lt;p&gt;</span>
-          Get high-fidelity in under 5 minutes. Upload your design files and add animations, gestures, and transitions to transform your static screens into clickable, interactive prototypes.
-        <span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"italic"</span><span class="nt">&gt;</span>
-          "InVision is a window into everything that's being designed at Twitter. It gets all of our best work in one place."
-        <span class="nt">&lt;/p&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;&lt;div</span> <span class="na">class=</span><span class="s">"half"</span><span class="nt">&gt;</span>
-      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"half-content"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/featurette.png"</span> <span class="nt">/&gt;</span>
-      <span class="nt">&lt;/div&gt;</span>
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="c">&lt;!-- Step 2 --&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ucsd-info"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ucsd-half"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ucsd-half-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;h2</span> <span class="na">class=</span><span class="s">"ucsd-half-content-header"</span><span class="nt">&gt;</span>
+        Powerful design<span class="nt">&lt;br&gt;</span>
+        prototyping tools
+      <span class="nt">&lt;/h2&gt;</span>
+      <span class="nt">&lt;p&gt;</span>
+        Get high-fidelity in under 5 minutes. Upload your design files and add animations, gestures, and transitions to transform your static screens into clickable, interactive prototypes.
+      <span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"ucsd-italic"</span><span class="nt">&gt;</span>
+        "InVision is a window into everything that's being designed at Twitter. It gets all of our best work in one place."
+      <span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;&lt;div</span> <span class="na">class=</span><span class="s">"ucsd-half"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ucsd-half-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"ucsd-computer-image"</span><span class="na">src=</span><span class="s">"images/featurette.png"</span> <span class="nt">/&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
   <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
@@ -305,12 +317,12 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 <p>Let’s start with a few basic properties on our <code class="highlighter-rouge">.info</code> <code class="highlighter-rouge">div</code> and define our <code class="highlighter-rouge">.italics</code> class.</p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.info</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.ucsd-info</span> <span class="p">{</span>
   <span class="nl">max-width</span><span class="p">:</span> <span class="m">1100px</span><span class="p">;</span>
-  <span class="nl">padding</span><span class="p">:</span> <span class="m">100px</span> <span class="m">15px</span><span class="p">;</span>
-  <span class="nl">margin</span><span class="p">:</span> <span class="nb">auto</span><span class="p">;</span>
+  <span class="nl">margin</span><span class="p">:</span> <span class="m">100px</span> <span class="nb">auto</span><span class="p">;</span> <span class="c">/*100px top and bottom, auto left and right allows it to center*/</span>
+  <span class="nl">padding</span><span class="p">:</span> <span class="m">0</span> <span class="m">15px</span><span class="p">;</span> <span class="c">/* For when the window is smaller, doesn't but up against the edges */</span>
 <span class="p">}</span>
-<span class="nc">.italic</span> <span class="p">{</span>
+<span class="nc">.ucsd-italic</span> <span class="p">{</span>
   <span class="nl">font-style</span><span class="p">:</span> <span class="nb">italic</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
@@ -320,9 +332,10 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 <p>Refresh the browser and check out what we have so far. Sweet, looks like be just need to separate the two halves.</p>
 
-<p>Take a look at our HTML and brainstorm some ways we can split our two <code class="highlighter-rouge">.half</code> classes. We know each <code class="highlighter-rouge">div</code> takes about half of the page, so we should set our <code class="highlighter-rouge">width: 50%</code>. Additionally, this would be a great place to use our <code class="highlighter-rouge">display: inline-block</code> property since we want our divs to be inline with each other, and its inner content to be block elements.</p>
+<p>Take a look at our HTML and brainstorm some ways we can split our two <code class="highlighter-rouge">.ucsd-half</code> classes. We know each <code class="highlighter-rouge">div</code> takes about half of the page, so we should set our <code class="highlighter-rouge">width: 50%</code>. Additionally, this would be a great place to use our <code class="highlighter-rouge">display: inline-block</code> property since we want our divs to be inline with each other, and its inner content to be block elements.</p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.half</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="c">/* Split left/right */</span>
+<span class="nc">.ucsd-half</span> <span class="p">{</span>
   <span class="nl">width</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
   <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
   <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span>
@@ -336,16 +349,15 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 <p>Finally, we’ll add a few text and image properties to the contents of our info section.</p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.half-content</span> <span class="nt">h2</span> <span class="p">{</span>
-  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">300</span><span class="p">;</span>
-  <span class="nl">font-size</span><span class="p">:</span> <span class="m">42px</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="nc">.half-content</span> <span class="nt">p</span> <span class="p">{</span>
-  <span class="nl">line-height</span><span class="p">:</span> <span class="m">1.6</span><span class="p">;</span>
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.ucsd-half-content</span><span class="p">{</span>
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">18px</span><span class="p">;</span>
   <span class="nl">color</span><span class="p">:</span> <span class="m">#5c6772</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nc">.half-content</span> <span class="nt">img</span> <span class="p">{</span>
+<span class="nc">.ucsd-half-content-header</span><span class="p">{</span>
+  <span class="nl">font-weight</span><span class="p">:</span> <span class="m">300</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">42px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.ucsd-computer-image</span><span class="p">{</span>
   <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
