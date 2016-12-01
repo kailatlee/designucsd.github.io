@@ -86,7 +86,12 @@ xmlns:fb="http://ogp.me/ns/fb#">
       <li><a href="#styling-the-button-and-the-logo" id="markdown-toc-styling-the-button-and-the-logo">Styling the Button and the Logo</a></li>
     </ul>
   </li>
-  <li><a href="#whats-next" id="markdown-toc-whats-next">What’s Next?</a></li>
+  <li><a href="#feedback-and-thank-you" id="markdown-toc-feedback-and-thank-you">Feedback and thank you</a></li>
+  <li><a href="#whats-next" id="markdown-toc-whats-next">What’s Next?</a>    <ul>
+      <li><a href="#the-next-logical-steps" id="markdown-toc-the-next-logical-steps">The next logical steps</a></li>
+      <li><a href="#additional-resources" id="markdown-toc-additional-resources">Additional resources</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="getting-set-up">Getting Set Up</h2>
@@ -333,18 +338,18 @@ xmlns:fb="http://ogp.me/ns/fb#">
 
 <p>Refresh the browser and check out what we have so far. Sweet, looks like be just need to separate the two halves.</p>
 
-<p>Take a look at our HTML and brainstorm some ways we can split our two <code class="highlighter-rouge">.ucsd-half</code> classes. We know each <code class="highlighter-rouge">div</code> takes about half of the page, so we should set our <code class="highlighter-rouge">width: 50%</code>. Additionally, this would be a great place to use our <code class="highlighter-rouge">display: inline-block</code> property since we want our divs to be inline with each other, and its inner content to be block elements.</p>
+<p>Take a look at our HTML and brainstorm some ways we can split our two <code class="highlighter-rouge">.ucsd-half</code> classes. We know each <code class="highlighter-rouge">div</code> takes about half of the page, so we should set our <code class="highlighter-rouge">width: 49%</code>. Additionally, this would be a great place to use our <code class="highlighter-rouge">display: inline-block</code> property since we want our divs to be inline with each other, and its inner content to be block elements.</p>
 
 <div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="c">/* Split left/right */</span>
 <span class="nc">.ucsd-half</span> <span class="p">{</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="m">50%</span><span class="p">;</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">49%</span><span class="p">;</span>
   <span class="nl">display</span><span class="p">:</span> <span class="n">inline-block</span><span class="p">;</span>
   <span class="nl">vertical-align</span><span class="p">:</span> <span class="nb">middle</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre>
 </div>
 <ul>
-  <li><code class="highlighter-rouge">width: 50%</code>: For width, we can use relative % values. This is saying that the width should take up 50% of the first parent div, which in our case is <code class="highlighter-rouge">.info</code>, that has a width defined.</li>
+  <li><code class="highlighter-rouge">width: 49%</code>: For width, we can use relative % values. This is saying that the width should take up 49% of the first parent div, which in our case is <code class="highlighter-rouge">.info</code>, that has a width defined. We’re using 49% because we want to prevent accidental wrapping of elements.</li>
   <li><code class="highlighter-rouge">vertical-align</code>: sets the vertical alignment of an element</li>
 </ul>
 
@@ -517,7 +522,31 @@ Our site looks great on desktop, but let's try seeing if works great on mobile t
 
 ### Media Queries -->
 
+<h2 id="feedback-and-thank-you">Feedback and thank you</h2>
+
+<p>Here at Design at UCSD, we’re passionate about putting forward educational, hands-on and fun workshops, and are always looking to improve and iterate, so if you’ve completed this tutorial (remotely or on-site), please fill out <a href="https://docs.google.com/forms/d/e/1FAIpQLSeKTwyMWx83XDSL6V98l5gfjf95qLKN8hGra8Gel89s_wjFyQ/viewform" target="_blank">this</a> form to let us know how we did.</p>
+
 <h2 id="whats-next">What’s Next?</h2>
+
+<p>If you’re ever interested in getting more involved with DesignatUCSD, have general feedback, or just want to love us, email us at <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#100;&#101;&#115;&#105;&#103;&#110;&#097;&#116;&#117;&#099;&#115;&#100;&#046;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">designatucsd@gmail.com</a>.</p>
+
+<h3 id="the-next-logical-steps">The next logical steps</h3>
+<p>Now that we’ve covered some HTML and CSS, what’s next? To become a frontend developer, you’d need to learn and do a couple more things:</p>
+
+<ul>
+  <li>Javascript</li>
+  <li>Mobile friendliness</li>
+  <li>Frontend frameworks (like Bootstrap) - we’ll be having a workshop on this soon!</li>
+  <li>Practice, practice, practice!</li>
+</ul>
+
+<h3 id="additional-resources">Additional resources</h3>
+<p>Here are some resources for you to continue learning frontend:</p>
+
+<ul>
+  <li><a href="https://medium.freecodecamp.com/from-zero-to-front-end-hero-part-1-7d4f7f0bff02" target="_blank">This Medium post</a>: A good post on how to get started with frontend development in general and how to practice.</li>
+  <li><a href="https://www.codecademy.com/learn/web" target="_blank">CodeAcademy Tutorial</a>: A hands-on tutorial teaching you the basics of HTML, CSS, and later on Bootstrap (also recommended by the above post).</li>
+</ul>
 
       </div>
     </div>
