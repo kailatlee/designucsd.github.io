@@ -33,9 +33,19 @@
     width: auto;
     margin: auto;
   }
+  @media screen and (max-width: $bp_xs) {
+    background-position: center;
+  }
 }
 .footer .navbar-brand-wrap {
   display: flex;
+}
+.footer .navbar-brand-text {
+  font-size: 36px;
+
+  @media screen and (max-width: $bp_xs) {
+    display: none;
+  }
 }
 .footer .social-links {
   font-size: 14px;
