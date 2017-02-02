@@ -18,7 +18,7 @@ layout: default
         <label for="email">Email</label>
         <input required type="email" name="entry.111900208" id="email" placeholder="example@email.com" />
         <br>
-        <input type="submit" value="Subscribe" />
+        <input type="submit" value="Sign-In" />
         <p class="form-success">Thanks for joining our mailing list!<br><a class="signin-form-again">Submit another</a></p>
       </form>
     </div>
@@ -30,7 +30,7 @@ layout: default
     <div class="col-sm-12">
       <h2>Other Cool Upcoming Events</h2>
       <h4 class="subheader">Our doors are open to everyone</h4>
-      
+
       {% assign upcomingCount = 0 %}
       {% for post in site.posts reversed %}
         {% assign postStartDate = post.date | date: '%s' %}
