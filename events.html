@@ -78,34 +78,40 @@ layout: default
       <h2>Past Events</h2>
     </div>
   </div>
-  <div class="row">
+  <div class="row" id="past-events">
     
     {% assign oldCount = 0 %}
     {% for post in site.posts %}
       {% assign postStartDate = post.date | date: '%s' %}
       
-        {% if oldCount < 3 %}
+        {% if oldCount < 1000 %}<!-- TODO: just remove the limit somehow -->
           {% if postStartDate < curDate %}
             {% assign oldCount = oldCount | plus: 1 %}
             {% assign img_url = site.base_url | append: "public/images/events/" | append: post.image %}
 
             <div class="col-sm-6 col-md-4 tile tile-vert">
-              <!-- <a href="{{ post.url }}"> -->
-              <a class="tile-link" {% if post.url %} href="{{ post.url }}" {% endif %}>
-                <div class="tile-image" style="background: url({{ img_url }}) no-repeat center center"></div>
-              </a>
-              <!-- </a> -->
-              <h3>{{ post.title }}</h3>
+              <a class="" {% if post.url %} href="{{ post.url }}" {% endif %}>
+                <div class="tile-vert-content">
+                <!-- <a href="{{ post.url }}"> -->
+                  <div class="tile-image" style="background: url({{ img_url }}) no-repeat center center">
+                  </div>
+                <!-- </a> -->
+                  <h3>{{ post.title }}</h3>
               <!-- <p class="strong">{{ post.time }}</p>
               <p class="strong">{{ post.location }}</p> -->
-              <p class="tile-text">{{ post.excerpt }}<!--  <a href="{{ post.url }}">More</a> --></p>
-              <p class="tile-text">{{ post.hosted }}</p>
-              {% if post.facebook %}
-              <p class="fb-link small"><a href="{{ post.facebook }}">Facebook Event</a></p>
-            {% endif %}
-          </div>
+                  <p class="tile-text">{{ post.excerpt }}<!--  <a href="{{ post.url }}">More</a> --></p>
+                  <p class="tile-text">{{ post.hosted }}</p>
+                  {% if post.facebook %}
+                    <p class="fb-link small"><a href="{{ post.facebook }}">Facebook Event</a></p>
+                  {% endif %}
+                  <a class="tile-bottom-text" href="{{ post.url }}">
+                    Click to learn more
+                  </a>
+                </div>
+              </a>
+            </div>
+          {% endif %}
         {% endif %}
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
-</div>

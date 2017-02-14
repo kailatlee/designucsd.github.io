@@ -518,3 +518,26 @@ p a {
   color: rgba(255, 255, 255, 0.5);
   font-size: inherit;
 }
+#past-events .tile-vert {
+  height: 600px;
+  margin-bottom: 25px;
+}
+#past-events .tile-vert-content {
+  max-height: 600px;
+  overflow: hidden;
+  position: relative;
+}
+#past-events .tile-bottom-text {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  padding-top: 80px;
+  width: 100%;
+  text-align: center;
+  text-decoration: underline;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+#past-events a {
+  background-color: inherit;
+  text-decoration: none;
+}
