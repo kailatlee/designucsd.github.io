@@ -2,7 +2,7 @@ const TEAM_CURRENT = "team-current";
 const TEAM_ALUMNI = "team-alumni";
 const TEAM_EVERYONE = "team-everyone";
 // The cutoff year for alumni
-const GRAD_YEAR = 2017;
+const GRAD_YEAR = 2016;
 
 // List of teams
 var team = [
